@@ -124,10 +124,10 @@ export default async function ServicePage({ params }: Props) {
             marginBottom: '0.5rem',
             textShadow: '0 2px 12px rgba(0,0,0,0.6)',
           }}>
-            {service.name}
+            {service.heroTitle ?? service.name}
           </h1>
           <h2 style={{ color: '#d1d5db', fontSize: '1rem', fontWeight: 400, lineHeight: 1.5 }}>
-            {service.shortDescription}
+            {service.heroSubtitle ?? service.shortDescription}
           </h2>
         </div>
       </div>
@@ -167,7 +167,7 @@ export default async function ServicePage({ params }: Props) {
                 marginBottom: '1.25rem',
                 letterSpacing: '0.03em',
               }}>
-                About This Service
+                About {service.heroTitle ?? service.name}
               </h2>
               {paragraphs.map((para, i) => (
                 <h3 key={i} className="svc-content-p" style={{ color: '#9ca3af', lineHeight: 1.8, marginBottom: '1rem', fontSize: '0.9375rem', fontWeight: 400, marginTop: 0 }}>
@@ -175,54 +175,6 @@ export default async function ServicePage({ params }: Props) {
                 </h3>
               ))}
             </div>
-
-            {/* Benefits */}
-            {service.benefits && service.benefits.length > 0 && (
-              <div className="svc-desc-card" style={{ marginBottom: '2rem' }}>
-                <h2 className="svc-content-h" style={{
-                  fontFamily: 'var(--font-josefin)', fontSize: '1.2rem', fontWeight: 700,
-                  color: '#fff', marginBottom: '1rem', letterSpacing: '0.03em',
-                }}>
-                  Key Benefits
-                </h2>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                  {service.benefits.map((benefit) => (
-                    <li key={benefit} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', marginBottom: '0.6rem' }}>
-                      <div style={{ width: '6px', height: '6px', background: '#c9a84c', borderRadius: '50%', flexShrink: 0, marginTop: '0.45rem' }} />
-                      <span style={{ color: '#d1d5db', fontSize: '0.9rem', lineHeight: 1.6 }}>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* Our Process */}
-            {service.process && service.process.length > 0 && (
-              <div className="svc-desc-card" style={{ marginBottom: '2rem' }}>
-                <h2 className="svc-content-h" style={{
-                  fontFamily: 'var(--font-josefin)', fontSize: '1.2rem', fontWeight: 700,
-                  color: '#fff', marginBottom: '1rem', letterSpacing: '0.03em',
-                }}>
-                  Our Cleaning Process
-                </h2>
-                <ol style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                  {service.process.map((step, i) => (
-                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem', marginBottom: '0.75rem' }}>
-                      <div style={{
-                        minWidth: '28px', height: '28px', borderRadius: '50%',
-                        background: 'rgba(201,168,76,0.15)', border: '1px solid rgba(201,168,76,0.4)',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontFamily: 'var(--font-josefin)', fontSize: '0.75rem', fontWeight: 700, color: '#c9a84c',
-                        flexShrink: 0,
-                      }}>
-                        {i + 1}
-                      </div>
-                      <span style={{ color: '#d1d5db', fontSize: '0.9rem', lineHeight: 1.6, paddingTop: '0.2rem' }}>{step}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            )}
 
             {/* Specialist site banner */}
             {service.externalWebsite && (

@@ -13,6 +13,8 @@ export interface ServiceFAQ {
 export interface Service {
   id: string
   name: string
+  heroTitle?: string
+  heroSubtitle?: string
   slug: string
   category: ServiceCategory
   shortDescription: string
@@ -31,10 +33,12 @@ export const services: Service[] = [
   {
     id: 'sofa-cleaning',
     name: 'Sofa Deep Cleaning & Shampooing',
+    heroTitle: 'Sofa Deep Cleaning Services',
+    heroSubtitle: 'Looking for the best sofa cleaning services Dubai has to offer? Our professional upholstery service removes stains, allergens, and odors using advanced pH-balanced technology. Book now!',
     slug: 'sofa-cleaning',
     category: 'domestic',
     shortDescription: 'Best professional sofa cleaning services in Dubai, Abu Dhabi & Sharjah. Expert upholstery shampooing at home — removes stains, odors & allergens. Same-day service across UAE.',
-    fullDescription: `Professional Sofa Deep Cleaning & Shampooing in Dubai: The Ultimate Guide to Reviving Your Upholstery
+    fullDescription: `The Ultimate Guide to Reviving Your Upholstery
 
 In a city like Dubai, where golden sands and desert winds are part of daily life, our homes often bear the brunt of the environment. While we focus on floors and windows, one of the most used items in any household — the sofa — is often the most neglected.
 
@@ -42,7 +46,7 @@ Whether you are dealing with dust from a summer sandstorm, coffee spills, or jus
 
 Why Your Sofa Needs More Than Just a Surface Vacuum
 
-In Dubai's high-humidity environment, sofas act like giant filters, trapping dust mites, allergens, and microscopic pollutants. Standard home vacuuming only reaches the surface, leaving deep-seated grime untouched. Our professional sofa cleaning services in Dubai use advanced hot-water extraction technology that penetrates deep into every fiber — removing what ordinary vacuuming simply cannot reach.
+In Dubai's high-humidity environment, sofas act like giant filters, trapping dust mites, allergens, and microscopic pollutants. Standard home vacuuming only reaches the surface, leaving deep-seated grime untouched. Our sofa cleaning services Dubai residents rely on use advanced hot-water extraction technology that penetrates deep into every fiber — removing what ordinary vacuuming simply cannot reach.
 
 Health and Indoor Air Quality
 
@@ -58,11 +62,11 @@ Dubai's heat can sometimes lead to trapped moisture and musty smells within sofa
 
 Our Sofa Cleaning Services Cover All UAE Emirates
 
-Al Haya provides the best sofa cleaning services in Dubai, sofa cleaning services in Abu Dhabi, sofa cleaning services in Sharjah, and across all 7 UAE Emirates. We offer carpet sofa cleaning services as a package deal, covering both your sofas and carpets in a single visit. Our sofa cleaning services cost is transparent — no hidden charges, free quotes via WhatsApp.
+Al Haya provides the best sofa cleaning services Dubai, Abu Dhabi, Sharjah, and across all 7 UAE Emirates. Our sofa cleaning services Dubai team is available 7 days a week with same-day booking. We offer carpet sofa cleaning services as a package deal, covering both your sofas and carpets in a single visit. Our sofa cleaning services cost is transparent — no hidden charges, free quotes via WhatsApp.
 
 We handle all sofa types: L-shaped, sectional, 3-seater, corner sofas, fabric recliners, velvet sofas, leather sofas, and modular configurations. Our quick-dry technology means your sofa is ready to use within 3–4 hours after our professional sofa cleaning services at home.`,
     benefits: [
-      'Best sofa cleaning services in Dubai & Abu Dhabi',
+      '#1 sofa cleaning services Dubai & Abu Dhabi — trusted by 500+ clients',
       'Professional sofa cleaning services at home — we come to you',
       'Removes deep stains, odors, dust mites & allergens',
       'Safe for all fabrics — velvet, microfiber, leather, cotton',
@@ -81,28 +85,40 @@ We handle all sofa types: L-shaped, sectional, 3-seater, corner sofas, fabric re
     ],
     faqs: [
       {
-        question: 'What is the sofa cleaning services cost in Dubai?',
-        answer: 'Our sofa cleaning services cost depends on sofa size and type. A standard 3-seater starts from AED 150. We provide free quotes via WhatsApp — no hidden charges. We offer the best sofa cleaning services in Dubai at competitive prices.',
+        question: 'How much does sofa cleaning cost in Dubai?',
+        answer: 'Sofa cleaning prices in Dubai typically vary based on the size of the sofa (number of seats) and the material. Most professional services charge per seat, with additional costs for specialized treatments like leather conditioning or heavy stain removal.',
       },
       {
-        question: 'Do you provide sofa cleaning services at home in Dubai?',
-        answer: 'Yes. All our professional sofa cleaning services are done at your home across Dubai, Abu Dhabi, Sharjah, and all UAE Emirates. Our technicians arrive with all equipment — you do not need to move the sofa anywhere.',
+        question: 'Is sofa shampooing better than steam cleaning?',
+        answer: 'Shampooing is highly effective for removing deep-seated grime and stubborn stains from fabric sofas. Steam cleaning is excellent for sanitization and killing dust mites. For the best results in Dubai\'s dusty environment, a combination of deep shampooing and high-pressure extraction is recommended.',
       },
       {
-        question: 'Are you the best sofa cleaning services in Abu Dhabi?',
-        answer: 'Al Haya provides professional sofa cleaning services in Abu Dhabi with the same certified technicians and equipment used in Dubai. Same-day service is available across Abu Dhabi including Khalifa City, Yas Island, and Al Ain.',
+        question: 'How long does a sofa take to dry after professional cleaning?',
+        answer: 'In Dubai\'s indoor climate, a sofa typically takes 4 to 8 hours to dry completely after a professional deep clean. Factors like fabric thickness, humidity, and airflow (AC usage) can influence this, with some heavy fabrics taking up to 12 hours.',
       },
       {
-        question: 'Do you offer upholstery sofa cleaning services in Dubai for fabric sofas?',
-        answer: 'Yes. Our upholstery sofa cleaning services in Dubai cover all fabric types — velvet, cotton, linen, microfiber, and synthetic blends. We also offer fabric sofa cleaning services near you with same-day availability.',
+        question: 'Can professional cleaning remove all stains from a couch?',
+        answer: 'While professional technicians use specialized enzymes and pH-balanced cleaners to treat ink, grease, and food spills, the success depends on the age of the stain and the fabric type. Pre-treating stains and avoiding DIY chemicals increases the likelihood of 100% removal.',
       },
       {
-        question: 'Can I book carpet sofa cleaning services together?',
-        answer: 'Yes. We offer carpet sofa cleaning services as a combined package at a discounted rate. Book both sofa and carpet cleaning in one visit and save on the total sofa cleaning services cost.',
+        question: 'How often should I get my sofa professionally cleaned in Dubai?',
+        answer: 'Due to the high amount of dust and sand in the UAE, we recommend a professional deep clean every 6 to 12 months. If you have children, pets, or allergy sufferers in the home, a cleaning every 4 months is ideal to maintain indoor air quality.',
       },
       {
-        question: 'Do you offer sofa cleaning services in Sharjah?',
-        answer: 'Yes. Our sofa cleaning services in Sharjah cover all areas including Sharjah City, Al Nahda, Al Majaz, Al Khan, and Al Qasimia. Same-day professional sofa cleaning services are available in most Sharjah locations.',
+        question: 'Are the cleaning chemicals safe for my family and pets?',
+        answer: 'Yes. We use eco-friendly, non-toxic cleaning solutions that are specifically designed for home use. Our high-pressure extraction process ensures that no soapy residue is left behind in the fabric fibers.',
+      },
+      {
+        question: 'Do you clean the sofa at my location or take it to a facility?',
+        answer: 'Our service is fully mobile. We bring industrial-grade extraction machinery and all necessary supplies to your home or office. The cleaning is performed on-site for your convenience, and the sofa remains in place throughout the process.',
+      },
+      {
+        question: 'Can you clean delicate fabrics like velvet or silk?',
+        answer: 'Absolutely. Our technicians are trained to identify fabric types before starting. For delicate materials, we use specialized low-moisture techniques and pH-neutral cleaners to ensure the fabric is cleaned thoroughly without any risk of browning, shrinking, or dye bleeding.',
+      },
+      {
+        question: 'Do I need to do anything to prepare for the cleaning?',
+        answer: 'We suggest clearing any small items or breakables from the area surrounding the sofa. Our team will handle the pre-vacuuming and furniture moving if necessary to ensure every inch of the upholstery is reached.',
       },
     ],
     images: ['/images/services/sofa-cleaning.webp'],
@@ -112,58 +128,92 @@ We handle all sofa types: L-shaped, sectional, 3-seater, corner sofas, fabric re
   {
     id: 'carpet-cleaning',
     name: 'Carpet Cleaning & Shampooing',
+    heroTitle: 'Professional Carpet Cleaning Services Dubai & UAE',
+    heroSubtitle: 'Our carpet cleaning services use deep steam extraction to remove desert sand, allergens & tough stains. Book carpet cleaning services in Dubai, Abu Dhabi & Sharjah — eco-friendly, safe for kids & pets. Same-day service available!',
     slug: 'carpet-cleaning',
     category: 'domestic',
-    shortDescription: 'Expert carpet cleaning and shampooing in UAE. Deep cleans all carpet types — rugs, wall-to-wall, Persian.',
-    fullDescription: `Our carpet cleaning service delivers a thorough, professional deep clean for all types of carpets and rugs across UAE. Using professional hot-water extraction — also known as steam cleaning — combined with our specialist shampoo solutions, we remove embedded dirt, pet hair, food stains, allergens, and bacteria from deep within the carpet fibers, delivering results that ordinary vacuuming and household cleaning products cannot achieve.
+    shortDescription: 'Best carpet cleaning services in Dubai & UAE. Trusted carpet cleaner Dubai for sofa carpet cleaning Dubai, dry carpet cleaning services & professional carpet cleaning services in Sharjah. Affordable carpet cleaning — safe for kids & pets. Book today!',
+    fullDescription: `The Ultimate Guide to a Dust-Free Home
 
-Carpets are one of the largest surfaces in any home or office, and they act as a filter — trapping dust, pollen, mold spores, pet dander, and other airborne particles over time. When this filter becomes saturated, those particles are released back into the air you breathe. A regular professional carpet clean significantly improves indoor air quality and is particularly important for households with allergy sufferers, young children, or pets.
+In the United Arab Emirates, your carpet is more than just a floor covering — it is a centerpiece of home aesthetics and comfort. However, between the sweeping desert sand and the high humidity of coastal cities like Dubai and Abu Dhabi, maintaining that showroom look is a unique challenge. Our professional carpet cleaning services in Dubai use deep steam extraction to tackle what the UAE climate throws at your carpets every day.
 
-We clean wall-to-wall carpets, area rugs, Persian rugs, runner carpets, and commercial carpeting. Our team is specifically trained to handle delicate handmade rugs with care — assessing fibers and dyes before selecting the safest and most effective cleaning method. For natural fiber rugs such as wool, silk, or jute, we use low-moisture techniques that clean effectively without shrinkage or color bleeding.
+Why UAE Carpets Need Specialized Care
 
-Our process begins with a thorough dry-vacuuming pass to remove loose debris, followed by a pre-treatment application to break down oils and staining. The hot-water extraction stage uses heated water and extraction simultaneously to flush contaminants from the fiber base up through the pile and into our containment tanks. Post-cleaning, we apply a protective treatment that shields the carpet fibers from future staining and extends the life of your carpet. Typical drying time is 2–6 hours depending on carpet thickness and ambient conditions.
+The UAE's desert climate means that fine sand and dust particles find their way into homes through the smallest crevices and AC vents. Research shows that carpets in the UAE collect dirt up to three times faster than those in more temperate regions. This is why carpet cleaning services in Dubai are in such high demand — standard vacuuming simply is not enough.
 
-Al Haya provides carpet cleaning services across all 7 UAE Emirates — Dubai, Sharjah, Abu Dhabi, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain — with same-day availability in most areas.`,
+The Sand Accumulation Factor
+
+Standard household vacuums often only reach the surface. Over time, heavy sand particles sink deep into the carpet fibers, acting like sandpaper that grinds down the weave every time you walk on it. Our carpet cleaning services Dubai teams use industrial-grade hot water extraction machines that flush out this deep-settled sand completely — restoring the carpet pile and extending the life of your flooring.
+
+Humidity and Allergens
+
+High humidity levels can trap moisture within thick carpet piles, creating a breeding ground for dust mites and mold. For residents suffering from asthma or allergies, professional carpet cleaning services in Abu Dhabi and Dubai is not a luxury — it is a health necessity. Our sofa and carpet cleaning services Dubai package addresses both upholstery and flooring in a single visit.
+
+Carpet Shampooing vs Steam Extraction
+
+Carpet shampooing is ideal for surface-level stains and refreshing the appearance of a rug. It uses a motorized brush and foam to lift dirt, though it may require longer drying times. Steam extraction (hot water extraction) is superior for carpet cleaning in Dubai — it removes fine desert sand, dust mites, and allergens at a deep level that shampooing alone cannot reach. Our professional carpet cleaning services combine both methods for the best results.
+
+Our Carpet Cleaning Services Cover All UAE
+
+Al Haya is the best carpet cleaning company Dubai residents and businesses trust. We provide carpet cleaning services in Dubai, carpet cleaning services in Abu Dhabi, and professional carpet cleaning services in Sharjah across all 7 UAE Emirates. Whether you need home carpet cleaning services, office carpet cleaning services, commercial carpet cleaning services, or house cleaning and carpet cleaning services together — our certified teams deliver consistent results.
+
+We also offer sofa carpet cleaning Dubai and carpet and sofa cleaning Dubai as a combined package, saving you time and cost. Our dry carpet cleaning services use low-moisture techniques ideal for delicate rugs and quick-turnaround commercial spaces. As an affordable carpet cleaning services provider, we keep our pricing transparent — no hidden charges, free quotes via WhatsApp.
+
+A clean carpet is the foundation of a healthy UAE home. By investing in professional carpet cleaning services every few months, you are not just protecting your investment — you are ensuring the air your family breathes is free from the desert's dust and allergens. Book our carpet cleaning service Dubai today and experience the difference a professional carpet cleaner Dubai makes.`,
     benefits: [
-      'Deep hot-water extraction removes embedded dirt and allergens',
-      'Safe for all carpet types including Persian and wool rugs',
-      'Removes pet hair, food stains, and odors',
-      'Protective treatment extends carpet life',
-      'Improves indoor air quality',
-      'Same-day service available',
+      'Best carpet cleaning services in Dubai from AED 75 — affordable carpet cleaning services',
+      'Trusted carpet cleaner Dubai — 500+ satisfied clients',
+      'Professional carpet cleaning services in Sharjah, Abu Dhabi & all UAE',
+      'Sofa carpet cleaning Dubai & carpet and sofa cleaning Dubai packages',
+      'Dry carpet cleaning services for delicate rugs & quick turnaround',
+      'Home, office & commercial carpet cleaning services available',
+      'Eco-friendly, non-toxic — safe for kids and pets',
+      'House cleaning and carpet cleaning services in one visit',
     ],
     process: [
-      'Dry vacuum to remove loose debris',
-      'Pre-treatment spray for oils and stains',
-      'Hot-water extraction (steam cleaning)',
-      'Spot treatment for stubborn stains',
-      'Protective fiber treatment application',
-      'Speed-dry with air movers',
+      'Pre-inspection — carpet type, fiber, and stain assessment',
+      'Dry vacuum to remove loose sand and surface debris',
+      'Pre-treatment spray for stains and deep-settled grime',
+      'Hot-water steam extraction (industrial-grade machines)',
+      'Spot treatment for stubborn or old stains',
+      'Speed-dry — carpet ready in 1–2 hours',
     ],
     faqs: [
       {
-        question: 'How long does carpet cleaning take?',
-        answer: 'Cleaning time depends on the size and condition of the carpet — a typical room takes 30–60 minutes. Drying takes 2–6 hours depending on thickness and ventilation.',
+        question: 'How much does carpet cleaning cost in Dubai?',
+        answer: 'Professional carpet cleaning in Dubai typically starts from AED 30 per square meter or flat rates beginning at AED 75 for small rugs. Prices vary based on the carpet material (silk vs. synthetic) and the level of staining. We provide free quotes for all carpet cleaning services Dubai.',
       },
       {
-        question: 'Can you remove old or stubborn stains?',
-        answer: 'We can remove the majority of stains using our specialist pre-treatment solutions. Some very old or chemically set stains may be reduced but not fully eliminated — we will advise you honestly after the pre-inspection.',
+        question: 'What is the best carpet cleaning method for the UAE climate?',
+        answer: 'Steam Cleaning (Hot Water Extraction) is the most effective method for UAE homes. It is superior at extracting fine desert sand and dust mites that settle deep into the pile, which standard vacuuming cannot reach. Our carpet cleaning services in Dubai use this method as standard.',
       },
       {
-        question: 'Do you clean Persian and handmade rugs?',
-        answer: 'Yes. We handle Persian, Turkish, Kashmiri, and other handmade rugs with specialist low-moisture techniques that protect delicate fibers and dyes.',
+        question: 'Is professional deep cleaning worth it in Dubai?',
+        answer: 'Yes. While some general cleaners only offer surface-level results, a professional carpet cleaning service Dubai uses mechanical pile lifting and high-pressure extraction to improve indoor air quality and extend the life of your carpet by removing abrasive sand.',
       },
       {
-        question: 'Is steam cleaning safe for all carpets?',
-        answer: 'Hot-water extraction is safe for most synthetic and wool carpets. For natural fiber rugs such as jute or sisal, we use low-moisture methods instead. Our technicians assess each carpet before selecting the appropriate method.',
+        question: 'How long does a carpet take to dry after cleaning?',
+        answer: 'Using professional-grade extraction machines, carpets in the UAE typically dry within 1 to 2 hours. This rapid drying prevents mold growth, which is a common concern in the region\'s high humidity. Our carpet cleaning services in Abu Dhabi and Dubai use the same fast-dry equipment.',
       },
       {
-        question: 'How often should carpets be professionally cleaned?',
-        answer: 'For homes with children or pets, every 6 months is recommended. For lighter-use areas, annual cleaning is sufficient. Commercial carpets typically require quarterly cleaning.',
+        question: 'How often should I have my carpets professionally cleaned in the UAE?',
+        answer: 'Due to frequent sandstorms and high AC usage, we recommend professional carpet cleaning services every 3 to 4 months. This prevents sand from grinding down the fibers and keeps your indoor air free of allergens.',
       },
       {
-        question: 'Do you move furniture before cleaning?',
-        answer: 'We move lighter furniture items at no extra charge. For heavy furniture such as wardrobes or beds, we clean around them. Please let us know in advance if you have specific requirements.',
+        question: 'Do you clean the carpets at my home or take them away?',
+        answer: 'Our carpet cleaning services are fully mobile — we bring industrial-grade equipment to your doorstep. You can use your space again just 1–2 hours after the carpet cleaning service Dubai is completed.',
+      },
+      {
+        question: 'Are the cleaning chemicals safe for children and pets?',
+        answer: 'Absolutely. We use non-toxic, biodegradable cleaning agents approved for home use. They are designed to be tough on stains but completely safe for sensitive family members and pets — used across all our carpet cleaning services in Dubai and Abu Dhabi.',
+      },
+      {
+        question: 'Can you remove old stains and foul odors?',
+        answer: 'Yes. Our deep extraction removes the source of odors — bacteria and mold — rather than just masking them. While we can remove most organic and oil-based stains, we recommend treating spills quickly for the best results from our carpet cleaning services.',
+      },
+      {
+        question: 'Do you serve areas outside of Dubai?',
+        answer: 'Yes. Our carpet cleaning services cover Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and Umm Al Quwain. We provide carpet cleaning services near me across all 7 UAE Emirates with the same high standards.',
       },
     ],
     images: ['/images/services/carpet-cleaning.jpg'],

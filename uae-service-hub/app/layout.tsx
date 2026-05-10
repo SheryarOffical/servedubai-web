@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: 'Professional Cleaning Services in UAE | Al Haya',
   description:
     'Al Haya offers 11 professional cleaning services across 7 UAE Emirates. Same-day service. Call or WhatsApp +971-54-719-9189.',
+  verification: {
+    google: 'kcRs3u_-iV5Ou0Op2OAvNBajnVhBwo3epUrUm0gEKCg',
+  },
 }
 
 export default function RootLayout({

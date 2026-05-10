@@ -398,9 +398,9 @@ img { max-width: 100%; }
 
 [data-theme="light"] .hero-overlay {
   background: linear-gradient(to bottom,
-    rgba(253,245,220,0.62) 0%,
-    rgba(245,232,195,0.72) 50%,
-    rgba(237,220,170,0.85) 100%
+    rgba(253,245,220,0.08) 0%,
+    rgba(245,232,195,0.18) 50%,
+    rgba(237,220,170,0.32) 100%
   ) !important;
 }
 

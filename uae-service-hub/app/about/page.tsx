@@ -99,14 +99,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="about-services" style={{ background: '#0e1635', padding: '5rem 1.5rem', borderTop: '1px solid rgba(201,168,76,0.1)' }}>
+      <section className="about-services abt-svc-section" style={{ padding: '5rem 1.5rem', borderTop: '1px solid rgba(201,168,76,0.1)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '2.75rem' }}>
             <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>What We Do</div>
-            <h2 style={{ fontFamily: 'var(--font-josefin)', fontSize: 'clamp(1.4rem, 2.8vw, 2rem)', fontWeight: 700, color: '#fff', marginBottom: '0.6rem' }}>
-              Comprehensive Cleaning Services We Provide
-            </h2>
-            <p style={{ color: '#6b7280', fontSize: '0.9rem', maxWidth: '560px', margin: '0 auto' }}>
+            <h2 className="abt-heading">Comprehensive Cleaning Services We Provide</h2>
+            <p className="abt-subtext" style={{ maxWidth: '560px', margin: '0 auto' }}>
               Specialized solutions for every surface, fabric, and space — across Dubai and all UAE Emirates.
             </p>
           </div>
@@ -114,20 +112,23 @@ export default function AboutPage() {
           {/* Service detail rows */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
             {[
-              { slug: 'villa-deep-cleaning', h3: 'Villa & Apartment Deep Cleaning Services', desc: 'Complete home sanitization, move-in and move-out cleaning, spring cleaning packages, and regular maintenance. Our villa cleaning Dubai service handles multiple bathrooms, AC vents, window tracks, pool decks, and every surface in your property.', pills: ['Complete home sanitization','Move-in & move-out cleaning','Post-construction cleaning','Regular maintenance plans'] },
-              { slug: 'sofa-cleaning', h3: 'Professional Sofa & Upholstery Cleaning', desc: 'Fabric sofa deep cleaning, leather furniture care, stain and odor removal using IICRC-standard steam extraction. We handle velvet, silk, cotton, and all upholstery types safely.', pills: ['Fabric sofa deep cleaning','Leather furniture care','Stain & odor removal','Scotchgard protection'] },
-              { slug: 'mattress-cleaning', h3: 'Mattress Deep Cleaning & Sanitization', desc: 'Dust mite elimination, allergen removal, and hospital-grade UV-C sanitization. Medical-grade HEPA vacuums extract contaminants deep within the foam for a healthier sleep environment.', pills: ['Dust mite elimination','UV-C sanitization','HEPA allergen removal','Steam cleaning'] },
-              { slug: 'carpet-cleaning', h3: 'Expert Carpet & Rug Cleaning Services', desc: 'Persian and Oriental rug care, wall-to-wall carpet cleaning, pet stain and odor removal using enzyme-based treatments, and commercial carpet maintenance with rapid drying.', pills: ['Persian & Oriental rug care','Pet stain removal','Steam extraction','Commercial carpet maintenance'] },
-              { slug: 'marble-polishing', h3: 'Marble Polishing & Restoration Specialists', desc: 'Diamond polishing and grinding, crystallization for a lasting mirror shine, scratch and etch repair, and sealing for long-term protection. We use advanced Italian machinery for dust-free results.', pills: ['Diamond polishing & grinding','Re-crystallization','Scratch & etch repair','Sealing & protection'] },
+              { slug: 'villa-deep-cleaning', icon: '🏠', h3: 'Villa & Apartment Deep Cleaning Services', desc: 'Complete home sanitization, move-in and move-out cleaning, spring cleaning packages, and regular maintenance. Our villa cleaning Dubai service handles multiple bathrooms, AC vents, window tracks, pool decks, and every surface in your property.', pills: ['Complete home sanitization','Move-in & move-out cleaning','Post-construction cleaning','Regular maintenance plans'] },
+              { slug: 'sofa-cleaning', icon: '🛋️', h3: 'Professional Sofa & Upholstery Cleaning', desc: 'Fabric sofa deep cleaning, leather furniture care, stain and odor removal using IICRC-standard steam extraction. We handle velvet, silk, cotton, and all upholstery types safely.', pills: ['Fabric sofa deep cleaning','Leather furniture care','Stain & odor removal','Scotchgard protection'] },
+              { slug: 'mattress-cleaning', icon: '🛏️', h3: 'Mattress Deep Cleaning & Sanitization', desc: 'Dust mite elimination, allergen removal, and hospital-grade UV-C sanitization. Medical-grade HEPA vacuums extract contaminants deep within the foam for a healthier sleep environment.', pills: ['Dust mite elimination','UV-C sanitization','HEPA allergen removal','Steam cleaning'] },
+              { slug: 'carpet-cleaning', icon: '🪄', h3: 'Expert Carpet & Rug Cleaning Services', desc: 'Persian and Oriental rug care, wall-to-wall carpet cleaning, pet stain and odor removal using enzyme-based treatments, and commercial carpet maintenance with rapid drying.', pills: ['Persian & Oriental rug care','Pet stain removal','Steam extraction','Commercial carpet maintenance'] },
+              { slug: 'marble-polishing', icon: '✨', h3: 'Marble Polishing & Restoration Specialists', desc: 'Diamond polishing and grinding, crystallization for a lasting mirror shine, scratch and etch repair, and sealing for long-term protection. We use advanced Italian machinery for dust-free results.', pills: ['Diamond polishing & grinding','Re-crystallization','Scratch & etch repair','Sealing & protection'] },
             ].map((svc) => (
-              <div key={svc.slug} style={{ background: '#1c2f58', border: '1px solid rgba(80,140,255,0.18)', borderRadius: '10px', padding: '1.4rem 1.6rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem', flexWrap: 'wrap' }}>
-                  <h3 style={{ fontFamily: 'var(--font-josefin)', fontSize: '1rem', fontWeight: 700, color: '#fff', margin: 0 }}>{svc.h3}</h3>
-                  <Link href={`/services/${svc.slug}`} style={{ color: '#c9a84c', fontSize: '0.75rem', fontWeight: 700, textDecoration: 'none', flexShrink: 0 }}>View Service →</Link>
-                </div>
-                <p style={{ color: '#9ca3af', fontSize: '0.85rem', lineHeight: 1.65, margin: 0 }}>{svc.desc}</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
-                  {svc.pills.map((p) => <span key={p} style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.18)', color: '#c9a84c', fontSize: '0.6rem', padding: '0.2rem 0.5rem', borderRadius: '3px' }}>{p}</span>)}
+              <div key={svc.slug} className="abt-svc-row">
+                <div className="abt-svc-row-icon">{svc.icon}</div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
+                    <h3 className="abt-svc-row-h3">{svc.h3}</h3>
+                    <Link href={`/services/${svc.slug}`} className="abt-svc-row-link">View Service →</Link>
+                  </div>
+                  <p className="abt-svc-row-desc">{svc.desc}</p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginTop: '0.6rem' }}>
+                    {svc.pills.map((p) => <span key={p} className="abt-svc-pill">{p}</span>)}
+                  </div>
                 </div>
               </div>
             ))}
@@ -137,14 +138,14 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(175px, 1fr))', gap: '0.875rem' }}>
             {services.map((service) => (
               <Link key={service.id} href={`/services/${service.slug}`} style={{ textDecoration: 'none' }}>
-                <div className="about-svc-card" style={{ background: '#132040', border: '1px solid rgba(80,140,255,0.18)', borderRadius: '8px', overflow: 'hidden' }}>
+                <div className="about-svc-card abt-img-card">
                   <div style={{ position: 'relative', height: '100px' }}>
                     <Image src={service.images[0]} alt={service.name} fill className="object-cover" sizes="200px" loading="lazy" />
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 35%, rgba(0,0,0,0.7))' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 35%, rgba(0,0,0,0.72))' }} />
                   </div>
-                  <div style={{ padding: '0.7rem 0.85rem' }}>
-                    <h3 className="about-svc-h3" style={{ fontFamily: 'var(--font-josefin)', fontSize: '0.78rem', fontWeight: 700, color: '#fff', marginBottom: '0.25rem', lineHeight: 1.3 }}>{service.name}</h3>
-                    <span style={{ color: '#c9a84c', fontSize: '0.65rem', fontWeight: 600 }}>Book Now →</span>
+                  <div className="abt-img-card-body">
+                    <h3 className="about-svc-h3 abt-img-card-h3">{service.name}</h3>
+                    <span className="abt-img-card-cta">Book Now →</span>
                   </div>
                 </div>
               </Link>

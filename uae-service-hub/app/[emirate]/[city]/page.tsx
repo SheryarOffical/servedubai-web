@@ -68,7 +68,7 @@ export default async function CityPage({ params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
 
-      <div className="max-w-6xl mx-auto px-4 py-12" style={{ paddingTop: '120px' }}>
+      <div className="city-main max-w-6xl mx-auto px-4 py-12" style={{ paddingTop: '120px' }}>
 
         {/* ══════════════════════════════════════
             BREADCRUMB
@@ -78,19 +78,19 @@ export default async function CityPage({ params }: Props) {
           <span className="mx-2" style={{ color: '#4b5563' }}>/</span>
           <a href={`/${emirate.slug}`} style={{ color: '#c9a84c' }}>{emirate.name}</a>
           <span className="mx-2" style={{ color: '#4b5563' }}>/</span>
-          <span className="text-white">{city.name}</span>
+          <span className="text-white city-crumb-cur">{city.name}</span>
         </nav>
 
         {/* ══════════════════════════════════════
             PAGE HEADING
         ══════════════════════════════════════ */}
         <h1
-          className="text-3xl md:text-4xl font-bold text-white mb-3"
+          className="city-page-h1 text-3xl md:text-4xl font-bold text-white mb-3"
           style={{ fontFamily: 'var(--font-josefin)' }}
         >
           Cleaning Services in {city.name}
         </h1>
-        <p className="text-gray-400 mb-6 text-lg" style={{ fontWeight: 400 }}>
+        <p className="city-page-sub text-gray-400 mb-6 text-lg" style={{ fontWeight: 400 }}>
           {emirate.name} · Professional cleaning — same-day service · Call {SITE_CONFIG.phone}
         </p>
 
@@ -99,7 +99,7 @@ export default async function CityPage({ params }: Props) {
             (unique per city — prevents duplicate content)
         ══════════════════════════════════════ */}
         {localContent && (
-          <div style={{
+          <div className="city-local-block" style={{
             background: 'linear-gradient(135deg, #0e1635 0%, #1c2f58 100%)',
             border: '1px solid rgba(201,168,76,0.18)',
             borderRadius: '12px',
@@ -198,7 +198,7 @@ export default async function CityPage({ params }: Props) {
             {cityServices.map((service) => (
               <div
                 key={service.id}
-                className="rounded-xl p-5"
+                className="city-svc-card rounded-xl p-5"
                 style={{ background: '#1e1e1e', border: '1px solid rgba(255,255,255,0.05)' }}
               >
                 <div className="flex items-start justify-between mb-3">
@@ -230,7 +230,7 @@ export default async function CityPage({ params }: Props) {
                   </a>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="flex-1 text-center px-4 py-2 rounded-lg text-sm font-semibold"
+                    className="city-view-btn flex-1 text-center px-4 py-2 rounded-lg text-sm font-semibold"
                     style={{
                       background: '#252525', color: '#c9a84c',
                       minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -249,7 +249,7 @@ export default async function CityPage({ params }: Props) {
             (unique per city — boosts local relevance)
         ══════════════════════════════════════ */}
         {localContent?.localFAQs && localContent.localFAQs.length > 0 && (
-          <div style={{
+          <div className="city-faq-block" style={{
             background: 'rgba(201,168,76,0.04)',
             border: '1px solid rgba(201,168,76,0.12)',
             borderRadius: '12px',
@@ -278,6 +278,7 @@ export default async function CityPage({ params }: Props) {
               {localContent.localFAQs.map((faq, i) => (
                 <div
                   key={i}
+                  className="city-faq-item"
                   style={{
                     background: 'rgba(255,255,255,0.03)',
                     border: '1px solid rgba(255,255,255,0.07)',
@@ -285,7 +286,7 @@ export default async function CityPage({ params }: Props) {
                     padding: '1.25rem 1.5rem',
                   }}
                 >
-                  <div style={{
+                  <div className="city-faq-q" style={{
                     fontFamily: 'var(--font-josefin)',
                     fontSize: '0.95rem',
                     fontWeight: 700,
@@ -298,7 +299,7 @@ export default async function CityPage({ params }: Props) {
                     <span style={{ color: '#c9a84c', flexShrink: 0 }}>Q</span>
                     {faq.question}
                   </div>
-                  <p style={{
+                  <p className="city-faq-a" style={{
                     color: '#9ca3af',
                     fontSize: '0.875rem',
                     lineHeight: 1.7,
@@ -366,7 +367,7 @@ export default async function CityPage({ params }: Props) {
           }
 
           return (
-            <div style={{
+            <div className="city-trust-block" style={{
               background: 'linear-gradient(135deg, #0d1b35 0%, #0e1a2e 100%)',
               border: '1px solid rgba(201,168,76,0.2)',
               borderRadius: '12px',
@@ -396,7 +397,7 @@ export default async function CityPage({ params }: Props) {
               </div>
 
               {/* Stats row */}
-              <div style={{
+              <div className="city-stats-row" style={{
                 display: 'flex', flexWrap: 'wrap', gap: '0.5rem',
                 marginBottom: '1.5rem',
                 padding: '1rem',
@@ -432,6 +433,7 @@ export default async function CityPage({ params }: Props) {
                 {trustBullets.map((bullet, i) => (
                   <div
                     key={i}
+                    className="city-trust-bullet"
                     style={{
                       display: 'flex',
                       gap: '0.65rem',
@@ -449,7 +451,7 @@ export default async function CityPage({ params }: Props) {
                       flexShrink: 0,
                       marginTop: '0.1rem',
                     }}>✓</span>
-                    <span style={{ color: '#d1d5db', fontSize: '0.85rem', lineHeight: 1.55 }}>{bullet}</span>
+                    <span className="city-trust-txt" style={{ color: '#d1d5db', fontSize: '0.85rem', lineHeight: 1.55 }}>{bullet}</span>
                   </div>
                 ))}
               </div>
@@ -504,7 +506,7 @@ export default async function CityPage({ params }: Props) {
             (Internal Linking — prevents orphan pages)
         ══════════════════════════════════════ */}
         {siblingCities.length > 0 && (
-          <div style={{
+          <div className="city-areas-block" style={{
             background: 'linear-gradient(135deg, #0e1635 0%, #1c2f58 100%)',
             border: '1px solid rgba(201,168,76,0.15)',
             borderRadius: '12px',
@@ -559,7 +561,7 @@ export default async function CityPage({ params }: Props) {
         {/* ══════════════════════════════════════
             BOTTOM CTA BANNER
         ══════════════════════════════════════ */}
-        <div className="rounded-xl p-8 text-center" style={{
+        <div className="city-cta-block rounded-xl p-8 text-center" style={{
           background: 'linear-gradient(135deg, #0d1b35 0%, #1a0a2e 50%, #2d1b00 100%)',
           border: '1px solid rgba(201,168,76,0.2)',
           position: 'relative',
@@ -575,7 +577,7 @@ export default async function CityPage({ params }: Props) {
             </h2>
             <p className="text-gray-400 mb-2">Same-day service available · Free instant quote</p>
             {/* Pre-filled message preview — shows what will be sent */}
-            <div style={{
+            <div className="city-cta-preview" style={{
               display: 'inline-block',
               padding: '0.4rem 1rem',
               background: 'rgba(37,211,102,0.08)',

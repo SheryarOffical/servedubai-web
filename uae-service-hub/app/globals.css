@@ -2665,3 +2665,82 @@ img { max-width: 100%; }
 [data-theme="light"] .home-map-section { background: #f5f0e5 !important; }
 [data-theme="light"] .home-map-wrap { border-color: rgba(201,168,76,0.3) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important; }
 [data-theme="light"] .home-map-value { color: #1a1510 !important; }
+
+/* ══════════════════════════════════════════════════════
+   CITY PAGE — Light theme overrides
+   All sections use hardcoded dark colours via inline styles.
+   These CSS rules (with !important) override inline styles
+   when [data-theme="light"] is active on <html>.
+══════════════════════════════════════════════════════ */
+
+/* Nuclear: all headings + paragraphs dark inside city page */
+[data-theme="light"] .city-main h1,
+[data-theme="light"] .city-main h2,
+[data-theme="light"] .city-main h3 { color: #1a1510 !important; }
+[data-theme="light"] .city-main p   { color: #5a4e3a !important; }
+
+/* Page title & subtitle */
+[data-theme="light"] .city-page-h1  { color: #1a1510 !important; }
+[data-theme="light"] .city-page-sub { color: #5a4e3a !important; }
+[data-theme="light"] .city-crumb-cur { color: #1a1510 !important; }
+
+/* Hyper-local intro block */
+[data-theme="light"] .city-local-block {
+  background: linear-gradient(135deg, #fdf8ee 0%, #f5f0e5 100%) !important;
+  border-color: rgba(201,168,76,0.25) !important;
+}
+
+/* Service cards */
+[data-theme="light"] .city-svc-card {
+  background: #ffffff !important;
+  border-color: rgba(201,168,76,0.2) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+}
+[data-theme="light"] .city-view-btn {
+  background: #f5f0e5 !important;
+}
+
+/* Area FAQ block */
+[data-theme="light"] .city-faq-block {
+  background: rgba(201,168,76,0.06) !important;
+  border-color: rgba(201,168,76,0.2) !important;
+}
+[data-theme="light"] .city-faq-item {
+  background: #ffffff !important;
+  border-color: rgba(201,168,76,0.15) !important;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05) !important;
+}
+[data-theme="light"] .city-faq-q { color: #1a1510 !important; }
+[data-theme="light"] .city-faq-a { color: #5a4e3a !important; }
+
+/* Social proof / trust block */
+[data-theme="light"] .city-trust-block {
+  background: linear-gradient(135deg, #fdf8ee 0%, #f5f0e5 100%) !important;
+  border-color: rgba(201,168,76,0.25) !important;
+}
+[data-theme="light"] .city-stats-row {
+  background: rgba(201,168,76,0.08) !important;
+  border-color: rgba(201,168,76,0.2) !important;
+}
+[data-theme="light"] .city-trust-bullet {
+  background: rgba(201,168,76,0.06) !important;
+  border-color: rgba(201,168,76,0.12) !important;
+}
+[data-theme="light"] .city-trust-txt { color: #3a3020 !important; }
+
+/* Other areas / sibling cities block */
+[data-theme="light"] .city-areas-block {
+  background: linear-gradient(135deg, #fdf8ee 0%, #f5f0e5 100%) !important;
+  border-color: rgba(201,168,76,0.2) !important;
+}
+
+/* Bottom CTA banner */
+[data-theme="light"] .city-cta-block {
+  background: linear-gradient(135deg, #fdf8ee 0%, #f5f0e5 50%, #ede8dc 100%) !important;
+  border-color: rgba(201,168,76,0.3) !important;
+}
+[data-theme="light"] .city-cta-preview {
+  background: rgba(201,168,76,0.1) !important;
+  border-color: rgba(201,168,76,0.2) !important;
+  color: #5a4e3a !important;
+}

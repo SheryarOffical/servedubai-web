@@ -1189,6 +1189,8 @@ img { max-width: 100%; }
   padding: 2rem;
   position: sticky;
   top: 100px;
+  align-self: start;
+  height: fit-content;
 }
 
 .svc-stat-card {

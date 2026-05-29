@@ -14,16 +14,17 @@ export const buildMetadata = (options: SeoOptions): Metadata => {
   const { title, description, path, imageUrl } = options
   const url = `${SITE_URL}${path}`
   const ogImage = imageUrl ?? `${SITE_URL}/images/hero/professional-cleaning-services-UAE.webp`
+  const fullTitle = title.endsWith(SITE_CONFIG.titleSuffix) ? title : `${title}${SITE_CONFIG.titleSuffix}`
 
   return {
-    title,
+    title: fullTitle,
     description,
     alternates: {
       canonical: url,
       languages: { 'en-AE': url },
     },
     openGraph: {
-      title,
+      title: fullTitle,
       description,
       url,
       siteName: SITE_CONFIG.siteName,
@@ -33,7 +34,7 @@ export const buildMetadata = (options: SeoOptions): Metadata => {
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: fullTitle,
       description,
       images: [ogImage],
     },

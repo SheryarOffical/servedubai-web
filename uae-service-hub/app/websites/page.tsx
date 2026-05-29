@@ -5,7 +5,7 @@ import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Our Specialist Websites | Al Haya Cleaning UAE',
+  title: 'Our Specialist Cleaning Websites | UAE Cleaning Services',
   description: 'Explore our 4 specialist cleaning websites covering sofa cleaning, carpet cleaning, villa deep cleaning, and marble polishing across UAE.',
   path: '/websites',
 })

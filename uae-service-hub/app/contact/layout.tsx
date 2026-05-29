@@ -1,14 +1,12 @@
 import type { Metadata } from 'next'
-import { buildLocalBusinessSchema } from '@/lib/utils/seo'
+import { buildLocalBusinessSchema, buildMetadata } from '@/lib/utils/seo'
 
-export const metadata: Metadata = {
-  title: 'Contact Al Haya Cleaning Services | Book a Clean in UAE',
+export const metadata: Metadata = buildMetadata({
+  title: 'Contact Us | Book Professional Cleaning in UAE',
   description:
     'Contact Al Haya Cleaning Services to book professional cleaning across UAE. Same-day service. Call or WhatsApp +971 55 127 5545 for a free instant quote.',
-  alternates: {
-    canonical: 'https://servedubai.com/contact',
-  },
-}
+  path: '/contact',
+})
 
 const contactSchema = buildLocalBusinessSchema({ path: '/contact' })
 

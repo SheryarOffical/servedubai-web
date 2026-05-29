@@ -1,5 +1,7 @@
 export const SITE_CONFIG = {
   siteName: 'Al Haya Cleaning Services',
+  brandShort: 'Al Haya',
+  titleSuffix: ' | Al Haya',
   phone: '+971551275545',
   phoneDisplay: '+971 55 127 5545',
   whatsapp: '+971551275545',

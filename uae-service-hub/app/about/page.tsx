@@ -9,7 +9,7 @@ import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About Al Haya Cleaning Services | Professional Cleaning Dubai & UAE',
+  title: 'About Us | Professional Cleaning Services Dubai & UAE',
   description:
     'Learn about Al Haya — Dubai\'s trusted professional cleaning company serving all 7 UAE Emirates. Expert villa, sofa, carpet, mattress cleaning & marble polishing. Vetted technicians. Free quotes.',
   path: '/about',

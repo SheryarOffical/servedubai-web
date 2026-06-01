@@ -9,6 +9,7 @@ import { buildMetadata, buildLocalBusinessSchema, buildBreadcrumbSchema, buildFA
 import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { getCityContent } from '@/lib/data/cityContent'
 import { getCityCoords } from '@/lib/data/cityCoordinates'
+import { hasCombo } from '@/lib/data/serviceAreaCombos'
 import { SITE_CONFIG } from '@/lib/data/constants'
 
 type Props = { params: Promise<{ emirate: string; city: string }> }
@@ -274,14 +275,20 @@ export default async function CityPage({ params }: Props) {
                       Book via WhatsApp
                     </a>
                     <Link
-                      href={`/services/${service.slug}`}
+                      href={
+                        hasCombo(emirate.slug, city.slug, service.slug)
+                          ? `/${emirate.slug}/${city.slug}/${service.slug}`
+                          : `/services/${service.slug}`
+                      }
                       className="city-view-btn flex-1 text-center px-4 py-2 rounded-lg text-sm font-semibold"
                       style={{
                         background: '#252525', color: '#c9a84c',
                         minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center',
                       }}
                     >
-                      View Details
+                      {hasCombo(emirate.slug, city.slug, service.slug)
+                        ? `View ${city.name} Details`
+                        : 'View Details'}
                     </Link>
                   </div>
                 </div>

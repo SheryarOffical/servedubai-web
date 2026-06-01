@@ -4,6 +4,7 @@ export const dynamic = 'force-dynamic'
 import type { MetadataRoute } from 'next'
 import { services } from '@/lib/data/services'
 import { emirates } from '@/lib/data/emirates'
+import { SERVICE_AREA_COMBOS } from '@/lib/data/serviceAreaCombos'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://servedubai.com'
@@ -38,5 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  return [...staticRoutes, ...serviceRoutes, ...emirateRoutes, ...cityRoutes]
+  // Service × area combo pages (e.g. /dubai/marina/sofa-cleaning) — high-intent long-tail
+  const comboRoutes: MetadataRoute.Sitemap = SERVICE_AREA_COMBOS.map((c) => ({
+    url: `${base}/${c.emirate}/${c.city}/${c.service}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
+  return [...staticRoutes, ...serviceRoutes, ...emirateRoutes, ...cityRoutes, ...comboRoutes]
 }

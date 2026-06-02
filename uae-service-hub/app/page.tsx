@@ -97,22 +97,152 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* HERO */}
+      {/* 1. HERO */}
       <Hero slides={heroSlides} />
 
-      {/* ABOUT */}
+      {/* 2. SERVICES — what we offer, shown immediately after hero */}
+      <section className="home-services-section" style={{ padding: '4.5rem 0' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
+
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>How We Help You</div>
+            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Our Professional Cleaning Services in Dubai</h2>
+            <p className="home-section-p" style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center' }}>From luxury villas to marble restoration — specialized cleaning built for Dubai's environment.</p>
+          </div>
+
+          {/* 6 main cards with images */}
+          <div className="home-svc-grid">
+            {mainCards.map((card) => (
+              <div key={card.slug + card.badge} className="home-svc-card">
+                <div style={{ position: 'relative', height: '190px', flexShrink: 0 }}>
+                  <Image src={card.image} alt={card.alt} fill className="object-cover" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 380px" loading="lazy" />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.6))' }} />
+                  <span className="home-svc-badge">{card.badge}</span>
+                </div>
+                <div style={{ padding: '1.4rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <h2 className="home-svc-h2">{card.h2}</h2>
+                  <h3 className="home-svc-h3">{card.h3}</h3>
+                  <p className="home-svc-p" style={{ flex: 1 }}>{card.p}</p>
+                  <div className="home-kw-row">
+                    {card.kws.map((kw) => <span key={kw} className="home-kw-tag">{kw}</span>)}
+                  </div>
+                  <Link href={`/services/${card.slug}`} className="home-svc-link" style={{ marginTop: '0.5rem' }}>View Service →</Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 5 extra services — text only, no images = fast load */}
+          <div style={{ marginTop: '2rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: '1.25rem' }}>
+              <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Also Available</div>
+            </div>
+            <div className="home-extra-grid">
+              {extraServices.map((s) => (
+                <Link key={s.slug} href={`/services/${s.slug}`} className="home-extra-card">
+                  <h3 className="home-extra-h3">{s.name}</h3>
+                  <p className="home-extra-p">{s.desc}</p>
+                  <span className="home-extra-kw">{s.kws}</span>
+                  <span className="home-extra-arrow">View →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. LOCATIONS (Emirates) — where we serve */}
+      <EmiratesSection emirates={emirates} />
+
+      {/* 4. BOOK BY LOCATION — service × area hub */}
+      <section className="home-services-section" style={{ padding: '4.5rem 0' }}>
+        <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Book by Location</div>
+            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Popular Cleaning Services by Area in Dubai</h2>
+            <p className="home-section-p" style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center' }}>
+              Dedicated local teams for your neighbourhood — same-day service with area specialists across Dubai.
+            </p>
+          </div>
+          <PopularAreas />
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <Link href="/areas" className="home-svc-link" style={{ fontWeight: 600 }}>
+              View all service areas →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. BOOKING CTA */}
+      <section className="theme-cta" style={{ padding: '5rem 0', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '-80px', right: '-80px', width: '320px', height: '320px', borderRadius: '50%', background: 'rgba(201,168,76,0.07)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '220px', height: '220px', borderRadius: '50%', background: 'rgba(201,168,76,0.05)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem', position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+            {[{ number: '11+', label: 'Services' },{ number: '7', label: 'Emirates' },{ number: '500+', label: 'Happy Clients' },{ number: 'Same Day', label: 'Availability' }].map((stat) => (
+              <div key={stat.label} style={{ textAlign: 'center', minWidth: '80px' }}>
+                <div className="cta-stat-number" style={{ fontSize: '1.9rem', fontWeight: 700, color: '#c9a84c', fontFamily: 'var(--font-josefin)', lineHeight: 1.1 }}>{stat.number}</div>
+                <div className="cta-stat-label" style={{ fontSize: '0.78rem', color: '#9aa3b2', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: '0.2rem' }}>{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ width: '50px', height: '2px', background: 'linear-gradient(90deg, #c9a84c, #25D366)', margin: '0 auto 2.25rem' }} />
+          <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.65rem' }}>Book Today</div>
+            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Ready to Refresh Your Space? Book a Deep Clean Today</h2>
+            <p className="home-section-p" style={{ maxWidth: '560px', margin: '0 auto 2.25rem', textAlign: 'center' }}>Same-day service across Dubai, Sharjah, Abu Dhabi and all UAE Emirates. Free instant quote via WhatsApp.</p>
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" style={{ display:'inline-flex',alignItems:'center',gap:'0.5rem',minWidth:'190px',justifyContent:'center',padding:'0.95rem 1.85rem',background:'linear-gradient(135deg,#25D366,#128C7E)',color:'#fff',fontWeight:700,borderRadius:'500px',textDecoration:'none',fontSize:'1rem',boxShadow:'0 4px 18px rgba(37,211,102,0.28)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.523 5.83L.057 23.547a.5.5 0 00.612.611l5.718-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.032-1.386l-.36-.214-3.737.978.997-3.643-.235-.374A9.786 9.786 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+                WhatsApp Now
+              </a>
+              <a href={`tel:${SITE_CONFIG.phone}`} style={{ display:'inline-flex',alignItems:'center',gap:'0.5rem',minWidth:'190px',justifyContent:'center',padding:'0.95rem 1.85rem',background:'transparent',color:'#c9a84c',fontWeight:700,borderRadius:'500px',textDecoration:'none',fontSize:'1rem',border:'2px solid #c9a84c' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/></svg>
+                Call {SITE_CONFIG.phone}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. WHY CHOOSE US */}
+      <section className="home-why-section" style={{ padding: '4.5rem 0' }}>
+        <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.75rem' }}>
+            <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Our Promise</div>
+            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Why Choose Our Professional Cleaning Services in Dubai?</h2>
+            <p className="home-section-p" style={{ maxWidth: '560px', margin: '0 auto', textAlign: 'center' }}>Trusted by homeowners across Marina, Downtown, Palm Jumeirah, and Arabian Ranches.</p>
+          </div>
+          <div className="home-why-grid">
+            {[
+              { title: 'Vetted, Insured & IICRC-Trained', desc: 'Every technician is background-checked, insured, and trained to international IICRC standards — the gold standard in the cleaning industry.', icon: '🏅' },
+              { title: 'Eco-Friendly & Non-Toxic', desc: 'We use biodegradable, non-toxic sanitization solutions safe for children, pets, and allergy sufferers — powerful on stains, gentle on your home.', icon: '🌿' },
+              { title: 'Same-Day Service Available', desc: 'Book via WhatsApp and our team arrives the same day, fully equipped — across Dubai, Sharjah, Abu Dhabi, and all UAE Emirates.', icon: '⚡' },
+              { title: '100% Satisfaction Guarantee', desc: "Not satisfied? We come back at no extra charge. Your satisfaction is our standard — not an exception.", icon: '✓' },
+            ].map((item) => (
+              <div key={item.title} className="home-why-card">
+                <div style={{ fontSize: '1.6rem', marginBottom: '0.65rem' }}>{item.icon}</div>
+                <h3 className="home-why-h3">{item.title}</h3>
+                <p className="home-why-p">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. ABOUT */}
       <section className="theme-about home-about-section" style={{ padding: '4.5rem 0' }}>
         <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div className="home-about-grid">
             <div>
-              <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>About Our Agency</div>
+              <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>About Our Agency</div>
               <h2 className="home-section-h2">Dubai's Unique Cleaning Challenge — And How We Solve It</h2>
               <p className="home-section-p">In a city as fast-paced and glamorous as Dubai, maintaining a pristine home isn't just about aesthetics — it's a necessity. Frequent sandstorms, high humidity, and fine dust mean standard dusting simply isn't enough.</p>
               <p className="home-section-p" style={{ marginBottom: '1.5rem' }}>Whether you are a tenant in a Downtown apartment or a homeowner in Arabian Ranches, Al Haya delivers the gold standard of professional cleaning services in Dubai — across all 7 UAE Emirates.</p>
               <ul className="home-checklist">
                 {['IICRC-trained & vetted technicians','Eco-friendly, non-toxic solutions','Same-day service available','All 7 UAE Emirates covered','100% Satisfaction Guaranteed'].map((item) => (
                   <li key={item} className="home-check-item">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#c9a84c" aria-hidden="true" style={{ flexShrink: 0 }}><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="#c9a84c" aria-hidden="true" style={{ flexShrink: 0 }}><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     {item}
                   </li>
                 ))}
@@ -129,93 +259,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="home-services-section" style={{ padding: '4.5rem 0' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
-
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>How We Help You</div>
-            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Our Professional Cleaning Services in Dubai</h2>
-            <p className="home-section-p" style={{ maxWidth: '580px', margin: '0 auto', textAlign: 'center' }}>From luxury villas to marble restoration — specialized cleaning built for Dubai's environment.</p>
-          </div>
-
-          {/* 6 main cards with images */}
-          <div className="home-svc-grid">
-            {mainCards.map((card) => (
-              <div key={card.slug + card.badge} className="home-svc-card">
-                <div style={{ position: 'relative', height: '170px', flexShrink: 0 }}>
-                  <Image src={card.image} alt={card.alt} fill className="object-cover" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 380px" loading="lazy" />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.6))' }} />
-                  <span className="home-svc-badge">{card.badge}</span>
-                </div>
-                <div style={{ padding: '1.1rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  <h2 className="home-svc-h2">{card.h2}</h2>
-                  <h3 className="home-svc-h3">{card.h3}</h3>
-                  <p className="home-svc-p" style={{ flex: 1 }}>{card.p}</p>
-                  <div className="home-kw-row">
-                    {card.kws.map((kw) => <span key={kw} className="home-kw-tag">{kw}</span>)}
-                  </div>
-                  <Link href={`/services/${card.slug}`} className="home-svc-link" style={{ marginTop: '0.5rem' }}>View Service →</Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* 5 extra services — text only, no images = fast load */}
-          <div style={{ marginTop: '2rem' }}>
-            <div style={{ textAlign: 'center', marginBottom: '1.25rem' }}>
-              <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Also Available</div>
-            </div>
-            <div className="home-extra-grid">
-              {extraServices.map((s) => (
-                <Link key={s.slug} href={`/services/${s.slug}`} className="home-extra-card">
-                  <h3 className="home-extra-h3">{s.name}</h3>
-                  <p className="home-extra-p">{s.desc}</p>
-                  <span className="home-extra-kw">{s.kws}</span>
-                  <span className="home-extra-arrow">View →</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US */}
-      <section className="home-why-section" style={{ padding: '4.5rem 0' }}>
-        <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2.75rem' }}>
-            <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Our Promise</div>
-            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Why Choose Our Professional Cleaning Services in Dubai?</h2>
-            <p className="home-section-p" style={{ maxWidth: '520px', margin: '0 auto', textAlign: 'center' }}>Trusted by homeowners across Marina, Downtown, Palm Jumeirah, and Arabian Ranches.</p>
-          </div>
-          <div className="home-why-grid">
-            {[
-              { title: 'Vetted, Insured & IICRC-Trained', desc: 'Every technician is background-checked, insured, and trained to international IICRC standards — the gold standard in the cleaning industry.', icon: '🏅' },
-              { title: 'Eco-Friendly & Non-Toxic', desc: 'We use biodegradable, non-toxic sanitization solutions safe for children, pets, and allergy sufferers — powerful on stains, gentle on your home.', icon: '🌿' },
-              { title: 'Same-Day Service Available', desc: 'Book via WhatsApp and our team arrives the same day, fully equipped — across Dubai, Sharjah, Abu Dhabi, and all UAE Emirates.', icon: '⚡' },
-              { title: '100% Satisfaction Guarantee', desc: "Not satisfied? We come back at no extra charge. Your satisfaction is our standard — not an exception.", icon: '✓' },
-            ].map((item) => (
-              <div key={item.title} className="home-why-card">
-                <div style={{ fontSize: '1.4rem', marginBottom: '0.65rem' }}>{item.icon}</div>
-                <h3 className="home-why-h3">{item.title}</h3>
-                <p className="home-why-p">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
+      {/* 8. FAQ */}
       <section className="home-faq-section" style={{ padding: '4.5rem 0' }}>
-        <div style={{ maxWidth: '780px', margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ maxWidth: '820px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '2.75rem' }}>
-            <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Common Questions</div>
+            <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Common Questions</div>
             <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Frequently Asked Questions About Cleaning in Dubai</h2>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {faqs.map((faq, i) => (
               <details key={i} className="home-faq-item">
-                <summary className="home-faq-q">{faq.q}<span style={{ color: '#c9a84c', fontSize: '1.1rem', flexShrink: 0 }}>+</span></summary>
+                <summary className="home-faq-q">{faq.q}<span style={{ color: '#c9a84c', fontSize: '1.3rem', flexShrink: 0 }}>+</span></summary>
                 <p className="home-faq-a">{faq.a}</p>
               </details>
             ))}
@@ -223,46 +277,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="theme-cta" style={{ padding: '5rem 0', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '-80px', right: '-80px', width: '320px', height: '320px', borderRadius: '50%', background: 'rgba(201,168,76,0.07)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '220px', height: '220px', borderRadius: '50%', background: 'rgba(201,168,76,0.05)', pointerEvents: 'none' }} />
-        <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem', position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
-            {[{ number: '11+', label: 'Services' },{ number: '7', label: 'Emirates' },{ number: '500+', label: 'Happy Clients' },{ number: 'Same Day', label: 'Availability' }].map((stat) => (
-              <div key={stat.label} style={{ textAlign: 'center', minWidth: '80px' }}>
-                <div className="cta-stat-number" style={{ fontSize: '1.65rem', fontWeight: 700, color: '#c9a84c', fontFamily: 'var(--font-josefin)', lineHeight: 1.1 }}>{stat.number}</div>
-                <div className="cta-stat-label" style={{ fontSize: '0.7rem', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: '0.2rem' }}>{stat.label}</div>
-              </div>
-            ))}
-          </div>
-          <div style={{ width: '50px', height: '2px', background: 'linear-gradient(90deg, #c9a84c, #25D366)', margin: '0 auto 2.25rem' }} />
-          <div style={{ maxWidth: '660px', margin: '0 auto', textAlign: 'center' }}>
-            <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.65rem' }}>Book Today</div>
-            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Ready to Refresh Your Space? Book a Deep Clean Today</h2>
-            <p className="home-section-p" style={{ maxWidth: '540px', margin: '0 auto 2.25rem', textAlign: 'center' }}>Same-day service across Dubai, Sharjah, Abu Dhabi and all UAE Emirates. Free instant quote via WhatsApp.</p>
-            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" style={{ display:'inline-flex',alignItems:'center',gap:'0.5rem',minWidth:'180px',justifyContent:'center',padding:'0.85rem 1.75rem',background:'linear-gradient(135deg,#25D366,#128C7E)',color:'#fff',fontWeight:700,borderRadius:'500px',textDecoration:'none',fontSize:'0.9rem',boxShadow:'0 4px 18px rgba(37,211,102,0.28)' }}>
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.523 5.83L.057 23.547a.5.5 0 00.612.611l5.718-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.032-1.386l-.36-.214-3.737.978.997-3.643-.235-.374A9.786 9.786 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
-                WhatsApp Now
-              </a>
-              <a href={`tel:${SITE_CONFIG.phone}`} style={{ display:'inline-flex',alignItems:'center',gap:'0.5rem',minWidth:'180px',justifyContent:'center',padding:'0.85rem 1.75rem',background:'transparent',color:'#c9a84c',fontWeight:700,borderRadius:'500px',textDecoration:'none',fontSize:'0.9rem',border:'2px solid #c9a84c' }}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/></svg>
-                Call {SITE_CONFIG.phone}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* GOOGLE MAP — Local SEO signal */}
+      {/* 9. GOOGLE MAP — Local SEO signal */}
       <section className="home-map-section" style={{ padding: '5rem 0' }}>
         <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'center' }}>
 
             {/* Left — info */}
             <div>
-              <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Find Us</div>
+              <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Find Us</div>
               <h2 className="home-section-h2">Al Haya Cleaning Services — Dubai, UAE</h2>
               <p className="home-section-p" style={{ marginBottom: '1.5rem' }}>
                 Serving all 7 UAE Emirates from our Dubai base. Same-day service available across Dubai Marina, Downtown, Business Bay, Jumeirah, Arabian Ranches, and beyond.
@@ -276,13 +298,13 @@ export default function Home() {
                   { label: 'Same-Day', value: 'Available on request', href: null },
                 ].map((item) => (
                   <div key={item.label} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#c9a84c', marginTop: '0.45rem', flexShrink: 0 }} />
+                    <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#c9a84c', marginTop: '0.5rem', flexShrink: 0 }} />
                     <div>
-                      <div style={{ fontSize: '0.65rem', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.1rem' }}>{item.label}</div>
+                      <div style={{ fontSize: '0.72rem', color: '#9aa3b2', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.15rem' }}>{item.label}</div>
                       {item.href ? (
-                        <a href={item.href} className="home-map-value" style={{ color: '#c9a84c', fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none' }}>{item.value}</a>
+                        <a href={item.href} className="home-map-value" style={{ color: '#c9a84c', fontWeight: 600, fontSize: '1rem', textDecoration: 'none' }}>{item.value}</a>
                       ) : (
-                        <div className="home-map-value" style={{ color: '#d1d5db', fontSize: '0.9rem', fontWeight: 500 }}>{item.value}</div>
+                        <div className="home-map-value" style={{ color: '#d1d5db', fontSize: '1rem', fontWeight: 500 }}>{item.value}</div>
                       )}
                     </div>
                   </div>
@@ -291,11 +313,11 @@ export default function Home() {
 
               <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
                 <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.75rem 1.5rem', background: 'linear-gradient(135deg,#25D366,#128C7E)', color: '#fff', fontWeight: 700, borderRadius: '500px', textDecoration: 'none', fontSize: '0.85rem' }}>
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.8rem 1.6rem', background: 'linear-gradient(135deg,#25D366,#128C7E)', color: '#fff', fontWeight: 700, borderRadius: '500px', textDecoration: 'none', fontSize: '0.9rem' }}>
                   WhatsApp Now
                 </a>
                 <a href="https://share.google/bDF6NqN3sJvO2nxSr" target="_blank" rel="noopener noreferrer"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.75rem 1.5rem', background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.3)', color: '#c9a84c', fontWeight: 700, borderRadius: '500px', textDecoration: 'none', fontSize: '0.85rem' }}>
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.8rem 1.6rem', background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.3)', color: '#c9a84c', fontWeight: 700, borderRadius: '500px', textDecoration: 'none', fontSize: '0.9rem' }}>
                   View on Google Maps
                 </a>
               </div>
@@ -318,28 +340,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* POPULAR SERVICES BY AREA — internal-linking hub for combo pages */}
-      <section className="home-services-section" style={{ padding: '4.5rem 0' }}>
-        <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-            <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Book by Location</div>
-            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Popular Cleaning Services by Area in Dubai</h2>
-            <p className="home-section-p" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-              Dedicated local teams for your neighbourhood — same-day service with area specialists across Dubai.
-            </p>
-          </div>
-          <PopularAreas />
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <Link href="/areas" className="home-svc-link" style={{ fontWeight: 600 }}>
-              View all service areas →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* EMIRATES */}
-      <EmiratesSection emirates={emirates} />
 
       <WhatsAppButton />
     </>

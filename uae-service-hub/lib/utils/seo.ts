@@ -74,25 +74,20 @@ const BASE_LOCAL_BUSINESS = {
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: [
-      'Monday', 'Tuesday', 'Wednesday', 'Thursday',
-      'Friday', 'Saturday', 'Sunday',
+      'https://schema.org/Monday',
+      'https://schema.org/Tuesday',
+      'https://schema.org/Wednesday',
+      'https://schema.org/Thursday',
+      'https://schema.org/Friday',
+      'https://schema.org/Saturday',
+      'https://schema.org/Sunday',
     ],
     opens: '08:00',
     closes: '22:00',
   },
   sameAs: [
-    'https://servedubai.com',
     'https://share.google/bDF6NqN3sJvO2nxSr',
   ],
-  serviceArea: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: 25.2048,
-      longitude: 55.2708,
-    },
-    geoRadius: '200000',
-  },
 }
 
 export const buildLocalBusinessSchema = (options: {
@@ -131,18 +126,6 @@ export const buildLocalBusinessSchema = (options: {
       }
     : BASE_LOCAL_BUSINESS.geo
 
-  const serviceAreaOverride = options.coords
-    ? {
-        '@type': 'GeoCircle',
-        geoMidpoint: {
-          '@type': 'GeoCoordinates',
-          latitude: options.coords.lat,
-          longitude: options.coords.lng,
-        },
-        geoRadius: String(options.coords.radiusMeters),
-      }
-    : BASE_LOCAL_BUSINESS.serviceArea
-
   // City-specific address — localises the business per page
   const addressOverride = options.coords
     ? {
@@ -167,7 +150,6 @@ export const buildLocalBusinessSchema = (options: {
       ? `Professional cleaning services in ${options.city}, ${options.emirate ?? 'UAE'} — sofa, carpet, villa, office & marble. Same-day service available.`
       : 'Professional cleaning and restoration services across all 7 UAE Emirates — sofa, carpet, villa, office, marble and more.',
     geo: geoOverride,
-    serviceArea: serviceAreaOverride,
     address: addressOverride,
     areaServed,
   }

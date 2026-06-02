@@ -9,6 +9,7 @@ import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
 
 import WhatsAppButton from '@/components/WhatsAppButton'
+import PopularAreas from '@/components/PopularAreas'
 
 // Dynamic imports — split JS bundle, deferred after above-the-fold content
 const Hero = dynamic(() => import('@/components/Hero'))
@@ -314,6 +315,25 @@ export default function Home() {
               />
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* POPULAR SERVICES BY AREA — internal-linking hub for combo pages */}
+      <section className="home-services-section" style={{ padding: '4.5rem 0' }}>
+        <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Book by Location</div>
+            <h2 className="home-section-h2" style={{ textAlign: 'center' }}>Popular Cleaning Services by Area in Dubai</h2>
+            <p className="home-section-p" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+              Dedicated local teams for your neighbourhood — same-day service with area specialists across Dubai.
+            </p>
+          </div>
+          <PopularAreas />
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <Link href="/areas" className="home-svc-link" style={{ fontWeight: 600 }}>
+              View all service areas →
+            </Link>
           </div>
         </div>
       </section>

@@ -59,3 +59,12 @@ export const combosForCity = (emirate: string, city: string): string[] =>
   SERVICE_AREA_COMBOS.filter((c) => c.emirate === emirate && c.city === city).map(
     (c) => c.service
   )
+
+/** All (emirate, city) areas that have a combo page for a given service. */
+export const combosForService = (
+  service: string
+): { emirate: string; city: string }[] =>
+  SERVICE_AREA_COMBOS.filter((c) => c.service === service).map((c) => ({
+    emirate: c.emirate,
+    city: c.city,
+  }))

@@ -4,7 +4,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import { services, getServiceBySlug } from '@/lib/data/services'
-import { emirates } from '@/lib/data/emirates'
+import { emirates, getCityBySlug } from '@/lib/data/emirates'
+import { combosForService } from '@/lib/data/serviceAreaCombos'
 import { buildMetadata, buildLocalBusinessSchema, buildServiceSchema, buildBreadcrumbSchema, buildFAQSchema } from '@/lib/utils/seo'
 import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
@@ -41,6 +42,11 @@ export default async function ServicePage({ params }: Props) {
   const availableEmirates = emirates.filter((e) =>
     service.availableInEmirates.includes(e.id)
   )
+
+  // Dubai areas that have a dedicated page for THIS service (internal linking)
+  const serviceAreas = combosForService(slug)
+    .map(({ emirate, city }) => ({ emirate, c: getCityBySlug(emirate, city) }))
+    .filter((x) => x.c) as { emirate: string; c: NonNullable<ReturnType<typeof getCityBySlug>> }[]
 
   const localBusinessSchema = buildLocalBusinessSchema({ service: service.name, path: `/services/${service.slug}` })
   const serviceSchema = buildServiceSchema({
@@ -435,6 +441,30 @@ export default async function ServicePage({ params }: Props) {
                     {faq.answer}
                   </div>
                 </details>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── AVAILABLE IN THESE DUBAI AREAS (combo page internal links) ── */}
+        {serviceAreas.length > 0 && (
+          <div style={{ marginTop: '3rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
+              <div style={{ width: '3px', height: '1.5rem', background: '#c9a84c', borderRadius: '2px', flexShrink: 0 }} />
+              <h2 className="svc-content-h" style={{ fontFamily: 'var(--font-josefin)', fontSize: '1.2rem', fontWeight: 700, color: '#fff', letterSpacing: '0.03em' }}>
+                {service.name.split(/[&]/)[0].trim()} — Available in These Dubai Areas
+              </h2>
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+              {serviceAreas.map(({ emirate, c }) => (
+                <Link
+                  key={`${emirate}-${c.slug}`}
+                  href={`/${emirate}/${c.slug}/${service.slug}`}
+                  style={{ padding: '0.45rem 1.1rem', background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.25)', color: '#c9a84c', borderRadius: '500px', fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
+                >
+                  <span style={{ color: 'rgba(201,168,76,0.5)', fontSize: '0.65rem' }}>→</span>
+                  {service.name.split(/[&]/)[0].trim()} in {c.name}
+                </Link>
               ))}
             </div>
           </div>

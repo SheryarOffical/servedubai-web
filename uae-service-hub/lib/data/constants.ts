@@ -10,8 +10,6 @@ export const SITE_CONFIG = {
   whatsappNumber: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '+971551275545').trim(),
   // Google Business Profile — used for the "Review us on Google" CTAs.
   googleProfileLink: 'https://share.google/bDF6NqN3sJvO2nxSr',
-  // TODO (Phase 3): replace with the DIRECT review link from GBP → "Ask for reviews"
-  // (looks like https://g.page/r/XXXXXXXXXXXX/review — opens the review box straight away).
-  // Until then this opens the listing, where customers tap "Write a review".
-  googleReviewLink: 'https://share.google/bDF6NqN3sJvO2nxSr',
+  // Direct GBP review link — opens the Google review box straight away.
+  googleReviewLink: 'https://g.page/r/CVepkYvvC3kCEBM/review',
 } as const

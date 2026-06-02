@@ -262,3 +262,27 @@ export const buildBreadcrumbSchema = (
     item: `${SITE_URL}${crumb.url}`,
   })),
 })
+
+export const buildArticleSchema = (options: {
+  headline: string
+  description: string
+  path: string
+  datePublished: string
+  dateModified?: string
+  image?: string
+}): Record<string, unknown> => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: options.headline,
+  description: options.description,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}${options.path}` },
+  image: options.image ? `${SITE_URL}${options.image}` : `${SITE_URL}/images/hero/professional-cleaning-services-UAE.webp`,
+  datePublished: options.datePublished,
+  dateModified: options.dateModified ?? options.datePublished,
+  author: { '@type': 'Organization', name: 'Al Haya Cleaning Services', url: SITE_URL },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Al Haya Cleaning Services',
+    logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/hero/professional-cleaning-services-UAE.webp` },
+  },
+})

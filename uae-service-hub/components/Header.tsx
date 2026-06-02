@@ -73,6 +73,9 @@ export default function Header() {
           </li>
 
           <li>
+            <Link href="/blog" className="nav-link">Blog</Link>
+          </li>
+          <li>
             <Link href="/contact" className="nav-link">Contact</Link>
           </li>
         </ul>
@@ -131,6 +134,7 @@ export default function Header() {
             {e.name}
           </Link>
         ))}
+        <Link href="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
         <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
         <div style={{ padding: '0.75rem 1.5rem' }}>
           <a

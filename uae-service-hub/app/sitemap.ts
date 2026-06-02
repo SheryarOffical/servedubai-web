@@ -5,6 +5,7 @@ import type { MetadataRoute } from 'next'
 import { services } from '@/lib/data/services'
 import { emirates } from '@/lib/data/emirates'
 import { SERVICE_AREA_COMBOS } from '@/lib/data/serviceAreaCombos'
+import { blogPosts } from '@/lib/data/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://servedubai.com'
@@ -15,7 +16,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/areas`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
   ]
+
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((p) => ({
+    url: `${base}/blog/${p.slug}`,
+    lastModified: p.dateModified ?? p.datePublished,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
 
   const serviceRoutes: MetadataRoute.Sitemap = services.map((s) => ({
     url: `${base}/services/${s.slug}`,
@@ -48,5 +57,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  return [...staticRoutes, ...serviceRoutes, ...emirateRoutes, ...cityRoutes, ...comboRoutes]
+  return [...staticRoutes, ...serviceRoutes, ...emirateRoutes, ...cityRoutes, ...comboRoutes, ...blogRoutes]
 }

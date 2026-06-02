@@ -98,6 +98,7 @@ export default function Footer() {
             <h3>Company</h3>
             <ul>
               <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/contact">Contact</Link></li>
               <li><Link href="/areas">Service Areas</Link></li>
               <li><a href={`tel:${SITE_CONFIG.phone}`}>{SITE_CONFIG.phone}</a></li>

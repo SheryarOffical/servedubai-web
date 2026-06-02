@@ -42,8 +42,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceBySlug(sSlug)
   if (!emirate || !city || !service) return {}
 
+  // Short service label (drop "& ..." suffix) + omit emirate to keep titles concise (<60 chars)
+  const shortService = service.name.split(/[&]/)[0].trim()
   return buildMetadata({
-    title: `${service.name} in ${city.name}, ${emirate.name} | Al Haya`,
+    title: `${shortService} in ${city.name} | Al Haya`,
     description: `Professional ${service.name.toLowerCase()} in ${city.name}, ${emirate.name}. Same-day service, certified technicians, eco-friendly products. Free quote — call ${SITE_CONFIG.phone}.`.slice(
       0,
       158

@@ -320,6 +320,11 @@ export default function Home() {
                   style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.8rem 1.6rem', background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.3)', color: '#c9a84c', fontWeight: 700, borderRadius: '500px', textDecoration: 'none', fontSize: '0.9rem' }}>
                   View on Google Maps
                 </a>
+                <a href={SITE_CONFIG.googleReviewLink} target="_blank" rel="noopener noreferrer"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.8rem 1.6rem', background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.3)', color: '#c9a84c', fontWeight: 700, borderRadius: '500px', textDecoration: 'none', fontSize: '0.9rem' }}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27l5.18 3.12-1.37-5.9L20.4 9.6l-6.05-.52L12 3.5 9.65 9.08 3.6 9.6l4.59 4.99-1.37 5.9z"/></svg>
+                  Review us on Google
+                </a>
               </div>
             </div>
 

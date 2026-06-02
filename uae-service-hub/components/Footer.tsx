@@ -53,6 +53,18 @@ export default function Footer() {
               <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
           </Link>
+          <a
+            href={SITE_CONFIG.googleReviewLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-btn-icon"
+            aria-label="Review us on Google"
+            title="Review us on Google"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 17.27l5.18 3.12-1.37-5.9L20.4 9.6l-6.05-.52L12 3.5 9.65 9.08 3.6 9.6l4.59 4.99-1.37 5.9z"/>
+            </svg>
+          </a>
         </div>
 
         {/* Divider */}
@@ -87,7 +99,9 @@ export default function Footer() {
             <ul>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/areas">Service Areas</Link></li>
               <li><a href={`tel:${SITE_CONFIG.phone}`}>{SITE_CONFIG.phone}</a></li>
+              <li><a href={SITE_CONFIG.googleReviewLink} target="_blank" rel="noopener noreferrer">Review us on Google</a></li>
             </ul>
           </div>
         </div>

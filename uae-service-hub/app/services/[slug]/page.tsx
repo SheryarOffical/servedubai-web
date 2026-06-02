@@ -89,7 +89,7 @@ export default async function ServicePage({ params }: Props) {
 
         {/* Breadcrumb top */}
         <nav
-          style={{ position: 'absolute', top: '90px', left: '1.5rem', zIndex: 5, fontSize: '0.8rem', color: '#9ca3af' }}
+          style={{ position: 'absolute', top: '90px', left: '1.5rem', zIndex: 5, fontSize: '0.88rem', color: '#9ca3af' }}
           aria-label="Breadcrumb"
         >
           <Link href="/" style={{ color: '#c9a84c', textDecoration: 'none' }}>Home</Link>
@@ -174,7 +174,7 @@ export default async function ServicePage({ params }: Props) {
                 About {service.heroTitle ?? service.name}
               </h2>
               {paragraphs.map((para, i) => (
-                <p key={i} className="svc-content-p" style={{ color: '#9ca3af', lineHeight: 1.8, marginBottom: '1rem', fontSize: '0.9375rem', marginTop: 0 }}>
+                <p key={i} className="svc-content-p" style={{ color: '#9ca3af', lineHeight: 1.8, marginBottom: '1rem', fontSize: '1.0625rem', marginTop: 0 }}>
                   {para}
                 </p>
               ))}
@@ -211,7 +211,7 @@ export default async function ServicePage({ params }: Props) {
                       </h3>
                     )}
                     {section.text && (
-                      <p style={{ color: '#9ca3af', lineHeight: 1.8, fontSize: '0.9375rem', margin: 0 }}>
+                      <p style={{ color: '#9ca3af', lineHeight: 1.8, fontSize: '1.0625rem', margin: 0 }}>
                         {section.text}
                       </p>
                     )}
@@ -252,7 +252,7 @@ export default async function ServicePage({ params }: Props) {
                     color: '#c9a84c',
                     borderRadius: '4px',
                     fontWeight: 600,
-                    fontSize: '0.85rem',
+                    fontSize: '0.98rem',
                     textDecoration: 'none',
                     letterSpacing: '0.05em',
                     whiteSpace: 'nowrap',
@@ -305,7 +305,7 @@ export default async function ServicePage({ params }: Props) {
                         position: 'absolute', bottom: 0, left: 0, right: 0,
                         padding: '0.6rem 0.75rem',
                       }}>
-                        <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.8rem', fontFamily: 'var(--font-josefin)', letterSpacing: '0.05em' }}>
+                        <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.88rem', fontFamily: 'var(--font-josefin)', letterSpacing: '0.05em' }}>
                           {emirate.name}
                         </div>
                         <div style={{ color: '#c9a84c', fontSize: '0.65rem', letterSpacing: '0.08em' }}>
@@ -345,7 +345,7 @@ export default async function ServicePage({ params }: Props) {
               ].map((feat) => (
                 <div key={feat} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.6rem' }}>
                   <div style={{ width: '6px', height: '6px', background: '#c9a84c', borderRadius: '50%', flexShrink: 0 }} />
-                  <span className="svc-feat-txt" style={{ color: '#d1d5db', fontSize: '0.875rem' }}>{feat}</span>
+                  <span className="svc-feat-txt" style={{ color: '#d1d5db', fontSize: '0.98rem' }}>{feat}</span>
                 </div>
               ))}
             </div>
@@ -393,7 +393,7 @@ export default async function ServicePage({ params }: Props) {
                 fontWeight: 600,
                 borderRadius: '6px',
                 textDecoration: 'none',
-                fontSize: '0.9rem',
+                fontSize: '1rem',
               }}
             >
               Call {SITE_CONFIG.phone}
@@ -427,7 +427,7 @@ export default async function ServicePage({ params }: Props) {
                     fontFamily: 'var(--font-josefin)',
                     fontWeight: 600,
                     color: '#fff',
-                    fontSize: '0.95rem',
+                    fontSize: '1.05rem',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
@@ -437,7 +437,7 @@ export default async function ServicePage({ params }: Props) {
                     {faq.question}
                     <span style={{ color: '#c9a84c', fontSize: '1.2rem', flexShrink: 0, marginLeft: '1rem' }}>+</span>
                   </summary>
-                  <div style={{ padding: '0 1.25rem 1rem', color: '#9ca3af', fontSize: '0.9rem', lineHeight: 1.7 }}>
+                  <div style={{ padding: '0 1.25rem 1rem', color: '#9ca3af', fontSize: '1rem', lineHeight: 1.7 }}>
                     {faq.answer}
                   </div>
                 </details>
@@ -460,7 +460,7 @@ export default async function ServicePage({ params }: Props) {
                 <Link
                   key={`${emirate}-${c.slug}`}
                   href={`/${emirate}/${c.slug}/${service.slug}`}
-                  style={{ padding: '0.45rem 1.1rem', background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.25)', color: '#c9a84c', borderRadius: '500px', fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
+                  style={{ padding: '0.45rem 1.1rem', background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.25)', color: '#c9a84c', borderRadius: '500px', fontSize: '0.88rem', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
                 >
                   <span style={{ color: 'rgba(201,168,76,0.5)', fontSize: '0.65rem' }}>→</span>
                   {service.name.split(/[&]/)[0].trim()} in {c.name}
@@ -487,7 +487,7 @@ export default async function ServicePage({ params }: Props) {
             <h2 style={{ fontFamily: 'var(--font-josefin)', fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>
               Ready to Book {service.name}?
             </h2>
-            <p style={{ color: '#9ca3af', marginBottom: '2rem', fontSize: '0.95rem', fontWeight: 400, marginTop: 0 }}>
+            <p style={{ color: '#9ca3af', marginBottom: '2rem', fontSize: '1.05rem', fontWeight: 400, marginTop: 0 }}>
               Same-day service across all UAE Emirates — free quote in minutes.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>

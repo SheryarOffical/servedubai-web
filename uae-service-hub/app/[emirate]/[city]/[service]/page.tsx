@@ -157,10 +157,10 @@ export default async function ServiceAreaPage({ params }: Props) {
         </p>
 
         <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-          <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.8rem 1.6rem', background: 'linear-gradient(135deg, #25D366, #128C7E)', color: '#fff', fontWeight: 700, borderRadius: '500px', textDecoration: 'none', fontSize: '0.9rem' }}>
+          <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.8rem 1.6rem', background: 'linear-gradient(135deg, #25D366, #128C7E)', color: '#fff', fontWeight: 700, borderRadius: '500px', textDecoration: 'none', fontSize: '1rem' }}>
             Book {service.name.split(' ')[0]} in {city.name} — Free Quote
           </a>
-          <a href={`tel:${SITE_CONFIG.phone}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.8rem 1.4rem', border: '1px solid rgba(201,168,76,0.4)', color: '#c9a84c', fontWeight: 600, borderRadius: '500px', textDecoration: 'none', fontSize: '0.9rem' }}>
+          <a href={`tel:${SITE_CONFIG.phone}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.8rem 1.4rem', border: '1px solid rgba(201,168,76,0.4)', color: '#c9a84c', fontWeight: 600, borderRadius: '500px', textDecoration: 'none', fontSize: '1rem' }}>
             📞 {SITE_CONFIG.phone}
           </a>
         </div>
@@ -186,8 +186,8 @@ export default async function ServiceAreaPage({ params }: Props) {
               </div>
             </div>
             <div style={{ marginTop: '1.25rem', paddingTop: '1.1rem', borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-              <span style={{ color: '#c9a84c', fontSize: '0.9rem', flexShrink: 0, marginTop: '0.05rem' }}>💡</span>
-              <p style={{ color: '#6b7280', fontSize: '0.82rem', lineHeight: 1.65, fontWeight: 400, margin: 0 }}>{local.areaNote}</p>
+              <span style={{ color: '#c9a84c', fontSize: '1rem', flexShrink: 0, marginTop: '0.05rem' }}>💡</span>
+              <p style={{ color: '#6b7280', fontSize: '0.95rem', lineHeight: 1.65, fontWeight: 400, margin: 0 }}>{local.areaNote}</p>
             </div>
           </div>
         )}
@@ -205,8 +205,8 @@ export default async function ServiceAreaPage({ params }: Props) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.6rem' }}>
               {service.benefits.map((b, i) => (
                 <div key={i} className="city-trust-bullet" style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start', padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px' }}>
-                  <span style={{ color: '#25D366', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0, marginTop: '0.1rem' }}>✓</span>
-                  <span className="city-trust-txt" style={{ color: '#d1d5db', fontSize: '0.85rem', lineHeight: 1.55 }}>{b}</span>
+                  <span style={{ color: '#25D366', fontSize: '0.88rem', fontWeight: 800, flexShrink: 0, marginTop: '0.1rem' }}>✓</span>
+                  <span className="city-trust-txt" style={{ color: '#d1d5db', fontSize: '0.98rem', lineHeight: 1.55 }}>{b}</span>
                 </div>
               ))}
             </div>
@@ -227,7 +227,7 @@ export default async function ServiceAreaPage({ params }: Props) {
               {service.process.map((step, i) => (
                 <div key={i} style={{ display: 'flex', gap: '0.85rem', alignItems: 'flex-start', padding: '0.85rem 1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px' }}>
                   <span style={{ flexShrink: 0, width: '24px', height: '24px', borderRadius: '50%', background: 'rgba(201,168,76,0.15)', color: '#c9a84c', fontSize: '0.75rem', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{i + 1}</span>
-                  <span className="city-trust-txt" style={{ color: '#d1d5db', fontSize: '0.875rem', lineHeight: 1.55 }}>{step}</span>
+                  <span className="city-trust-txt" style={{ color: '#d1d5db', fontSize: '0.98rem', lineHeight: 1.55 }}>{step}</span>
                 </div>
               ))}
             </div>
@@ -247,10 +247,10 @@ export default async function ServiceAreaPage({ params }: Props) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {combinedFaqs.map((faq, i) => (
                 <div key={i} className="city-faq-item" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '8px', padding: '1.25rem 1.5rem' }}>
-                  <div className="city-faq-q" style={{ fontFamily: 'var(--font-josefin)', fontSize: '0.95rem', fontWeight: 700, color: '#fff', marginBottom: '0.6rem', display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
+                  <div className="city-faq-q" style={{ fontFamily: 'var(--font-josefin)', fontSize: '1.05rem', fontWeight: 700, color: '#fff', marginBottom: '0.6rem', display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
                     <span style={{ color: '#c9a84c', flexShrink: 0 }}>Q</span>{faq.question}
                   </div>
-                  <p className="city-faq-a" style={{ color: '#9ca3af', fontSize: '0.875rem', lineHeight: 1.7, paddingLeft: '1.3rem', fontWeight: 400, margin: 0 }}>{faq.answer}</p>
+                  <p className="city-faq-a" style={{ color: '#9ca3af', fontSize: '0.98rem', lineHeight: 1.7, paddingLeft: '1.3rem', fontWeight: 400, margin: 0 }}>{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -269,12 +269,12 @@ export default async function ServiceAreaPage({ params }: Props) {
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.55rem' }}>
               {siblingServices.map((s) => (
-                <Link key={s.id} href={`/${emirate.slug}/${city.slug}/${s.slug}`} style={{ padding: '0.45rem 1.1rem', background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.2)', color: '#c9a84c', borderRadius: '500px', fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                <Link key={s.id} href={`/${emirate.slug}/${city.slug}/${s.slug}`} style={{ padding: '0.45rem 1.1rem', background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.2)', color: '#c9a84c', borderRadius: '500px', fontSize: '0.88rem', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
                   <span style={{ color: 'rgba(201,168,76,0.45)', fontSize: '0.65rem' }}>→</span>{s.name}
                 </Link>
               ))}
             </div>
-            <div style={{ marginTop: '1.25rem', display: 'flex', flexWrap: 'wrap', gap: '1.25rem', fontSize: '0.82rem' }}>
+            <div style={{ marginTop: '1.25rem', display: 'flex', flexWrap: 'wrap', gap: '1.25rem', fontSize: '0.95rem' }}>
               <Link href={`/services/${service.slug}`} style={{ color: '#9ca3af', textDecoration: 'underline' }}>
                 About {service.name} (all areas)
               </Link>

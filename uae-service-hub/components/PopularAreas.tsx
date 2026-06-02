@@ -65,7 +65,7 @@ export default function PopularAreas() {
                       border: '1px solid rgba(201,168,76,0.25)',
                       color: '#c9a84c',
                       borderRadius: '500px',
-                      fontSize: '0.8rem',
+                      fontSize: '0.88rem',
                       fontWeight: 600,
                       textDecoration: 'none',
                       display: 'inline-flex',

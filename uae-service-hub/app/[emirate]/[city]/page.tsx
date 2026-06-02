@@ -105,7 +105,7 @@ export default async function CityPage({ params }: Props) {
             <div style={{ fontSize: '0.6rem', color: '#c9a84c', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
               {emirate.name} · {city.name}
             </div>
-            <div style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 700, fontFamily: 'var(--font-josefin)', letterSpacing: '0.05em' }}>
+            <div style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, fontFamily: 'var(--font-josefin)', letterSpacing: '0.05em' }}>
               Professional Cleaning Services
             </div>
           </div>
@@ -196,8 +196,8 @@ export default async function CityPage({ params }: Props) {
               gap: '0.75rem',
               alignItems: 'flex-start',
             }}>
-              <span style={{ color: '#c9a84c', fontSize: '0.9rem', flexShrink: 0, marginTop: '0.05rem' }}>💡</span>
-              <p style={{ color: '#6b7280', fontSize: '0.82rem', lineHeight: 1.65, fontWeight: 400, margin: 0 }}>
+              <span style={{ color: '#c9a84c', fontSize: '1rem', flexShrink: 0, marginTop: '0.05rem' }}>💡</span>
+              <p style={{ color: '#6b7280', fontSize: '0.95rem', lineHeight: 1.65, fontWeight: 400, margin: 0 }}>
                 {localContent.areaNote}
               </p>
             </div>
@@ -341,7 +341,7 @@ export default async function CityPage({ params }: Props) {
                 >
                   <div className="city-faq-q" style={{
                     fontFamily: 'var(--font-josefin)',
-                    fontSize: '0.95rem',
+                    fontSize: '1.05rem',
                     fontWeight: 700,
                     color: '#fff',
                     marginBottom: '0.6rem',
@@ -354,7 +354,7 @@ export default async function CityPage({ params }: Props) {
                   </div>
                   <p className="city-faq-a" style={{
                     color: '#9ca3af',
-                    fontSize: '0.875rem',
+                    fontSize: '0.98rem',
                     lineHeight: 1.7,
                     paddingLeft: '1.3rem',
                     fontWeight: 400,
@@ -470,7 +470,7 @@ export default async function CityPage({ params }: Props) {
                     padding: '0.5rem',
                   }}>
                     <div style={{ fontSize: '1rem', marginBottom: '0.2rem' }}>{stat.icon}</div>
-                    <div style={{ fontFamily: 'var(--font-josefin)', fontWeight: 700, color: '#c9a84c', fontSize: '0.95rem', lineHeight: 1 }}>{stat.value}</div>
+                    <div style={{ fontFamily: 'var(--font-josefin)', fontWeight: 700, color: '#c9a84c', fontSize: '1.05rem', lineHeight: 1 }}>{stat.value}</div>
                     <div style={{ color: '#6b7280', fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '0.2rem' }}>{stat.label}</div>
                   </div>
                 ))}
@@ -499,12 +499,12 @@ export default async function CityPage({ params }: Props) {
                   >
                     <span style={{
                       color: '#25D366',
-                      fontSize: '0.8rem',
+                      fontSize: '0.88rem',
                       fontWeight: 800,
                       flexShrink: 0,
                       marginTop: '0.1rem',
                     }}>✓</span>
-                    <span className="city-trust-txt" style={{ color: '#d1d5db', fontSize: '0.85rem', lineHeight: 1.55 }}>{bullet}</span>
+                    <span className="city-trust-txt" style={{ color: '#d1d5db', fontSize: '0.98rem', lineHeight: 1.55 }}>{bullet}</span>
                   </div>
                 ))}
               </div>
@@ -525,7 +525,7 @@ export default async function CityPage({ params }: Props) {
                     fontWeight: 700,
                     borderRadius: '500px',
                     textDecoration: 'none',
-                    fontSize: '0.9rem',
+                    fontSize: '1rem',
                     boxShadow: '0 4px 16px rgba(37,211,102,0.25)',
                   }}
                 >
@@ -539,7 +539,7 @@ export default async function CityPage({ params }: Props) {
                   href={`tel:${SITE_CONFIG.phone}`}
                   style={{
                     color: '#c9a84c',
-                    fontSize: '0.875rem',
+                    fontSize: '0.98rem',
                     fontWeight: 600,
                     textDecoration: 'none',
                     display: 'inline-flex',
@@ -581,7 +581,7 @@ export default async function CityPage({ params }: Props) {
                 </h2>
               </div>
             </div>
-            <p style={{ color: '#6b7280', fontSize: '0.85rem', marginBottom: '1.25rem', paddingLeft: '1rem', fontWeight: 400, marginTop: 0 }}>
+            <p style={{ color: '#6b7280', fontSize: '0.98rem', marginBottom: '1.25rem', paddingLeft: '1rem', fontWeight: 400, marginTop: 0 }}>
               Al Haya provides professional cleaning across all areas of {emirate.name} — same-day service available.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.55rem' }}>
@@ -595,7 +595,7 @@ export default async function CityPage({ params }: Props) {
                     border: '1px solid rgba(201,168,76,0.2)',
                     color: '#c9a84c',
                     borderRadius: '500px',
-                    fontSize: '0.8rem',
+                    fontSize: '0.88rem',
                     fontWeight: 600,
                     textDecoration: 'none',
                     display: 'inline-flex',
@@ -704,7 +704,7 @@ export default async function CityPage({ params }: Props) {
               fontWeight: 700,
               borderRadius: '8px',
               textDecoration: 'none',
-              fontSize: '0.85rem',
+              fontSize: '0.98rem',
             }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -724,7 +724,7 @@ export default async function CityPage({ params }: Props) {
               fontWeight: 700,
               borderRadius: '8px',
               textDecoration: 'none',
-              fontSize: '0.85rem',
+              fontSize: '0.98rem',
             }}
           >
             📞 Call Now

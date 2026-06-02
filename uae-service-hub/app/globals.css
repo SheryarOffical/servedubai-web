@@ -2746,3 +2746,81 @@ img { max-width: 100%; }
   border-color: rgba(201,168,76,0.2) !important;
   color: #5a4e3a !important;
 }
+
+/* ══════════════════════════════════════════════════════
+   NAVBAR REDESIGN — readable over the hero (both themes)
+   Top/not-scrolled: dark frosted scrim + light text so the
+   menu is always legible over the bright hero image.
+   Scrolled state keeps its solid theme background (unchanged).
+══════════════════════════════════════════════════════ */
+.p-navbar:not(.scrolled) {
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 10, 24, 0.92) 0%,
+    rgba(6, 10, 24, 0.55) 55%,
+    rgba(6, 10, 24, 0) 100%
+  );
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+/* Force the same dark scrim in light theme at the top (beats the
+   earlier `background: transparent !important` light-theme rule). */
+[data-theme="light"] .p-navbar:not(.scrolled) {
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 10, 24, 0.92) 0%,
+    rgba(6, 10, 24, 0.55) 55%,
+    rgba(6, 10, 24, 0) 100%
+  ) !important;
+  border-bottom: none !important;
+}
+
+/* Light, high-contrast text while over the hero (both themes) */
+.p-navbar:not(.scrolled) .brand,
+[data-theme="light"] .p-navbar:not(.scrolled) .brand {
+  color: #ecca6e !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+.p-navbar:not(.scrolled) .nav-links .nav-link,
+[data-theme="light"] .p-navbar:not(.scrolled) .nav-links .nav-link {
+  color: #f5f1e6 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+.p-navbar:not(.scrolled) .nav-links .nav-link:hover,
+.p-navbar:not(.scrolled) .nav-links .nav-link.active,
+[data-theme="light"] .p-navbar:not(.scrolled) .nav-links .nav-link:hover,
+[data-theme="light"] .p-navbar:not(.scrolled) .nav-links .nav-link.active {
+  color: #ecca6e !important;
+}
+.p-navbar:not(.scrolled) .hamburger,
+[data-theme="light"] .p-navbar:not(.scrolled) .hamburger {
+  color: #ffffff !important;
+}
+
+/* Subtle gold underline indicator on hover/active (premium touch) */
+.p-navbar .nav-links .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 28px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+.p-navbar.scrolled .nav-links .nav-link::after { bottom: 12px; }
+.p-navbar .nav-links .nav-link:hover::after,
+.p-navbar .nav-links .nav-link.active::after { width: 100%; }
+
+/* WhatsApp CTA — solid green, instantly recognisable + high contrast on any bg */
+.p-navbar .nav-cta {
+  background: linear-gradient(135deg, #25d366, #128c7e) !important;
+  border: none !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35) !important;
+}
+.p-navbar .nav-cta:hover {
+  filter: brightness(1.08);
+  color: #ffffff !important;
+}

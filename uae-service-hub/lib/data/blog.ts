@@ -291,6 +291,131 @@ export const blogPosts: BlogPost[] = [
     ],
     relatedServices: ['apartment-cleaning', 'villa-deep-cleaning', 'sofa-cleaning'],
   },
+
+  {
+    slug: 'carpet-cleaning-cost-dubai',
+    title: 'Carpet Cleaning Cost in Dubai: 2026 Prices & Methods Explained',
+    h1: 'How Much Does Carpet Cleaning Cost in Dubai?',
+    description:
+      'Carpet & rug cleaning prices in Dubai for 2026 — by size and method (steam vs dry), what affects the cost, and how to protect rugs from desert dust. Free quote.',
+    excerpt:
+      'Carpet & rug cleaning prices in Dubai, steam vs dry cleaning, and how to protect rugs from desert dust.',
+    image: '/images/services/carpet-cleaning.webp',
+    datePublished: '2026-06-01',
+    readMins: 5,
+    intro: [
+      'Carpets and rugs in Dubai take a beating from fine desert sand and humidity. Professional cleaning not only refreshes their look but protects your investment — especially for delicate Persian and wool rugs. Here is what carpet cleaning costs in Dubai in 2026 and how the methods differ.',
+    ],
+    sections: [
+      {
+        heading: 'Steam cleaning vs dry cleaning — which do you need?',
+        body: [
+          'Steam (hot-water extraction) is the most thorough method: it injects hot water and solution deep into the pile, then extracts dirt, allergens and moisture. It suits most synthetic and wall-to-wall carpets. Dry cleaning uses minimal moisture and is better for delicate natural fibres or rugs that cannot be soaked, like fine wool and silk Persians.',
+        ],
+      },
+      {
+        heading: 'What affects the price?',
+        bullets: [
+          'Area in square metres (or rug size)',
+          'Fibre type — synthetic vs wool/silk Persian',
+          'Stains, pet accidents or odor treatment',
+          'On-site cleaning vs take-away rug cleaning',
+        ],
+      },
+      {
+        heading: 'Protecting carpets between cleans',
+        body: [
+          'Vacuum at least weekly, deal with spills immediately (blot, don’t rub), use doormats to catch sand, and rotate rugs to even out wear. Even with good care, a professional deep clean every 6–12 months is recommended in Dubai’s dusty climate.',
+        ],
+      },
+    ],
+    costTable: {
+      title: 'Approximate carpet & rug cleaning prices in Dubai (2026)',
+      rows: [
+        { label: 'Small rug (up to 5 m²)', price: 'AED 80 – 150' },
+        { label: 'Medium carpet (per m²)', price: 'AED 8 – 15 / m²' },
+        { label: 'Wool / Persian rug (per m²)', price: 'AED 20 – 35 / m²' },
+        { label: 'Carpet + sofa bundle', price: 'Discounted — ask on WhatsApp' },
+      ],
+      note: 'Indicative 2026 ranges; final price depends on size, fibre and condition. Free quote on WhatsApp.',
+    },
+    faqs: [
+      {
+        question: 'How long does carpet take to dry after cleaning?',
+        answer:
+          'With professional extraction, most carpets are dry within 3–6 hours depending on thickness and ventilation. We use high-extraction equipment to speed drying and prevent mold in Dubai’s humidity.',
+      },
+      {
+        question: 'Can you clean Persian and wool rugs safely?',
+        answer:
+          'Yes. Delicate wool and silk Persian rugs are cleaned with low-moisture, pH-balanced methods to protect the fibres and colours. We assess each rug before choosing the method.',
+      },
+    ],
+    relatedServices: ['carpet-cleaning', 'sofa-cleaning'],
+  },
+
+  {
+    slug: 'marble-polishing-dubai-guide',
+    title: 'Marble Polishing in Dubai: Cost, Process & How to Restore Shine',
+    h1: 'Marble Polishing in Dubai: Cost, Process & Restoring Shine',
+    description:
+      'Everything about marble polishing in Dubai — what it costs in 2026, the difference between polishing and crystallization, and how to restore dull or scratched marble floors.',
+    excerpt:
+      'What marble polishing costs in Dubai, polishing vs crystallization, and how to bring dull floors back to a mirror shine.',
+    image: '/images/services/marble-polishing.webp',
+    datePublished: '2026-06-01',
+    readMins: 5,
+    intro: [
+      'Marble floors give Dubai homes a luxurious look — but they are porous and scratch easily, dulling over time from foot traffic, sand and acidic spills. Professional marble polishing restores that mirror-like shine. Here’s how the process works and what it costs in 2026.',
+    ],
+    sections: [
+      {
+        heading: 'Polishing vs re-crystallization',
+        body: [
+          'Standard polishing uses progressively finer diamond pads to grind out scratches and restore the stone’s natural surface. Re-crystallization goes a step further — a chemical-and-heat process that creates a hard, high-gloss, durable protective layer. For high-traffic areas and a long-lasting mirror finish, crystallization is the premium choice.',
+        ],
+      },
+      {
+        heading: 'The professional process',
+        bullets: [
+          'Assessment of stone type and damage',
+          'Grinding to remove deep scratches and lippage',
+          'Honing to a smooth, even surface',
+          'Polishing / re-crystallization for shine',
+          'Sealing to protect against future stains',
+        ],
+      },
+      {
+        heading: 'Is the process messy?',
+        body: [
+          'No. We use a wet polishing method with advanced machinery that keeps dust to a minimum, so your home stays clean throughout the restoration.',
+        ],
+      },
+    ],
+    costTable: {
+      title: 'Approximate marble polishing prices in Dubai (2026)',
+      rows: [
+        { label: 'Standard polishing (per m²)', price: 'AED 12 – 25 / m²' },
+        { label: 'Re-crystallization (per m²)', price: 'AED 20 – 40 / m²' },
+        { label: 'Stain / etch mark removal', price: 'Custom — request a survey' },
+        { label: 'Full villa floor restoration', price: 'Custom package' },
+      ],
+      note: 'Indicative 2026 ranges; price depends on area, stone condition and finish. Free site survey available.',
+    },
+    faqs: [
+      {
+        question: 'Can dull, scratched marble really be restored?',
+        answer:
+          'Yes. Diamond grinding and polishing removes scratches and etch marks, restoring the marble’s original shine. Re-crystallization then adds a durable, glossy protective finish.',
+      },
+      {
+        question: 'How often should marble floors be polished in Dubai?',
+        answer:
+          'High-traffic areas benefit from polishing every 12–18 months, while sealing every 1–2 years helps protect against stains and dulling from sand and spills.',
+      },
+    ],
+    relatedServices: ['marble-polishing', 'villa-deep-cleaning'],
+  },
 ]
 
 export const getBlogPost = (slug: string): BlogPost | undefined =>

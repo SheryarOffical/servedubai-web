@@ -21,7 +21,7 @@ export const buildMetadata = (options: SeoOptions): Metadata => {
     description,
     alternates: {
       canonical: url,
-      languages: { 'en-AE': url },
+      languages: { 'en-AE': url, 'x-default': url },
     },
     openGraph: {
       title: fullTitle,
@@ -178,15 +178,9 @@ export const buildServiceSchema = (options: {
         (n) => ({ '@type': 'State', name: n })
       ),
   serviceType: options.serviceName,
-  offers: {
-    '@type': 'Offer',
-    priceCurrency: 'AED',
-    availability: 'https://schema.org/InStock',
-    priceSpecification: {
-      '@type': 'PriceSpecification',
-      priceCurrency: 'AED',
-    },
-  },
+  // NOTE: no `offers` block — an Offer without a `price` is invalid (Google/schema.org
+  // flag "missing field price"). We use free quotes / variable pricing, so we omit offers
+  // entirely; the Service schema is fully valid without it.
 })
 
 export const buildFAQSchema = (

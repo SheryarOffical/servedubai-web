@@ -35,7 +35,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'sofa-cleaning-cost-dubai',
-    title: 'How Much Does Sofa Cleaning Cost in Dubai? (2026 Price Guide)',
+    title: 'How Much Does Sofa Cleaning Cost in Dubai?',
     h1: 'How Much Does Sofa Cleaning Cost in Dubai?',
     description:
       'A clear 2026 price guide for professional sofa cleaning in Dubai — costs by sofa size & material, what affects the price, and how to book. Free quotes on WhatsApp.',
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'villa-deep-cleaning-cost-dubai',
-    title: 'Villa Deep Cleaning Cost in Dubai: 2026 Guide & What’s Included',
+    title: 'Villa Deep Cleaning Cost in Dubai (2026)',
     h1: 'How Much Does Villa Deep Cleaning Cost in Dubai?',
     description:
       'What villa deep cleaning costs in Dubai in 2026, what’s included, and how long it takes — by villa size. Move-in/move-out specialists. Free WhatsApp quote.',
@@ -175,7 +175,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-often-clean-sofa-carpet-dubai',
-    title: 'How Often Should You Deep-Clean Your Sofa & Carpet in Dubai?',
+    title: 'How Often to Clean Your Sofa & Carpet in Dubai',
     h1: 'How Often Should You Clean Your Sofa & Carpet in Dubai?',
     description:
       'Dubai’s dust and humidity mean upholstery needs cleaning more often than you think. Here’s how often to deep-clean your sofa, carpet and mattress in the UAE.',
@@ -230,7 +230,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'move-out-cleaning-checklist-dubai',
-    title: 'Move-Out Cleaning Checklist for Dubai Tenants (Get Your Deposit Back)',
+    title: 'Move-Out Cleaning Checklist for Dubai Tenants',
     h1: 'Move-Out Cleaning Checklist for Dubai Tenants',
     description:
       'A complete move-out cleaning checklist for Dubai tenants — exactly what to clean to get your security deposit back, plus when to hire professionals.',
@@ -294,7 +294,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'carpet-cleaning-cost-dubai',
-    title: 'Carpet Cleaning Cost in Dubai: 2026 Prices & Methods Explained',
+    title: 'Carpet Cleaning Cost in Dubai (2026)',
     h1: 'How Much Does Carpet Cleaning Cost in Dubai?',
     description:
       'Carpet & rug cleaning prices in Dubai for 2026 — by size and method (steam vs dry), what affects the cost, and how to protect rugs from desert dust. Free quote.',
@@ -356,7 +356,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'marble-polishing-dubai-guide',
-    title: 'Marble Polishing in Dubai: Cost, Process & How to Restore Shine',
+    title: 'Marble Polishing in Dubai: Cost & Process',
     h1: 'Marble Polishing in Dubai: Cost, Process & Restoring Shine',
     description:
       'Everything about marble polishing in Dubai — what it costs in 2026, the difference between polishing and crystallization, and how to restore dull or scratched marble floors.',

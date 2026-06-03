@@ -16,16 +16,23 @@ export const buildMetadata = (options: SeoOptions): Metadata => {
   const ogImage = imageUrl ?? `${SITE_URL}/images/hero/professional-cleaning-services-UAE.webp`
   const fullTitle = title.endsWith(SITE_CONFIG.titleSuffix) ? title : `${title}${SITE_CONFIG.titleSuffix}`
 
+  // Keep meta descriptions <=160 chars (trim at a word boundary) so they don't get
+  // truncated in search results / flagged as "too long".
+  const metaDescription =
+    description.length > 160
+      ? description.slice(0, 157).replace(/\s+\S*$/, '').trimEnd() + '…'
+      : description
+
   return {
     title: fullTitle,
-    description,
+    description: metaDescription,
     alternates: {
       canonical: url,
       languages: { 'en-AE': url, 'x-default': url },
     },
     openGraph: {
       title: fullTitle,
-      description,
+      description: metaDescription,
       url,
       siteName: SITE_CONFIG.siteName,
       locale: 'en_AE',
@@ -35,7 +42,7 @@ export const buildMetadata = (options: SeoOptions): Metadata => {
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
-      description,
+      description: metaDescription,
       images: [ogImage],
     },
     other: {

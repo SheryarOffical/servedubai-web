@@ -65,10 +65,11 @@ const BASE_LOCAL_BUSINESS = {
   priceRange: '$$',
   currenciesAccepted: 'AED',
   paymentAccepted: 'Cash, Credit Card',
+  // Matches the Google Business Profile address exactly (NAP consistency).
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Dubai',
-    addressLocality: 'Dubai',
+    streetAddress: '4th Street, Al Nahda First',
+    addressLocality: 'Al Nahda, Dubai',
     addressRegion: 'Dubai',
     addressCountry: 'AE',
   },
@@ -133,17 +134,6 @@ export const buildLocalBusinessSchema = (options: {
       }
     : BASE_LOCAL_BUSINESS.geo
 
-  // City-specific address — localises the business per page
-  const addressOverride = options.coords
-    ? {
-        '@type': 'PostalAddress',
-        streetAddress: options.coords.addressLocality,
-        addressLocality: options.coords.addressLocality,
-        addressRegion: options.coords.addressRegion,
-        addressCountry: 'AE',
-      }
-    : BASE_LOCAL_BUSINESS.address
-
   const pageUrl = options.path ? `${SITE_URL}${options.path}` : SITE_URL
 
   return {
@@ -157,7 +147,7 @@ export const buildLocalBusinessSchema = (options: {
       ? `Professional cleaning services in ${options.city}, ${options.emirate ?? 'UAE'} — sofa, carpet, villa, office & marble. Same-day service available.`
       : 'Professional cleaning and restoration services across all 7 UAE Emirates — sofa, carpet, villa, office, marble and more.',
     geo: geoOverride,
-    address: addressOverride,
+    address: BASE_LOCAL_BUSINESS.address,
     areaServed,
   }
 }

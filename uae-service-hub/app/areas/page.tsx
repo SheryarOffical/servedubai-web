@@ -6,7 +6,7 @@ import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Cleaning Services by Area in Dubai | Al Haya',
+  title: 'Cleaning Services by Area in Dubai | Madinat Alhaya',
   description:
     'Find professional cleaning services in your Dubai area — sofa, carpet, villa deep cleaning and marble polishing in Marina, Downtown, Jumeirah, Palm Jumeirah and more. Same-day service.',
   path: '/areas',
@@ -37,7 +37,7 @@ export default function AreasPage() {
           Cleaning Services by Area in Dubai
         </h1>
         <p className="city-page-sub" style={{ color: '#9ca3af', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: '720px' }}>
-          Al Haya provides professional, same-day cleaning across Dubai&rsquo;s top neighbourhoods. Choose your service and
+          Madinat Alhaya provides professional, same-day cleaning across Dubai&rsquo;s top neighbourhoods. Choose your service and
           area below for local specialists who know your building and community — from high-rise apartments in Dubai Marina
           to luxury villas in Palm Jumeirah. Free quotes via WhatsApp — call {SITE_CONFIG.phone}.
         </p>

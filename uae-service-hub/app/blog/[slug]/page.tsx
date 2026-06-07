@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: Props) {
           {post.h1}
         </h1>
         <div className="city-page-sub" style={{ color: '#9ca3af', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-          Al Haya Cleaning Services · {dateLabel} · {post.readMins} min read
+          Madinat Alhaya Building Cleaning Services · {dateLabel} · {post.readMins} min read
         </div>
 
         {/* Hero image */}

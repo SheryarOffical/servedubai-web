@@ -28,16 +28,16 @@ const heroSlides: HeroSlide[] = [
     image: '/images/hero/professional-cleaning-services-UAE.webp',
     title: 'The Gold Standard for Professional Cleaning Services in Dubai',
     subtitle: 'Vetted, IICRC-trained technicians. Eco-friendly solutions. Same-day service across all 7 UAE Emirates.',
-    imageAlt: 'Professional Cleaning Services Dubai — Al Haya certified cleaning technicians UAE',
-    imageTitle: 'Professional Cleaning Services Dubai | Al Haya',
-    tags: ['professional cleaning services Dubai','cleaning services Dubai','deep cleaning Dubai','Al Haya cleaning UAE','same day cleaning service Dubai'],
+    imageAlt: 'Professional Cleaning Services Dubai — Madinat Alhaya certified cleaning technicians UAE',
+    imageTitle: 'Professional Cleaning Services Dubai | Madinat Alhaya',
+    tags: ['professional cleaning services Dubai','cleaning services Dubai','deep cleaning Dubai','Madinat Alhaya cleaning UAE','same day cleaning service Dubai'],
   },
   {
     image: '/images/hero/sofa-carpet-cleaning.webp',
     title: 'Sofa & Carpet Deep Cleaning Dubai',
     subtitle: 'IICRC-standard steam extraction. Allergen-free results for fabric, leather, and luxury rugs.',
     imageAlt: 'Sofa Carpet Cleaning Dubai — professional upholstery and carpet deep cleaning UAE',
-    imageTitle: 'Sofa Cleaning Dubai | Carpet Cleaning Dubai by Al Haya',
+    imageTitle: 'Sofa Cleaning Dubai | Carpet Cleaning Dubai by Madinat Alhaya',
     tags: ['sofa cleaning Dubai','carpet cleaning Dubai','upholstery cleaning UAE','leather sofa cleaning Dubai','rug cleaning services UAE'],
   },
   {
@@ -45,7 +45,7 @@ const heroSlides: HeroSlide[] = [
     title: 'Premium Marble Polishing & Restoration Dubai',
     subtitle: 'Re-crystallization, grinding, and mirror-finish polishing. Restore your floors to hotel-lobby shine.',
     imageAlt: 'Marble Polishing Dubai — professional floor polishing and marble restoration UAE',
-    imageTitle: 'Marble Polishing Dubai | Stone Restoration by Al Haya',
+    imageTitle: 'Marble Polishing Dubai | Stone Restoration by Madinat Alhaya',
     tags: ['marble polishing Dubai','floor polishing services Dubai','marble restoration UAE','stone polishing UAE'],
   },
 ]
@@ -238,7 +238,7 @@ export default function Home() {
               <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>About Our Agency</div>
               <h2 className="home-section-h2">Dubai's Unique Cleaning Challenge — And How We Solve It</h2>
               <p className="home-section-p">In a city as fast-paced and glamorous as Dubai, maintaining a pristine home isn't just about aesthetics — it's a necessity. Frequent sandstorms, high humidity, and fine dust mean standard dusting simply isn't enough.</p>
-              <p className="home-section-p" style={{ marginBottom: '1.5rem' }}>Whether you are a tenant in a Downtown apartment or a homeowner in Arabian Ranches, Al Haya delivers the gold standard of professional cleaning services in Dubai — across all 7 UAE Emirates.</p>
+              <p className="home-section-p" style={{ marginBottom: '1.5rem' }}>Whether you are a tenant in a Downtown apartment or a homeowner in Arabian Ranches, Madinat Alhaya delivers the gold standard of professional cleaning services in Dubai — across all 7 UAE Emirates.</p>
               <ul className="home-checklist">
                 {['IICRC-trained & vetted technicians','Eco-friendly, non-toxic solutions','Same-day service available','All 7 UAE Emirates covered','100% Satisfaction Guaranteed'].map((item) => (
                   <li key={item} className="home-check-item">
@@ -253,7 +253,7 @@ export default function Home() {
               </div>
             </div>
             <div className="p-about-img home-about-img" style={{ position: 'relative', borderRadius: '10px', overflow: 'hidden' }}>
-              <Image src="/images/hero/villa-apartment-cleaning-services.webp" alt="Professional cleaning team Dubai villa — Al Haya deep cleaning UAE" fill className="object-cover" sizes="(max-width:768px) 100vw, 50vw" loading="lazy" />
+              <Image src="/images/hero/villa-apartment-cleaning-services.webp" alt="Professional cleaning team Dubai villa — Madinat Alhaya deep cleaning UAE" fill className="object-cover" sizes="(max-width:768px) 100vw, 50vw" loading="lazy" />
             </div>
           </div>
         </div>
@@ -285,7 +285,7 @@ export default function Home() {
             {/* Left — info */}
             <div>
               <div style={{ fontSize: '0.7rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Find Us</div>
-              <h2 className="home-section-h2">Al Haya Cleaning Services — Dubai, UAE</h2>
+              <h2 className="home-section-h2">Madinat Alhaya Building Cleaning Services — Dubai, UAE</h2>
               <p className="home-section-p" style={{ marginBottom: '1.5rem' }}>
                 Serving all 7 UAE Emirates from our Dubai base. Same-day service available across Dubai Marina, Downtown, Business Bay, Jumeirah, Arabian Ranches, and beyond.
               </p>
@@ -338,7 +338,7 @@ export default function Home() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Al Haya Cleaning Services location on Google Maps Dubai"
+                title="Madinat Alhaya Building Cleaning Services location on Google Maps Dubai"
               />
             </div>
 

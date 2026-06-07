@@ -57,7 +57,7 @@ export const buildMetadata = (options: SeoOptions): Metadata => {
 const BASE_LOCAL_BUSINESS = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'CleaningService'],
-  name: 'Al Haya Cleaning Services',
+  name: 'Madinat Alhaya Building Cleaning Services',
   image: 'https://servedubai.com/images/hero/professional-cleaning-services-UAE.webp',
   url: 'https://servedubai.com',
   telephone: '+971551275545',
@@ -165,7 +165,7 @@ export const buildServiceSchema = (options: {
   url: `https://servedubai.com${options.url}`,
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Al Haya Cleaning Services',
+    name: 'Madinat Alhaya Building Cleaning Services',
     telephone: '+971551275545',
     url: 'https://servedubai.com',
   },
@@ -201,7 +201,7 @@ export const buildImageObjectSchema = (
   '@context': 'https://schema.org',
   '@type': 'ImageGallery',
   url: 'https://servedubai.com',
-  name: 'Al Haya Cleaning Services — Hero Images',
+  name: 'Madinat Alhaya Building Cleaning Services — Hero Images',
   associatedMedia: images.map((img) => ({
     '@type': 'ImageObject',
     url: `https://servedubai.com${img.url}`,
@@ -213,12 +213,12 @@ export const buildImageObjectSchema = (
     ...(img.height ? { height: img.height } : {}),
     author: {
       '@type': 'Organization',
-      name: 'Al Haya Cleaning Services',
+      name: 'Madinat Alhaya Building Cleaning Services',
       url: 'https://servedubai.com',
     },
     copyrightHolder: {
       '@type': 'Organization',
-      name: 'Al Haya Cleaning Services',
+      name: 'Madinat Alhaya Building Cleaning Services',
     },
   })),
 })
@@ -252,10 +252,10 @@ export const buildArticleSchema = (options: {
   image: options.image ? `${SITE_URL}${options.image}` : `${SITE_URL}/images/hero/professional-cleaning-services-UAE.webp`,
   datePublished: options.datePublished,
   dateModified: options.dateModified ?? options.datePublished,
-  author: { '@type': 'Organization', name: 'Al Haya Cleaning Services', url: SITE_URL },
+  author: { '@type': 'Organization', name: 'Madinat Alhaya Building Cleaning Services', url: SITE_URL },
   publisher: {
     '@type': 'Organization',
-    name: 'Al Haya Cleaning Services',
+    name: 'Madinat Alhaya Building Cleaning Services',
     logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/hero/professional-cleaning-services-UAE.webp` },
   },
 })

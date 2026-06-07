@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const emirate = getEmirateBySlug(emirateSlug)
   if (!emirate) return {}
   return buildMetadata({
-    title: `Cleaning Services in ${emirate.name} | Al Haya`,
+    title: `Cleaning Services in ${emirate.name} | Madinat Alhaya`,
     description: `Professional cleaning services across ${emirate.name}. Sofa, carpet, villa, marble and more. Call +971 55 127 5545.`,
     path: `/${emirateSlug}`,
   })
@@ -91,7 +91,7 @@ export default async function EmiratePage({ params }: Props) {
         <div style={{ position: 'absolute', bottom: 0, left: 0, zIndex: 5, padding: '2rem 2rem 3rem', maxWidth: '700px' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.875rem' }}>
             <div style={{ width: '28px', height: '2px', background: '#c9a84c' }} />
-            <span style={{ color: '#c9a84c', fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>Al Haya Cleaning</span>
+            <span style={{ color: '#c9a84c', fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>Madinat Alhaya Cleaning</span>
           </div>
 
           <h1 style={{
@@ -339,7 +339,7 @@ export default async function EmiratePage({ params }: Props) {
                   fontFamily: 'var(--font-josefin)', fontSize: '1.6rem', fontWeight: 700,
                   color: '#fff', lineHeight: 1.2, marginBottom: '1rem',
                 }}>
-                  Why Choose<br />Al Haya in<br />{emirate.name}
+                  Why Choose<br />Madinat Alhaya in<br />{emirate.name}
                 </h2>
                 <p style={{ color: '#6b7280', fontSize: '0.85rem', lineHeight: 1.65, fontWeight: 400, marginTop: 0, marginBottom: 0 }}>
                   Trusted by hundreds of homes and businesses across {emirate.name}.

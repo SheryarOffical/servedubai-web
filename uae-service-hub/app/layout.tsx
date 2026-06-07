@@ -21,9 +21,9 @@ const workSans = Work_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Professional Cleaning Services in UAE | Al Haya Cleaning Services',
+  title: 'Professional Cleaning Services in UAE | Madinat Alhaya Building Cleaning Services',
   description:
-    'Al Haya offers 11 professional cleaning services across 7 UAE Emirates. Same-day service. Call or WhatsApp +971 55 127 5545.',
+    'Madinat Alhaya offers 11 professional cleaning services across 7 UAE Emirates. Same-day service. Call or WhatsApp +971 55 127 5545.',
   verification: {
     google: 'kcRs3u_-iV5Ou0Op2OAvNBajnVhBwo3epUrUm0gEKCg',
   },

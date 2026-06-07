@@ -28,7 +28,7 @@ export default function Header() {
       <div className="nav-inner">
         {/* Brand */}
         <Link href="/" className="brand" onClick={() => setMobileOpen(false)}>
-          Al Haya
+          Madinat Alhaya
         </Link>
 
         {/* Desktop nav */}

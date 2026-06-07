@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     readMins: 5,
     intro: [
       'If you are searching for professional sofa cleaning in Dubai, the first question is almost always: how much will it cost? The honest answer is that it depends on a few things — the number of seats, the fabric type, and how deep the cleaning needs to be. This guide gives you realistic 2026 price ranges so you know what to expect before you book.',
-      'At Al Haya, our pricing is transparent with no hidden charges, and every quote is free via WhatsApp. Below is how sofa cleaning is typically priced across Dubai.',
+      'At Madinat Alhaya, our pricing is transparent with no hidden charges, and every quote is free via WhatsApp. Below is how sofa cleaning is typically priced across Dubai.',
     ],
     sections: [
       {
@@ -273,7 +273,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'Should you hire a professional?',
         body: [
-          'For most tenants, a professional move-out deep clean is worth it: it returns the property to handover standard, gives you an invoice some agencies request, and saves you days of work during a stressful move. Al Haya offers full move-out packages across Dubai with same-day availability.',
+          'For most tenants, a professional move-out deep clean is worth it: it returns the property to handover standard, gives you an invoice some agencies request, and saves you days of work during a stressful move. Madinat Alhaya offers full move-out packages across Dubai with same-day availability.',
         ],
       },
     ],

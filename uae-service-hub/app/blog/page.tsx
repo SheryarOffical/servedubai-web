@@ -5,9 +5,9 @@ import { blogPosts, type BlogPost } from '@/lib/data/blog'
 import { buildMetadata, buildBreadcrumbSchema } from '@/lib/utils/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Cleaning Tips & Guides for Dubai | Al Haya Blog',
+  title: 'Cleaning Tips & Guides for Dubai | Madinat Alhaya Blog',
   description:
-    'Expert cleaning guides for Dubai — sofa & villa cleaning costs, how often to deep-clean, move-out checklists and more. Practical advice from Al Haya Cleaning Services.',
+    'Expert cleaning guides for Dubai — sofa & villa cleaning costs, how often to deep-clean, move-out checklists and more. Practical advice from Madinat Alhaya Building Cleaning Services.',
   path: '/blog',
 })
 
@@ -54,7 +54,7 @@ export default function BlogIndexPage() {
             Cleaning Tips &amp; Guides
           </div>
           <h1 className="city-page-h1" style={{ fontFamily: 'var(--font-josefin)', fontSize: 'clamp(1.9rem, 4.2vw, 2.8rem)', fontWeight: 700, color: '#fff', lineHeight: 1.12 }}>
-            The Al Haya Cleaning Blog
+            The Madinat Alhaya Cleaning Blog
           </h1>
           <div className="blog-title-accent" />
           <p className="city-page-sub" style={{ color: '#9ca3af', fontSize: '1.075rem', lineHeight: 1.7, margin: '1rem 0 2.75rem', maxWidth: '720px' }}>

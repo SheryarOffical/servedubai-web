@@ -105,7 +105,7 @@ export default function WebsitesPage() {
         <div style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
             <div style={{ width: '40px', height: '1px', background: '#c9a84c' }} />
-            <span style={{ fontSize: '0.65rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', fontWeight: 600 }}>Al Haya Specialist Network</span>
+            <span style={{ fontSize: '0.65rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', fontWeight: 600 }}>Madinat Alhaya Specialist Network</span>
             <div style={{ width: '40px', height: '1px', background: '#c9a84c' }} />
           </div>
           <h1 style={{
@@ -117,7 +117,7 @@ export default function WebsitesPage() {
             Our Specialist Websites
           </h1>
           <h2 style={{ color: '#9ca3af', fontSize: '1.05rem', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7, fontWeight: 400 }}>
-            4 dedicated websites. Each one a specialist in its field. All backed by Al Haya's certified cleaning professionals across UAE.
+            4 dedicated websites. Each one a specialist in its field. All backed by Madinat Alhaya's certified cleaning professionals across UAE.
           </h2>
           {/* 4 dots representing 4 sites */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '0.6rem', marginTop: '2rem' }}>

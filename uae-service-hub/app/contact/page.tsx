@@ -156,7 +156,7 @@ export default function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Al Haya Cleaning Services on Google Maps"
+              title="Madinat Alhaya Building Cleaning Services on Google Maps"
             />
           </div>
           <div style={{ marginTop: '1rem', textAlign: 'center' }}>

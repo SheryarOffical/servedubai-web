@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!emirate || !city) return {}
   const localContent = getCityContent(emirateSlug, citySlug)
   return buildMetadata({
-    title: `Cleaning Services in ${city.name}, ${emirate.name} | Al Haya`,
+    title: `Cleaning Services in ${city.name}, ${emirate.name} | Madinat Alhaya`,
     description:
       localContent?.localDescription.slice(0, 155) ??
       `Professional cleaning in ${city.name}, ${emirate.name}. Sofa, carpet, villa & more. Same-day service. Call ${SITE_CONFIG.phone}.`,
@@ -93,8 +93,8 @@ export default async function CityPage({ params }: Props) {
         <div style={{ position: 'relative', height: '220px', borderRadius: '12px', overflow: 'hidden', marginBottom: '1.75rem' }}>
           <Image
             src={emirateBannerSrc}
-            alt={`Professional cleaning services in ${city.name}, ${emirate.name} — Al Haya expert cleaning team serving ${city.name} homes, villas and apartments`}
-            title={`Cleaning Services in ${city.name}, ${emirate.name} | Al Haya`}
+            alt={`Professional cleaning services in ${city.name}, ${emirate.name} — Madinat Alhaya expert cleaning team serving ${city.name} homes, villas and apartments`}
+            title={`Cleaning Services in ${city.name}, ${emirate.name} | Madinat Alhaya`}
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
             priority
@@ -236,8 +236,8 @@ export default async function CityPage({ params }: Props) {
                   <div style={{ position: 'relative', height: '150px' }}>
                     <Image
                       src={service.images[0]}
-                      alt={`${service.name} in ${city.name}, ${emirate.name} — professional ${service.name.toLowerCase()} by Al Haya cleaning services`}
-                      title={`${service.name} in ${city.name} | Al Haya`}
+                      alt={`${service.name} in ${city.name}, ${emirate.name} — professional ${service.name.toLowerCase()} by Madinat Alhaya cleaning services`}
+                      title={`${service.name} in ${city.name} | Madinat Alhaya`}
                       fill
                       style={{ objectFit: 'cover' }}
                       loading="lazy"
@@ -444,7 +444,7 @@ export default async function CityPage({ params }: Props) {
                     Local Trust
                   </div>
                   <h2 style={{ fontFamily: 'var(--font-josefin)', fontSize: '1.25rem', fontWeight: 700, color: '#fff', lineHeight: 1.2 }}>
-                    Why {city.name} Residents Choose Al Haya
+                    Why {city.name} Residents Choose Madinat Alhaya
                   </h2>
                 </div>
               </div>
@@ -582,7 +582,7 @@ export default async function CityPage({ params }: Props) {
               </div>
             </div>
             <p style={{ color: '#6b7280', fontSize: '0.98rem', marginBottom: '1.25rem', paddingLeft: '1rem', fontWeight: 400, marginTop: 0 }}>
-              Al Haya provides professional cleaning across all areas of {emirate.name} — same-day service available.
+              Madinat Alhaya provides professional cleaning across all areas of {emirate.name} — same-day service available.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.55rem' }}>
               {siblingCities.map((c) => (
@@ -641,7 +641,7 @@ export default async function CityPage({ params }: Props) {
               marginBottom: '1.75rem',
               fontFamily: 'monospace',
             }}>
-              "Hi Al Haya, I want to book a cleaning service in {city.name}..."
+              "Hi Madinat Alhaya, I want to book a cleaning service in {city.name}..."
             </div>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a

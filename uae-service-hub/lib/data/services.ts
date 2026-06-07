@@ -65,11 +65,11 @@ Upholstery is an investment. Dust particles act like tiny sandpaper, grinding do
 
 Eliminating Stubborn Odors
 
-Dubai's heat can sometimes lead to trapped moisture and musty smells within sofa cushions. Our professional-grade deodorizers and shampooing treatments neutralize these odors at the source — not just masking them. This is why residents across Dubai, Sharjah, and Abu Dhabi trust Al Haya for their sofa cleaning services.
+Dubai's heat can sometimes lead to trapped moisture and musty smells within sofa cushions. Our professional-grade deodorizers and shampooing treatments neutralize these odors at the source — not just masking them. This is why residents across Dubai, Sharjah, and Abu Dhabi trust Madinat Alhaya for their sofa cleaning services.
 
 Our Sofa Cleaning Services Cover All UAE Emirates
 
-Al Haya provides the best sofa cleaning services Dubai, Abu Dhabi, Sharjah, and across all 7 UAE Emirates. Our sofa cleaning services Dubai team is available 7 days a week with same-day booking. We offer carpet sofa cleaning services as a package deal, covering both your sofas and carpets in a single visit. Our sofa cleaning services cost is transparent — no hidden charges, free quotes via WhatsApp.
+Madinat Alhaya provides the best sofa cleaning services Dubai, Abu Dhabi, Sharjah, and across all 7 UAE Emirates. Our sofa cleaning services Dubai team is available 7 days a week with same-day booking. We offer carpet sofa cleaning services as a package deal, covering both your sofas and carpets in a single visit. Our sofa cleaning services cost is transparent — no hidden charges, free quotes via WhatsApp.
 
 We handle all sofa types: L-shaped, sectional, 3-seater, corner sofas, fabric recliners, velvet sofas, leather sofas, and modular configurations. Our quick-dry technology means your sofa is ready to use within 3–4 hours after our professional sofa cleaning services at home.`,
     benefits: [
@@ -152,7 +152,7 @@ We handle all sofa types: L-shaped, sectional, 3-seater, corner sofas, fabric re
       {
         headingLevel: 'h2',
         heading: 'Our Specialized Sofa Cleaning Process',
-        text: 'Al Haya\'s sofa cleaning services Dubai use a multi-stage process tailored to your specific fabric type and soiling level — delivering results far beyond what any home cleaning method can achieve.',
+        text: 'Madinat Alhaya\'s sofa cleaning services Dubai use a multi-stage process tailored to your specific fabric type and soiling level — delivering results far beyond what any home cleaning method can achieve.',
       },
       {
         headingLevel: 'h3',
@@ -206,13 +206,13 @@ We handle all sofa types: L-shaped, sectional, 3-seater, corner sofas, fabric re
       },
       {
         headingLevel: 'h2',
-        heading: 'Why Choose Al Haya for Sofa Deep Cleaning in Dubai?',
-        text: 'Al Haya is the trusted sofa cleaning services Dubai provider with 500+ satisfied residential and commercial clients across UAE.',
+        heading: 'Why Choose Madinat Alhaya for Sofa Deep Cleaning in Dubai?',
+        text: 'Madinat Alhaya is the trusted sofa cleaning services Dubai provider with 500+ satisfied residential and commercial clients across UAE.',
       },
       {
         headingLevel: 'h3',
         heading: 'Certified Technicians and Advanced Equipment',
-        text: 'All Al Haya sofa cleaning technicians are trained, background-checked, and equipped with industrial-grade hot-water extraction machines and professional sofa cleaning products — far beyond any household cleaning method.',
+        text: 'All Madinat Alhaya sofa cleaning technicians are trained, background-checked, and equipped with industrial-grade hot-water extraction machines and professional sofa cleaning products — far beyond any household cleaning method.',
       },
       {
         headingLevel: 'h3',
@@ -259,7 +259,7 @@ Carpet shampooing is ideal for surface-level stains and refreshing the appearanc
 
 Our Carpet Cleaning Services Cover All UAE
 
-Al Haya is the best carpet cleaning company Dubai residents and businesses trust. We provide carpet cleaning services in Dubai, carpet cleaning services in Abu Dhabi, and professional carpet cleaning services in Sharjah across all 7 UAE Emirates. Whether you need home carpet cleaning services, office carpet cleaning services, commercial carpet cleaning services, or house cleaning and carpet cleaning services together — our certified teams deliver consistent results.
+Madinat Alhaya is the best carpet cleaning company Dubai residents and businesses trust. We provide carpet cleaning services in Dubai, carpet cleaning services in Abu Dhabi, and professional carpet cleaning services in Sharjah across all 7 UAE Emirates. Whether you need home carpet cleaning services, office carpet cleaning services, commercial carpet cleaning services, or house cleaning and carpet cleaning services together — our certified teams deliver consistent results.
 
 We also offer sofa carpet cleaning Dubai and carpet and sofa cleaning Dubai as a combined package, saving you time and cost. Our dry carpet cleaning services use low-moisture techniques ideal for delicate rugs and quick-turnaround commercial spaces. As an affordable carpet cleaning services provider, we keep our pricing transparent — no hidden charges, free quotes via WhatsApp.
 
@@ -334,7 +334,7 @@ A clean carpet is the foundation of a healthy UAE home. By investing in carpet c
     shortDescription: 'Best mattress cleaning services Dubai — eliminate 99.9% dust mites, bacteria & stains. Professional mattress cleaning services Dubai from AED 150. Book your sanitization today!',
     fullDescription: `The Ultimate Guide to a Healthier Sleep
 
-In a city as vibrant and fast-paced as Dubai, quality sleep is your most valuable asset. However, while you might diligently wash your linens, the mattress beneath them often becomes a forgotten reservoir for allergens and debris. With Dubai's unique combination of fine desert dust, high humidity, and constant AC usage, a standard vacuum is not enough to maintain a truly hygienic sleep environment. Professional mattress deep cleaning in Dubai is no longer a luxury — it is a health necessity. Whether you are searching for mattress cleaning services Dubai or a trusted mattress deep cleaner, Al Haya delivers results.
+In a city as vibrant and fast-paced as Dubai, quality sleep is your most valuable asset. However, while you might diligently wash your linens, the mattress beneath them often becomes a forgotten reservoir for allergens and debris. With Dubai's unique combination of fine desert dust, high humidity, and constant AC usage, a standard vacuum is not enough to maintain a truly hygienic sleep environment. Professional mattress deep cleaning in Dubai is no longer a luxury — it is a health necessity. Whether you are searching for mattress cleaning services Dubai or a trusted mattress deep cleaner, Madinat Alhaya delivers results.
 
 The Invisible Guests in Your Bed
 
@@ -362,7 +362,7 @@ Our mattress deep cleaning service follows a rigorous four-step protocol: indust
 
 Frequency and Pricing in Dubai
 
-For optimal health, professional mattress deep cleaning every 6 months is recommended. In Dubai, professional mattress cleaning services range from AED 150 to AED 250 depending on size (Single, Queen, or King) and the level of sanitization required. Al Haya provides mattress deep cleaning across all 7 UAE Emirates — Dubai, Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and UAQ.
+For optimal health, professional mattress deep cleaning every 6 months is recommended. In Dubai, professional mattress cleaning services range from AED 150 to AED 250 depending on size (Single, Queen, or King) and the level of sanitization required. Madinat Alhaya provides mattress deep cleaning across all 7 UAE Emirates — Dubai, Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and UAQ.
 
 Investing in mattress deep cleaning is an investment in your long-term respiratory health and sleep quality. By removing millions of microscopic irritants, you transform your bedroom back into the sanctuary it was meant to be.`,
     benefits: [
@@ -440,7 +440,7 @@ Investing in mattress deep cleaning is an investment in your long-term respirato
       {
         headingLevel: 'h2',
         heading: 'Our Comprehensive 4-Step Mattress Deep Cleaning Process',
-        text: 'Al Haya\'s mattress deep cleaning service follows a rigorous protocol developed for the UAE climate — combining industrial equipment with eco-friendly solutions for a result that goes far beyond surface cleaning.',
+        text: 'Madinat Alhaya\'s mattress deep cleaning service follows a rigorous protocol developed for the UAE climate — combining industrial equipment with eco-friendly solutions for a result that goes far beyond surface cleaning.',
       },
       {
         headingLevel: 'h3',
@@ -495,7 +495,7 @@ Investing in mattress deep cleaning is an investment in your long-term respirato
       {
         headingLevel: 'h2',
         heading: 'Serving All Major Areas Across Dubai',
-        text: 'Al Haya\'s mattress deep cleaning Dubai teams cover every major area and community. Same-day service is available across most locations.',
+        text: 'Madinat Alhaya\'s mattress deep cleaning Dubai teams cover every major area and community. Same-day service is available across most locations.',
       },
       {
         headingLevel: 'h3',
@@ -523,11 +523,11 @@ Investing in mattress deep cleaning is an investment in your long-term respirato
 
 Living in a city as vibrant and fast-paced as Dubai comes with its perks, but it also brings unique challenges for homeowners. Between frequent sandstorms, high humidity, and 24/7 reliance on air conditioning, your curtains do far more than look pretty — they act as a giant air filter for your home.
 
-Over time, these fabrics trap dust, allergens, and pollutants that impact both your indoor air quality and the lifespan of your window treatments. Al Haya — the trusted curtain cleaning company Dubai residents choose — provides professional curtain cleaning services in Dubai to maintain a healthier, fresher home year-round.
+Over time, these fabrics trap dust, allergens, and pollutants that impact both your indoor air quality and the lifespan of your window treatments. Madinat Alhaya — the trusted curtain cleaning company Dubai residents choose — provides professional curtain cleaning services in Dubai to maintain a healthier, fresher home year-round.
 
 Why Your Curtains Need Special Care in Dubai
 
-In the UAE, curtains are exposed to environmental factors not common elsewhere. Fine desert sand finds its way into fabric fibers even with windows closed — making curtains look dull and feel gritty. AC vents blow dust directly onto drapes, and combined with humidity, this can lead to musty smells or mold growth in delicate fabrics. The intense Dubai sun also makes fabrics brittle and fades colors. Regular curtain cleaning Dubai removes these abrasive dust particles that accelerate wear and tear. Whether you need home curtain cleaning services or a professional curtain cleaning service near me, Al Haya is your trusted curtain cleaner across UAE.
+In the UAE, curtains are exposed to environmental factors not common elsewhere. Fine desert sand finds its way into fabric fibers even with windows closed — making curtains look dull and feel gritty. AC vents blow dust directly onto drapes, and combined with humidity, this can lead to musty smells or mold growth in delicate fabrics. The intense Dubai sun also makes fabrics brittle and fades colors. Regular curtain cleaning Dubai removes these abrasive dust particles that accelerate wear and tear. Whether you need home curtain cleaning services or a professional curtain cleaning service near me, Madinat Alhaya is your trusted curtain cleaner across UAE.
 
 On-Site vs. Off-Site Curtain Cleaning
 
@@ -545,7 +545,7 @@ How Much Does Curtain Cleaning Cost in Dubai?
 
 Our curtain cleaning Dubai pricing is competitive and transparent. By square meter: AED 12 to AED 30 per sq. m. depending on fabric and method. Flat rate per piece: from AED 50 to AED 100 per curtain panel. Free on-site inspection and quote available via WhatsApp.
 
-Al Haya is the best curtain cleaning company covering curtain cleaning Dubai, curtain cleaning Abu Dhabi, curtain cleaning Sharjah, and all 7 UAE Emirates — homes, villas, hotels, and commercial premises. Book our professional curtain cleaning services today and breathe easier tomorrow.`,
+Madinat Alhaya is the best curtain cleaning company covering curtain cleaning Dubai, curtain cleaning Abu Dhabi, curtain cleaning Sharjah, and all 7 UAE Emirates — homes, villas, hotels, and commercial premises. Book our professional curtain cleaning services today and breathe easier tomorrow.`,
     benefits: [
       'Best curtain cleaning Dubai — on-site steam & off-site dry cleaning',
       'Professional curtain cleaning service near me across all UAE',
@@ -630,7 +630,7 @@ Al Haya is the best curtain cleaning company covering curtain cleaning Dubai, cu
       {
         headingLevel: 'h2',
         heading: 'Our Expert Curtain Cleaning Methodologies',
-        text: 'Al Haya offers two specialist curtain cleaning services in Dubai tailored to your fabric type, schedule, and level of soiling — ensuring the best result for every curtain in your home.',
+        text: 'Madinat Alhaya offers two specialist curtain cleaning services in Dubai tailored to your fabric type, schedule, and level of soiling — ensuring the best result for every curtain in your home.',
       },
       {
         headingLevel: 'h3',
@@ -650,7 +650,7 @@ Al Haya is the best curtain cleaning company covering curtain cleaning Dubai, cu
       {
         headingLevel: 'h2',
         heading: 'Transparent Curtain Cleaning Prices in Dubai',
-        text: 'Al Haya believes in fully transparent pricing — no hidden charges, no surprises. Get a free quote via WhatsApp before booking any curtain cleaning service Dubai.',
+        text: 'Madinat Alhaya believes in fully transparent pricing — no hidden charges, no surprises. Get a free quote via WhatsApp before booking any curtain cleaning service Dubai.',
       },
       {
         headingLevel: 'h3',
@@ -670,7 +670,7 @@ Al Haya is the best curtain cleaning company covering curtain cleaning Dubai, cu
       {
         headingLevel: 'h2',
         heading: 'The Benefits of Choosing Our Dubai Cleaning Team',
-        text: 'With 500+ satisfied clients across Dubai, Abu Dhabi, and Sharjah, Al Haya is the best curtain cleaning company for quality, reliability, and care.',
+        text: 'With 500+ satisfied clients across Dubai, Abu Dhabi, and Sharjah, Madinat Alhaya is the best curtain cleaning company for quality, reliability, and care.',
       },
       {
         headingLevel: 'h3',
@@ -727,7 +727,7 @@ Why Car Seats Cleaning Services are Essential in the UAE
 
 Dubai's extreme summer heat — regularly exceeding 45°C — accelerates the deterioration of both leather and fabric car seats. Heat causes leather to dry out and crack, while fabric seats trap sweat, dust, and food particles deep within the fibers. UAE vehicles also suffer from AC mold buildup, creating musty odors that standard car washes cannot address.
 
-Our mobile car seats cleaning service uses hot-water extraction for fabric seats and specialist leather car seat cleaner products formulated for the UAE climate. We service all vehicle types — sedans, SUVs, 4x4s, minivans, pickup trucks, and luxury cars — and we come to your home, office, or any convenient location. Whether you need car seats cleaning Dubai, car seats cleaning Sharjah, or car seats cleaning Abu Dhabi — Al Haya covers all UAE Emirates.
+Our mobile car seats cleaning service uses hot-water extraction for fabric seats and specialist leather car seat cleaner products formulated for the UAE climate. We service all vehicle types — sedans, SUVs, 4x4s, minivans, pickup trucks, and luxury cars — and we come to your home, office, or any convenient location. Whether you need car seats cleaning Dubai, car seats cleaning Sharjah, or car seats cleaning Abu Dhabi — Madinat Alhaya covers all UAE Emirates.
 
 Fabric Car Seats Deep Cleaning
 
@@ -741,7 +741,7 @@ Full Car Interior Detailing Package
 
 Beyond car seats cleaning services, our full interior package covers dashboard and console detailing, door panels and handles, air vents deep cleaning, roof lining spot cleaning, floor mats and carpets hot-water extraction, all glass surfaces streak-free cleaning, and ozone-based deodorization for complete odor elimination.
 
-Al Haya provides car seats cleaning services across all 7 UAE Emirates — Dubai, Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and UAQ — with same-day mobile service available.`,
+Madinat Alhaya provides car seats cleaning services across all 7 UAE Emirates — Dubai, Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and UAQ — with same-day mobile service available.`,
     benefits: [
       'Car seats cleaning Dubai, Sharjah & Abu Dhabi — mobile service',
       'Car seat steam cleaner & hot-water extraction for fabric seats',
@@ -862,7 +862,7 @@ Al Haya provides car seats cleaning services across all 7 UAE Emirates — Dubai
       {
         headingLevel: 'h2',
         heading: 'Why Choose Our Car Seats Cleaning Services in Dubai?',
-        text: 'Al Haya is the trusted car seats cleaning service near me for residents across Dubai Marina, Downtown, JLT, Business Bay, Jumeirah, Al Quoz, and all UAE Emirates.',
+        text: 'Madinat Alhaya is the trusted car seats cleaning service near me for residents across Dubai Marina, Downtown, JLT, Business Bay, Jumeirah, Al Quoz, and all UAE Emirates.',
       },
       {
         headingLevel: 'h3',
@@ -985,7 +985,7 @@ Strategic Benefits of Villa Deep Cleaning Dubai
 
 Investing in professional villa deep cleaning services Dubai twice a year offers more than aesthetics. Health and Wellness: significant reduction in indoor allergens — vital for residents with asthma or dust sensitivities. Asset Protection: regular villa deep cleaning Abu Dhabi and Dubai prevents permanent staining of expensive flooring. Property Value: for Palm Jumeirah, Emirates Hills, and Dubai Hills Estate villas, a spotless maintenance record maximizes rental yields and resale value.
 
-Al Haya is the best villa deep cleaning services Dubai, Abu Dhabi, and Sharjah provider — serving all villa types across all 7 UAE Emirates with Dubai Municipality approved protocols and eco-friendly, biodegradable products.`,
+Madinat Alhaya is the best villa deep cleaning services Dubai, Abu Dhabi, and Sharjah provider — serving all villa types across all 7 UAE Emirates with Dubai Municipality approved protocols and eco-friendly, biodegradable products.`,
     benefits: [
       'Best villa deep cleaning services Dubai from AED 399',
       'Villa deep cleaning Dubai, Abu Dhabi & Sharjah covered',
@@ -1107,7 +1107,7 @@ Al Haya is the best villa deep cleaning services Dubai, Abu Dhabi, and Sharjah p
       {
         headingLevel: 'h2',
         heading: 'How to Choose the Best Villa Deep Cleaning Company in Dubai',
-        text: 'With hundreds of providers in the market, Al Haya stands out as the best villa deep cleaning services Dubai provider for the following reasons.',
+        text: 'With hundreds of providers in the market, Madinat Alhaya stands out as the best villa deep cleaning services Dubai provider for the following reasons.',
       },
       {
         headingLevel: 'h3',
@@ -1117,7 +1117,7 @@ Al Haya is the best villa deep cleaning services Dubai, Abu Dhabi, and Sharjah p
       {
         headingLevel: 'h3',
         heading: 'Trained Staff & Transparent Pricing',
-        text: 'All Al Haya villa deep cleaning technicians are in-house employees with specific training for luxury villa materials. Our villa deep cleaning services Dubai price is fixed and transparent — no estimates that change upon arrival. Square-footage-based pricing for 3, 4, and 5-bedroom villas.',
+        text: 'All Madinat Alhaya villa deep cleaning technicians are in-house employees with specific training for luxury villa materials. Our villa deep cleaning services Dubai price is fixed and transparent — no estimates that change upon arrival. Square-footage-based pricing for 3, 4, and 5-bedroom villas.',
       },
     ],
     images: ['/images/services/villa-deep-cleaning.webp'],
@@ -1130,7 +1130,7 @@ Al Haya is the best villa deep cleaning services Dubai, Abu Dhabi, and Sharjah p
     slug: 'apartment-cleaning',
     category: 'commercial',
     shortDescription: 'Professional apartment cleaning service in UAE. Regular, deep, and move-in/move-out cleaning packages.',
-    fullDescription: `Our apartment cleaning service offers flexible packages designed to meet every need — from a quick regular maintenance clean to a comprehensive deep clean or a move-in/move-out clean that restores the property to its original condition. Whether you are a resident looking for a reliable regular cleaning team or a landlord or tenant preparing for a handover, Al Haya provides consistent, professional results across all UAE Emirates.
+    fullDescription: `Our apartment cleaning service offers flexible packages designed to meet every need — from a quick regular maintenance clean to a comprehensive deep clean or a move-in/move-out clean that restores the property to its original condition. Whether you are a resident looking for a reliable regular cleaning team or a landlord or tenant preparing for a handover, Madinat Alhaya provides consistent, professional results across all UAE Emirates.
 
 Our regular apartment cleaning package covers all the essential tasks needed to keep your home fresh and organized between deep cleans: dusting all surfaces, vacuuming carpets and rugs, mopping hard floors, cleaning bathroom surfaces, wiping kitchen counters and hob, emptying bins, cleaning mirrors, and general tidying. This package is ideal for weekly or fortnightly bookings and can be customized to your specific priorities.
 
@@ -1138,7 +1138,7 @@ The deep cleaning package goes significantly further, addressing everything in t
 
 Our move-in and move-out cleaning is the most thorough level — designed to meet the requirements of UAE tenancy agreements and property handovers. The team deep-cleans every surface, fixture, and fitting in the apartment, leaving it in a verifiably clean condition. We can provide a detailed cleaning checklist and completion report for landlord or agency sign-off.
 
-All packages are available for studio apartments through to 4+ bedroom apartments, penthouses, and duplexes. Our cleaning teams are background-checked, uniformed, and trained to Al Haya's quality standards, ensuring a consistent result every visit.`,
+All packages are available for studio apartments through to 4+ bedroom apartments, penthouses, and duplexes. Our cleaning teams are background-checked, uniformed, and trained to Madinat Alhaya's quality standards, ensuring a consistent result every visit.`,
     benefits: [
       'Regular, deep, and move-in/move-out packages',
       'Customizable to your specific requirements',
@@ -1190,7 +1190,7 @@ All packages are available for studio apartments through to 4+ bedroom apartment
     slug: 'office-cleaning',
     category: 'commercial',
     shortDescription: 'Professional office cleaning services in UAE. Daily, weekly, and deep cleaning for commercial spaces.',
-    fullDescription: `A consistently clean and well-maintained office environment directly influences employee productivity, morale, and health — and creates a strong first impression on visiting clients and partners. Al Haya's professional office cleaning service covers all types of commercial spaces across UAE, from small boutique offices and co-working spaces to large corporate floors, government offices, and retail premises.
+    fullDescription: `A consistently clean and well-maintained office environment directly influences employee productivity, morale, and health — and creates a strong first impression on visiting clients and partners. Madinat Alhaya's professional office cleaning service covers all types of commercial spaces across UAE, from small boutique offices and co-working spaces to large corporate floors, government offices, and retail premises.
 
 Our office cleaning packages are designed to be flexible around your business operations. We offer early-morning cleans before staff arrive, evening cleans after the working day, and weekend deep cleans — all scheduled to minimize disruption to your team. For large corporate clients, we can assign a dedicated team and site supervisor who manages the cleaning schedule and quality on an ongoing basis.
 
@@ -1240,7 +1240,7 @@ We hold comprehensive liability insurance and our cleaning teams undergo regular
       },
       {
         question: 'Are your cleaning staff vetted?',
-        answer: 'All Al Haya cleaning staff are background-checked, reference-verified, uniformed, and trained to our quality standards before being deployed to client premises.',
+        answer: 'All Madinat Alhaya cleaning staff are background-checked, reference-verified, uniformed, and trained to our quality standards before being deployed to client premises.',
       },
     ],
     images: ['/images/services/office-cleaning.webp'],

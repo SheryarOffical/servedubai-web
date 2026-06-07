@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Short service label (drop "& ..." suffix) + omit emirate to keep titles concise (<60 chars)
   const shortService = service.name.split(/[&]/)[0].trim()
   return buildMetadata({
-    title: `${shortService} in ${city.name} | Al Haya`,
+    title: `${shortService} in ${city.name} | Madinat Alhaya`,
     description: `Professional ${service.name.toLowerCase()} in ${city.name}, ${emirate.name}. Same-day service, certified technicians, eco-friendly products. Free quote — call ${SITE_CONFIG.phone}.`.slice(
       0,
       158
@@ -129,8 +129,8 @@ export default async function ServiceAreaPage({ params }: Props) {
           {service.images[0] && (
             <Image
               src={service.images[0]}
-              alt={`${service.name} in ${city.name}, ${emirate.name} — professional ${service.name.toLowerCase()} by Al Haya for ${local?.propertyType ?? 'homes and offices'}`}
-              title={`${service.name} in ${city.name} | Al Haya`}
+              alt={`${service.name} in ${city.name}, ${emirate.name} — professional ${service.name.toLowerCase()} by Madinat Alhaya for ${local?.propertyType ?? 'homes and offices'}`}
+              title={`${service.name} in ${city.name} | Madinat Alhaya`}
               fill
               priority
               style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -153,7 +153,7 @@ export default async function ServiceAreaPage({ params }: Props) {
 
         {/* ── INTRO + CTA ── */}
         <p className="city-page-sub" style={{ color: '#9ca3af', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '1rem' }}>
-          Looking for professional <strong style={{ color: '#c9a84c' }}>{service.name.toLowerCase()}</strong> in {city.name}? Al Haya
+          Looking for professional <strong style={{ color: '#c9a84c' }}>{service.name.toLowerCase()}</strong> in {city.name}? Madinat Alhaya
           provides expert, same-day {service.name.toLowerCase()} for {local?.propertyType ?? 'homes, villas and offices'} across {city.name}, {emirate.name}.
           Our certified technicians use eco-friendly products and bring all equipment to your door — with transparent pricing and a 100% satisfaction guarantee.
         </p>

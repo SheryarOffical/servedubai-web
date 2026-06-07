@@ -18,13 +18,13 @@ export const getWhatsAppLink = (service?: string, city?: string): string => {
   let msg: string
 
   if (service && city) {
-    msg = `Hi Al Haya, I want to book ${service} in ${city}. Please share pricing and available time slots.`
+    msg = `Hi Madinat Alhaya, I want to book ${service} in ${city}. Please share pricing and available time slots.`
   } else if (service) {
-    msg = `Hi Al Haya, I want to book ${service}. Please share your pricing and available slots.`
+    msg = `Hi Madinat Alhaya, I want to book ${service}. Please share your pricing and available slots.`
   } else if (city) {
-    msg = `Hi Al Haya, I want to book a cleaning service in ${city}. Please share your services and pricing.`
+    msg = `Hi Madinat Alhaya, I want to book a cleaning service in ${city}. Please share your services and pricing.`
   } else {
-    msg = `Hi Al Haya, I need cleaning services. Please contact me with details and pricing.`
+    msg = `Hi Madinat Alhaya, I need cleaning services. Please contact me with details and pricing.`
   }
 
   return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`

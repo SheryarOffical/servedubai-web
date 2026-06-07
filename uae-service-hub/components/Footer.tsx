@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="p-footer-inner">
         {/* Large brand name — exact Poseify display-4 */}
         <Link href="/" className="p-footer-logo">
-          Al Haya
+          Madinat Alhaya
         </Link>
 
         {/* Social / CTA icon buttons — exact Poseify square outline */}
@@ -111,7 +111,7 @@ export default function Footer() {
         <p className="p-footer-copy">
           &copy; {year}{' '}
           <Link href="/" style={{ borderBottom: '1px solid #6b7280', color: '#6b7280', textDecoration: 'none' }}>
-            Al Haya Cleaning Services
+            Madinat Alhaya Building Cleaning Services
           </Link>
           , All Rights Reserved.
         </p>

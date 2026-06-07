@@ -11,7 +11,7 @@ import { SITE_CONFIG } from '@/lib/data/constants'
 export const metadata: Metadata = buildMetadata({
   title: 'About Us | Professional Cleaning Services Dubai & UAE',
   description:
-    'Learn about Al Haya — Dubai\'s trusted professional cleaning company serving all 7 UAE Emirates. Expert villa, sofa, carpet, mattress cleaning & marble polishing. Vetted technicians. Free quotes.',
+    'Learn about Madinat Alhaya — Dubai\'s trusted professional cleaning company serving all 7 UAE Emirates. Expert villa, sofa, carpet, mattress cleaning & marble polishing. Vetted technicians. Free quotes.',
   path: '/about',
 })
 
@@ -21,12 +21,12 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'What services does Al Haya provide in Dubai?', acceptedAnswer: { '@type': 'Answer', text: 'Al Haya provides 11 professional cleaning services across UAE: villa & apartment deep cleaning, sofa & upholstery cleaning, mattress sanitization, carpet & rug cleaning, marble polishing & restoration, curtain cleaning, dining chair cleaning, car interior detailing, office cleaning, and restaurant kitchen cleaning.' } },
-    { '@type': 'Question', name: 'What areas in Dubai does Al Haya service?', acceptedAnswer: { '@type': 'Answer', text: 'We serve all major areas of Dubai including Dubai Marina, JBR, Downtown Dubai, Business Bay, Jumeirah, Arabian Ranches, Palm Jumeirah, JLT, JVC, Silicon Oasis, and Deira. We also extend services to Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and Umm Al Quwain.' } },
-    { '@type': 'Question', name: 'Are Al Haya\'s cleaning products safe for children and pets?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. We use only eco-friendly, non-toxic, and biodegradable cleaning solutions that are completely safe for children, pets, and family members with sensitivities. All products meet international safety standards.' } },
-    { '@type': 'Question', name: 'Does Al Haya offer same-day cleaning services?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Al Haya offers same-day cleaning services based on availability. Contact us via WhatsApp or phone, describe your requirement, and we will deploy a team the same day whenever possible across Dubai and UAE.' } },
-    { '@type': 'Question', name: 'How does Al Haya handle Dubai\'s sand and dust problems?', acceptedAnswer: { '@type': 'Answer', text: 'We use HEPA-filtered vacuums that capture fine sand particles, industrial extraction for carpets and upholstery, and specialized AC vent cleaning. We recommend post-sandstorm deep cleans to remove the fine desert dust that settles on every surface.' } },
-    { '@type': 'Question', name: 'What is Al Haya\'s satisfaction guarantee?', acceptedAnswer: { '@type': 'Answer', text: 'We offer a 100% satisfaction guarantee on all services. If you are not completely satisfied with any aspect of our work, we will return to address your concerns at no additional charge.' } },
+    { '@type': 'Question', name: 'What services does Madinat Alhaya provide in Dubai?', acceptedAnswer: { '@type': 'Answer', text: 'Madinat Alhaya provides 11 professional cleaning services across UAE: villa & apartment deep cleaning, sofa & upholstery cleaning, mattress sanitization, carpet & rug cleaning, marble polishing & restoration, curtain cleaning, dining chair cleaning, car interior detailing, office cleaning, and restaurant kitchen cleaning.' } },
+    { '@type': 'Question', name: 'What areas in Dubai does Madinat Alhaya service?', acceptedAnswer: { '@type': 'Answer', text: 'We serve all major areas of Dubai including Dubai Marina, JBR, Downtown Dubai, Business Bay, Jumeirah, Arabian Ranches, Palm Jumeirah, JLT, JVC, Silicon Oasis, and Deira. We also extend services to Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and Umm Al Quwain.' } },
+    { '@type': 'Question', name: 'Are Madinat Alhaya\'s cleaning products safe for children and pets?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. We use only eco-friendly, non-toxic, and biodegradable cleaning solutions that are completely safe for children, pets, and family members with sensitivities. All products meet international safety standards.' } },
+    { '@type': 'Question', name: 'Does Madinat Alhaya offer same-day cleaning services?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Madinat Alhaya offers same-day cleaning services based on availability. Contact us via WhatsApp or phone, describe your requirement, and we will deploy a team the same day whenever possible across Dubai and UAE.' } },
+    { '@type': 'Question', name: 'How does Madinat Alhaya handle Dubai\'s sand and dust problems?', acceptedAnswer: { '@type': 'Answer', text: 'We use HEPA-filtered vacuums that capture fine sand particles, industrial extraction for carpets and upholstery, and specialized AC vent cleaning. We recommend post-sandstorm deep cleans to remove the fine desert dust that settles on every surface.' } },
+    { '@type': 'Question', name: 'What is Madinat Alhaya\'s satisfaction guarantee?', acceptedAnswer: { '@type': 'Answer', text: 'We offer a 100% satisfaction guarantee on all services. If you are not completely satisfied with any aspect of our work, we will return to address your concerns at no additional charge.' } },
   ],
 }
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
       {/* ── HERO ── */}
       <div className="page-hero-wrap" style={{ position: 'relative', height: 'clamp(360px, 52vh, 500px)', overflow: 'hidden' }}>
-        <Image src="/images/hero/professional-cleaning-services-UAE.webp" alt="About Al Haya — professional cleaning services Dubai UAE" fill priority className="object-cover" sizes="100vw" />
+        <Image src="/images/hero/professional-cleaning-services-UAE.webp" alt="About Madinat Alhaya — professional cleaning services Dubai UAE" fill priority className="object-cover" sizes="100vw" />
         <div className="hero-overlay" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.88) 100%)' }} />
         <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '90px 1.5rem 2rem' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.875rem' }}>
@@ -47,7 +47,7 @@ export default function AboutPage() {
             <div style={{ width: '36px', height: '1px', background: '#c9a84c' }} />
           </div>
           <h1 style={{ fontFamily: 'var(--font-josefin)', fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: '0.875rem', textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
-            About Al Haya Cleaning Services
+            About Madinat Alhaya Building Cleaning Services
           </h1>
           <p style={{ color: '#d1d5db', fontSize: '1rem', maxWidth: '520px', lineHeight: 1.7, margin: 0 }}>
             Professional cleaning services across Dubai &amp; all 7 UAE Emirates — certified technicians, eco-friendly solutions, same-day availability.
@@ -80,10 +80,10 @@ export default function AboutPage() {
                 Our Mission — Delivering Excellence in Every Clean
               </h3>
               <p className="about-body-p" style={{ color: '#9ca3af', lineHeight: 1.85, marginBottom: '1rem', fontSize: '0.9375rem' }}>
-                Al Haya Cleaning Services was built on a simple belief — that every home and business in Dubai deserves a truly professional clean. In a city where desert sand, hard water, and high humidity create unique cleaning challenges, we developed services that go far beyond standard dusting and mopping.
+                Madinat Alhaya Building Cleaning Services was built on a simple belief — that every home and business in Dubai deserves a truly professional clean. In a city where desert sand, hard water, and high humidity create unique cleaning challenges, we developed services that go far beyond standard dusting and mopping.
               </p>
               <p className="about-body-p" style={{ color: '#9ca3af', lineHeight: 1.85, marginBottom: '1.5rem', fontSize: '0.9375rem' }}>
-                Today, Al Haya serves thousands of residential and commercial clients across all 7 UAE Emirates — from luxury villas in Arabian Ranches to high-rise apartments in Dubai Marina. Our certified, background-checked technicians bring professional-grade equipment, eco-friendly solutions, and genuine care to every job.
+                Today, Madinat Alhaya serves thousands of residential and commercial clients across all 7 UAE Emirates — from luxury villas in Arabian Ranches to high-rise apartments in Dubai Marina. Our certified, background-checked technicians bring professional-grade equipment, eco-friendly solutions, and genuine care to every job.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem 1.5rem' }}>
                 {['11 professional services','All 7 UAE Emirates','Same-day availability','Eco-friendly solutions','Vetted technicians','Free instant quote'].map((feat) => (
@@ -95,7 +95,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="p-about-img" style={{ aspectRatio: '4/3', minHeight: '260px' }}>
-              <Image src="/images/hero/villa-apartment-cleaning-services.webp" alt="Al Haya professional cleaning team Dubai villa" fill className="object-cover" sizes="(max-width:768px) 100vw, 50vw" loading="lazy" />
+              <Image src="/images/hero/villa-apartment-cleaning-services.webp" alt="Madinat Alhaya professional cleaning team Dubai villa" fill className="object-cover" sizes="(max-width:768px) 100vw, 50vw" loading="lazy" />
             </div>
           </div>
         </div>
@@ -152,19 +152,19 @@ export default function AboutPage() {
           <div style={{ textAlign: 'center', marginBottom: '2.75rem' }}>
             <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>Our Standards</div>
             <h2 style={{ fontFamily: 'var(--font-josefin)', fontSize: 'clamp(1.4rem, 2.8vw, 2rem)', fontWeight: 700, color: '#fff', marginBottom: '0.6rem' }}>
-              What Makes Al Haya Different from Other Cleaning Companies
+              What Makes Madinat Alhaya Different from Other Cleaning Companies
             </h2>
             <p style={{ color: '#6b7280', fontSize: '0.9rem', maxWidth: '520px', margin: '0 auto' }}>
-              Not all cleaning services are equal. Here's what sets Al Haya apart across Dubai and UAE.
+              Not all cleaning services are equal. Here's what sets Madinat Alhaya apart across Dubai and UAE.
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.1rem' }}>
             {[
-              { n: '01', title: 'Experienced & Background-Checked Professionals', desc: 'Every Al Haya technician passes rigorous background verification and comprehensive training before servicing any property. We don\'t learn on your home — our staff arrives fully prepared.' },
+              { n: '01', title: 'Experienced & Background-Checked Professionals', desc: 'Every Madinat Alhaya technician passes rigorous background verification and comprehensive training before servicing any property. We don\'t learn on your home — our staff arrives fully prepared.' },
               { n: '02', title: 'Advanced Commercial-Grade Equipment', desc: 'We invest in truck-mounted carpet cleaners, hospital-grade HEPA vacuum systems, Italian diamond marble polishing machines, and industrial steam cleaners — not basic portable units.' },
               { n: '03', title: '100% Eco-Friendly & Non-Toxic Solutions', desc: 'Our biodegradable, non-toxic cleaning products are powerful on stains but completely safe for children, pets, and allergy sufferers. Zero harsh chemicals — zero compromise on results.' },
               { n: '04', title: 'Transparent Pricing with No Hidden Fees', desc: 'Every quote is detailed and final. No surprise charges after the job. No add-on fees you weren\'t told about. Just honest, upfront pricing with professional results.' },
-              { n: '05', title: 'Comprehensive Insurance & Satisfaction Guarantee', desc: 'Al Haya carries full liability insurance on all services. Not satisfied? We return at no extra charge. Your peace of mind is our standard practice — not an exception.' },
+              { n: '05', title: 'Comprehensive Insurance & Satisfaction Guarantee', desc: 'Madinat Alhaya carries full liability insurance on all services. Not satisfied? We return at no extra charge. Your peace of mind is our standard practice — not an exception.' },
               { n: '06', title: 'IICRC-Standard Cleaning Techniques', desc: 'We follow international IICRC (Institute of Inspection, Cleaning and Restoration Certification) standards for carpet, upholstery, and water damage restoration — the gold standard globally.' },
             ].map((v) => (
               <div key={v.n} className="about-value-card" style={{ background: '#1c2f58', border: '1px solid rgba(80,140,255,0.18)', borderRadius: '12px', padding: '1.4rem', display: 'flex', gap: '0.875rem' }}>
@@ -226,7 +226,7 @@ export default function AboutPage() {
             {emirates.map((e) => (
               <Link key={e.id} href={`/${e.slug}`} style={{ textDecoration: 'none' }}>
                 <div className="about-emir-card" style={{ position: 'relative', height: '150px', borderRadius: '10px', overflow: 'hidden', border: '1px solid rgba(201,168,76,0.2)' }}>
-                  <Image src={e.image} alt={`Cleaning services ${e.name} — Al Haya UAE`} fill className="object-cover" sizes="220px" loading="lazy" />
+                  <Image src={e.image} alt={`Cleaning services ${e.name} — Madinat Alhaya UAE`} fill className="object-cover" sizes="220px" loading="lazy" />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.1))' }} />
                   <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '0.75rem 0.9rem' }}>
                     <div style={{ fontFamily: 'var(--font-josefin)', fontWeight: 700, color: '#fff', fontSize: '0.88rem' }}>{e.name}</div>
@@ -245,16 +245,16 @@ export default function AboutPage() {
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>FAQ</div>
             <h2 style={{ fontFamily: 'var(--font-josefin)', fontSize: 'clamp(1.4rem, 2.8vw, 2rem)', fontWeight: 700, color: '#fff' }}>
-              Frequently Asked Questions About Al Haya
+              Frequently Asked Questions About Madinat Alhaya
             </h2>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {[
-              { q: 'What services does Al Haya provide in Dubai?', a: 'Al Haya provides 11 professional cleaning services across UAE: villa & apartment deep cleaning, sofa & upholstery cleaning, mattress sanitization, carpet & rug cleaning, marble polishing & restoration, curtain cleaning, dining chair cleaning, car interior detailing, office cleaning, and restaurant kitchen cleaning.' },
-              { q: 'What areas in Dubai does Al Haya service?', a: 'We serve all major Dubai areas including Dubai Marina, JBR, Downtown, Business Bay, Jumeirah, Arabian Ranches, Palm Jumeirah, JLT, JVC, Silicon Oasis, and Deira. We also cover Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and Umm Al Quwain.' },
+              { q: 'What services does Madinat Alhaya provide in Dubai?', a: 'Madinat Alhaya provides 11 professional cleaning services across UAE: villa & apartment deep cleaning, sofa & upholstery cleaning, mattress sanitization, carpet & rug cleaning, marble polishing & restoration, curtain cleaning, dining chair cleaning, car interior detailing, office cleaning, and restaurant kitchen cleaning.' },
+              { q: 'What areas in Dubai does Madinat Alhaya service?', a: 'We serve all major Dubai areas including Dubai Marina, JBR, Downtown, Business Bay, Jumeirah, Arabian Ranches, Palm Jumeirah, JLT, JVC, Silicon Oasis, and Deira. We also cover Abu Dhabi, Sharjah, Ajman, RAK, Fujairah, and Umm Al Quwain.' },
               { q: 'Are your cleaning products safe for children and pets?', a: 'Absolutely. We use only eco-friendly, non-toxic, biodegradable cleaning solutions. All products meet international safety standards and are completely safe for children, pets, and allergy sufferers.' },
-              { q: 'Does Al Haya offer same-day cleaning services?', a: 'Yes, same-day services are available based on availability. Contact us via WhatsApp or phone, describe your requirement, and we will deploy a team the same day whenever possible.' },
-              { q: 'How does Al Haya handle Dubai\'s sand and dust problems?', a: 'We use HEPA-filtered vacuums, industrial extraction for carpets and upholstery, and specialized AC vent cleaning. Post-sandstorm deep cleans are recommended to remove fine desert dust from every surface.' },
+              { q: 'Does Madinat Alhaya offer same-day cleaning services?', a: 'Yes, same-day services are available based on availability. Contact us via WhatsApp or phone, describe your requirement, and we will deploy a team the same day whenever possible.' },
+              { q: 'How does Madinat Alhaya handle Dubai\'s sand and dust problems?', a: 'We use HEPA-filtered vacuums, industrial extraction for carpets and upholstery, and specialized AC vent cleaning. Post-sandstorm deep cleans are recommended to remove fine desert dust from every surface.' },
               { q: 'What is your satisfaction guarantee?', a: 'We offer a 100% satisfaction guarantee. If you are not completely satisfied with any aspect of our work, we will return to address your concerns at no additional charge — no questions asked.' },
             ].map((faq, i) => (
               <details key={i} style={{ background: '#1c2f58', border: '1px solid rgba(80,140,255,0.18)', borderRadius: '8px', padding: '1rem 1.3rem' }}>
@@ -274,7 +274,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <div style={{ fontSize: '0.63rem', color: '#c9a84c', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Get Started Today</div>
           <h2 style={{ fontFamily: 'var(--font-josefin)', fontSize: 'clamp(1.6rem, 3.5vw, 2.3rem)', fontWeight: 700, color: '#fff', marginBottom: '0.75rem' }}>
-            Ready to Experience the Al Haya Difference?
+            Ready to Experience the Madinat Alhaya Difference?
           </h2>
           <p style={{ color: '#9ca3af', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '2rem' }}>
             Free instant quote via WhatsApp. Same-day service available across Dubai and all 7 UAE Emirates. We respond in minutes — 7 days a week.

@@ -235,7 +235,7 @@ const cityLocalContent: Record<string, CityLocalContent> = {
   },
 
   'dubai-international-city': {
-    localDescription: "Cost-effective professional cleaning for apartments across International City's themed clusters, including China Cluster, England Cluster, Spain Cluster, and Persia Cluster. Al Haya offers transparent, affordable cleaning packages tailored specifically for budget-conscious residents in this large residential community near Dragon Mart.",
+    localDescription: "Cost-effective professional cleaning for apartments across International City's themed clusters, including China Cluster, England Cluster, Spain Cluster, and Persia Cluster. Madinat Alhaya offers transparent, affordable cleaning packages tailored specifically for budget-conscious residents in this large residential community near Dragon Mart.",
     landmarks: ['China Cluster', 'England Cluster', 'Spain Cluster', 'Persia Cluster', 'France Cluster', 'Dragon Mart vicinity'],
     propertyType: 'budget apartments in themed residential clusters',
     areaNote: "International City's high-density, high-turnover environment creates strong demand for fast, affordable move-in and move-out cleaning. Our competitive pricing and same-day availability make us a popular choice for residents in all clusters.",
@@ -401,7 +401,7 @@ const cityLocalContent: Record<string, CityLocalContent> = {
   =========================================== */
 
   'ajman-ajman-city': {
-    localDescription: "Professional cleaning for apartments and villas in Ajman City, including Al Rashidiya, Al Nuaimiya, and Corniche areas. Al Haya offers affordable same-day cleaning across all of Ajman - the same professional standards as Dubai at Ajman-friendly pricing.",
+    localDescription: "Professional cleaning for apartments and villas in Ajman City, including Al Rashidiya, Al Nuaimiya, and Corniche areas. Madinat Alhaya offers affordable same-day cleaning across all of Ajman - the same professional standards as Dubai at Ajman-friendly pricing.",
     landmarks: ['Ajman Corniche', 'Al Rashidiya', 'Al Nuaimiya', 'Ajman City Centre vicinity'],
     propertyType: 'mixed apartments, villas and commercial spaces',
     areaNote: "Ajman's rapid residential growth and competitive property market mean strong demand for move-in, move-out, and regular deep cleaning. Our competitive pricing makes professional cleaning accessible for all Ajman residents.",
@@ -530,7 +530,7 @@ const cityLocalContent: Record<string, CityLocalContent> = {
   =========================================== */
 
   'umm-al-quwain-uaq-city': {
-    localDescription: "Professional cleaning for apartments and villas in UAQ City (Umm Al Quwain) - trusted by residents of this quiet and affordable emirate for sofa cleaning, carpet shampooing, and full deep cleaning. Al Haya brings big-city professional standards to UAQ at local-friendly pricing.",
+    localDescription: "Professional cleaning for apartments and villas in UAQ City (Umm Al Quwain) - trusted by residents of this quiet and affordable emirate for sofa cleaning, carpet shampooing, and full deep cleaning. Madinat Alhaya brings big-city professional standards to UAQ at local-friendly pricing.",
     landmarks: ['UAQ Corniche', 'UAQ Free Trade Zone', 'Dream Land vicinity'],
     propertyType: 'family villas, apartments and free zone properties',
     areaNote: "Umm Al Quwain's quiet residential character and affordable property prices attract families seeking a less crowded alternative to Dubai. Our professional cleaning services are competitively priced for UAQ residents.",

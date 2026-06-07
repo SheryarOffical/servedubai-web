@@ -149,7 +149,7 @@ export default function ContactPage() {
             }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.2426037257887!2d55.362276599999994!3d25.2960519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5dc6fe655c83%3A0x2790bef8b91a957!2sAL%20HAYA%20cleaning%20services!5e0!3m2!1sen!2s!4v1777990342134!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d927577.8847531937!2d55.4692488!3d24.74914795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6dc22e5a8d45%3A0x5f56211bd03d48bd!2sMadinat%20Alhaya%20Building%20Cleaning%20Services!5e0!3m2!1sen!2s!4v1780844711725!5m2!1sen!2s"
               width="100%"
               height="300"
               style={{ border: 0, display: 'block' }}
@@ -161,7 +161,7 @@ export default function ContactPage() {
           </div>
           <div style={{ marginTop: '1rem', textAlign: 'center' }}>
             <a
-              href="https://share.google/bDF6NqN3sJvO2nxSr"
+              href="https://maps.app.goo.gl/qAog9d6usteD2jsH6"
               target="_blank"
               rel="noopener noreferrer"
               style={{

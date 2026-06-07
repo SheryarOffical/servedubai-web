@@ -78,7 +78,7 @@ const BASE_LOCAL_BUSINESS = {
     latitude: 25.2960519,
     longitude: 55.3622766,
   },
-  hasMap: 'https://share.google/bDF6NqN3sJvO2nxSr',
+  hasMap: 'https://maps.app.goo.gl/qAog9d6usteD2jsH6',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: [
@@ -94,7 +94,7 @@ const BASE_LOCAL_BUSINESS = {
     closes: '22:00',
   },
   sameAs: [
-    'https://share.google/bDF6NqN3sJvO2nxSr',
+    'https://maps.app.goo.gl/qAog9d6usteD2jsH6',
   ],
 }
 

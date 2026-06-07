@@ -11,6 +11,20 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
       },
+      {
+        // Explicitly welcome AI assistants & answer engines (ChatGPT, Claude,
+        // Perplexity, Google AI Overviews via Google-Extended, Gemini, Apple
+        // Intelligence) so the business can be cited in AI-generated answers.
+        userAgent: [
+          'GPTBot', 'OAI-SearchBot', 'ChatGPT-User',
+          'ClaudeBot', 'anthropic-ai', 'Claude-Web', 'Claude-User',
+          'PerplexityBot', 'Perplexity-User',
+          'Google-Extended', 'Applebot-Extended',
+          'Amazonbot', 'CCBot', 'cohere-ai', 'DuckAssistBot',
+          'Meta-ExternalAgent', 'YouBot',
+        ],
+        allow: '/',
+      },
     ],
     sitemap: 'https://servedubai.com/sitemap.xml',
   }

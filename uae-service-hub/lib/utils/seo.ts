@@ -65,18 +65,19 @@ const BASE_LOCAL_BUSINESS = {
   priceRange: '$$',
   currenciesAccepted: 'AED',
   paymentAccepted: 'Cash, Credit Card',
-  // Matches the Google Business Profile address exactly (NAP consistency).
+  // Service-area business — the GBP has "No location; deliveries and home
+  // services only" (no public street address). So we use a city-level address
+  // (Dubai) + areaServed for NAP consistency, not a specific street.
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '4th Street, Al Nahda First',
-    addressLocality: 'Al Nahda, Dubai',
+    addressLocality: 'Dubai',
     addressRegion: 'Dubai',
     addressCountry: 'AE',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 25.2960519,
-    longitude: 55.3622766,
+    latitude: 25.2048,
+    longitude: 55.2708,
   },
   hasMap: 'https://maps.app.goo.gl/qAog9d6usteD2jsH6',
   openingHoursSpecification: {

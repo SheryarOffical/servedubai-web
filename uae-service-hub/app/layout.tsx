@@ -51,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en-AE" className={`${josefin.variable} ${workSans.variable}`} data-theme="light">
+    <html lang="en-AE" className={`${josefin.variable} ${workSans.variable}`} data-theme="light" suppressHydrationWarning>
       <head />
 
       {/* GTM — head script */}

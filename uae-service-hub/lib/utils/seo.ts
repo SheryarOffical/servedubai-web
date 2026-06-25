@@ -96,6 +96,8 @@ const BASE_LOCAL_BUSINESS = {
   },
   sameAs: [
     'https://maps.app.goo.gl/qAog9d6usteD2jsH6',
+    'https://www.facebook.com/alhayacleaners',
+    'https://twitter.com/cleansofacarpet',
   ],
 }
 

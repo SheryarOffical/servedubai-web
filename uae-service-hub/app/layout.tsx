@@ -3,7 +3,6 @@ import { Josefin_Sans, Work_Sans } from 'next/font/google'
 import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ThemeProvider from '@/components/ThemeProvider'
 import './globals.css'
 
 const josefin = Josefin_Sans({
@@ -51,11 +50,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en-AE" className={`${josefin.variable} ${workSans.variable}`} data-theme="dark" suppressHydrationWarning>
-      <head>
-        {/* Prevent flash of wrong theme */}
-        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('al-haya-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}` }} />
-      </head>
+    <html lang="en-AE" className={`${josefin.variable} ${workSans.variable}`} data-theme="light">
+      <head />
 
       {/* GTM — head script */}
       <Script
@@ -81,11 +77,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
 
-        <ThemeProvider>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
-        </ThemeProvider>
       </body>
     </html>
   )

@@ -6,13 +6,9 @@ import { servicesNav as services } from '@/lib/data/services-nav'
 import { emirates } from '@/lib/data/emirates'
 import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
-import ThemeToggle from './ThemeToggle'
-import { useTheme } from './ThemeProvider'
-
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const { theme } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 45)
@@ -20,8 +16,6 @@ export default function Header() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  const linkColor = theme === 'light' ? '#1a1510' : undefined
 
   return (
     <header className={`p-navbar${scrolled ? ' scrolled' : ''}`}>
@@ -82,7 +76,12 @@ export default function Header() {
 
         {/* CTA button */}
         <div className="nav-cta-wrap">
-          <ThemeToggle />
+          <a href="https://www.facebook.com/alhayacleaners" target="_blank" rel="noopener noreferrer" className="nav-social-icon" aria-label="Facebook" title="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://twitter.com/cleansofacarpet" target="_blank" rel="noopener noreferrer" className="nav-social-icon" aria-label="X (Twitter)" title="X (Twitter)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
           <a
             href={getWhatsAppLink()}
             target="_blank"
@@ -117,9 +116,6 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div className={`mobile-menu${mobileOpen ? ' open' : ''}`}>
-        <div style={{ padding: '0.5rem 1.5rem', borderBottom: '1px solid rgba(201,168,76,0.1)', marginBottom: '0.5rem' }}>
-          <ThemeToggle />
-        </div>
         <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
         <Link href="/about" onClick={() => setMobileOpen(false)}>About</Link>
         <p className="section-label">Services</p>

@@ -6,9 +6,15 @@ import { servicesNav as services } from '@/lib/data/services-nav'
 import { emirates } from '@/lib/data/emirates'
 import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
+import { useLocale } from '@/lib/i18n/LanguageProvider'
+import translations from '@/lib/i18n/translations'
+import LanguageToggle from './LanguageToggle'
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { locale } = useLocale()
+  const t = translations[locale]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 45)
@@ -28,24 +34,24 @@ export default function Header() {
         {/* Desktop nav */}
         <ul className="nav-links">
           <li>
-            <Link href="/" className="nav-link active">Home</Link>
+            <Link href="/" className="nav-link active">{t.nav.home}</Link>
           </li>
           <li>
-            <Link href="/about" className="nav-link">About</Link>
+            <Link href="/about" className="nav-link">{t.nav.about}</Link>
           </li>
 
           {/* Services dropdown */}
           <li className="dropdown">
             <span className="nav-link">
-              Services
-              <svg style={{ display: 'inline', marginLeft: '5px', verticalAlign: 'middle' }} width="10" height="8" viewBox="0 0 10 6" fill="currentColor">
+              {t.nav.services}
+              <svg style={{ display: 'inline', marginInlineStart: '5px', verticalAlign: 'middle' }} width="10" height="8" viewBox="0 0 10 6" fill="currentColor">
                 <path d="M0 0l5 6 5-6z" />
               </svg>
             </span>
             <div className="dropdown-menu">
               {services.map((s) => (
                 <Link key={s.id} href={`/services/${s.slug}`}>
-                  {s.name}
+                  {t.serviceNames[s.id as keyof typeof t.serviceNames] ?? s.name}
                 </Link>
               ))}
             </div>
@@ -54,28 +60,31 @@ export default function Header() {
           {/* Emirates dropdown */}
           <li className="dropdown">
             <span className="nav-link">
-              Emirates
-              <svg style={{ display: 'inline', marginLeft: '5px', verticalAlign: 'middle' }} width="10" height="8" viewBox="0 0 10 6" fill="currentColor">
+              {t.nav.emirates}
+              <svg style={{ display: 'inline', marginInlineStart: '5px', verticalAlign: 'middle' }} width="10" height="8" viewBox="0 0 10 6" fill="currentColor">
                 <path d="M0 0l5 6 5-6z" />
               </svg>
             </span>
             <div className="dropdown-menu">
               {emirates.map((e) => (
-                <Link key={e.id} href={`/${e.slug}`}>{e.name}</Link>
+                <Link key={e.id} href={`/${e.slug}`}>
+                  {t.emirateNames[e.slug as keyof typeof t.emirateNames] ?? e.name}
+                </Link>
               ))}
             </div>
           </li>
 
           <li>
-            <Link href="/blog" className="nav-link">Blog</Link>
+            <Link href="/blog" className="nav-link">{t.nav.blog}</Link>
           </li>
           <li>
-            <Link href="/contact" className="nav-link">Contact</Link>
+            <Link href="/contact" className="nav-link">{t.nav.contact}</Link>
           </li>
         </ul>
 
         {/* CTA button */}
         <div className="nav-cta-wrap">
+          <LanguageToggle />
           <a href="https://www.facebook.com/alhayacleaners" target="_blank" rel="noopener noreferrer" className="nav-social-icon" aria-label="Facebook" title="Facebook">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
@@ -116,22 +125,25 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div className={`mobile-menu${mobileOpen ? ' open' : ''}`}>
-        <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
-        <Link href="/about" onClick={() => setMobileOpen(false)}>About</Link>
-        <p className="section-label">Services</p>
+        <div style={{ padding: '0.5rem 1.5rem', borderBottom: '1px solid rgba(201,168,76,0.1)', marginBottom: '0.5rem' }}>
+          <LanguageToggle />
+        </div>
+        <Link href="/" onClick={() => setMobileOpen(false)}>{t.nav.home}</Link>
+        <Link href="/about" onClick={() => setMobileOpen(false)}>{t.nav.about}</Link>
+        <p className="section-label">{t.nav.services}</p>
         {services.map((s) => (
           <Link key={s.id} href={`/services/${s.slug}`} onClick={() => setMobileOpen(false)}>
-            {s.name}
+            {t.serviceNames[s.id as keyof typeof t.serviceNames] ?? s.name}
           </Link>
         ))}
-        <p className="section-label">Emirates</p>
+        <p className="section-label">{t.nav.emirates}</p>
         {emirates.map((e) => (
           <Link key={e.id} href={`/${e.slug}`} onClick={() => setMobileOpen(false)}>
-            {e.name}
+            {t.emirateNames[e.slug as keyof typeof t.emirateNames] ?? e.name}
           </Link>
         ))}
-        <Link href="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
-        <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+        <Link href="/blog" onClick={() => setMobileOpen(false)}>{t.nav.blog}</Link>
+        <Link href="/contact" onClick={() => setMobileOpen(false)}>{t.nav.contact}</Link>
         <div style={{ padding: '0.75rem 1.5rem' }}>
           <a
             href={getWhatsAppLink()}

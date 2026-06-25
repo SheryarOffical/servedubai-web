@@ -875,6 +875,31 @@ img { max-width: 100%; }
   color: #c9a84c;
 }
 
+.lang-toggle-btn {
+  background: none;
+  border: 1px solid rgba(201,168,76,0.45);
+  border-radius: 500px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  color: #c9a84c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-josefin), 'Segoe UI', sans-serif;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.lang-toggle-btn:hover {
+  background: rgba(201,168,76,0.12);
+  border-color: #c9a84c;
+}
+
+/* RTL adjustments */
+[dir="rtl"] .nav-inner { direction: rtl; }
+[dir="rtl"] .p-footer-links { direction: rtl; text-align: right; }
+[dir="rtl"] .mobile-menu { text-align: right; }
+[dir="rtl"] .dropdown-menu { text-align: right; }
+
 /* ══════════════════════════════════════════════════════
    BLOG — animated, attractive index & cards
 ══════════════════════════════════════════════════════ */

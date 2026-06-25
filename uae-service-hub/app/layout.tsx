@@ -3,6 +3,7 @@ import { Josefin_Sans, Work_Sans } from 'next/font/google'
 import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import LanguageProvider from '@/lib/i18n/LanguageProvider'
 import './globals.css'
 
 const josefin = Josefin_Sans({
@@ -77,9 +78,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
 
+        <LanguageProvider>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+        </LanguageProvider>
       </body>
     </html>
   )

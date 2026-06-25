@@ -1,11 +1,17 @@
+'use client'
+
 import Link from 'next/link'
 import { servicesNav as services } from '@/lib/data/services-nav'
 import { emirates } from '@/lib/data/emirates'
 import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
+import { useLocale } from '@/lib/i18n/LanguageProvider'
+import translations from '@/lib/i18n/translations'
 
 export default function Footer() {
   const year = new Date().getFullYear()
+  const { locale } = useLocale()
+  const t = translations[locale]
 
   return (
     <footer className="p-footer">
@@ -79,36 +85,40 @@ export default function Footer() {
         {/* Links grid */}
         <div className="p-footer-links">
           <div>
-            <h3>Services</h3>
+            <h3>{t.footer.services}</h3>
             <ul>
               {services.map((s) => (
                 <li key={s.id}>
-                  <Link href={`/services/${s.slug}`}>{s.name}</Link>
+                  <Link href={`/services/${s.slug}`}>
+                    {t.serviceNames[s.id as keyof typeof t.serviceNames] ?? s.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3>Emirates</h3>
+            <h3>{t.footer.emirates}</h3>
             <ul>
               {emirates.map((e) => (
                 <li key={e.id}>
-                  <Link href={`/${e.slug}`}>{e.name}</Link>
+                  <Link href={`/${e.slug}`}>
+                    {t.emirateNames[e.slug as keyof typeof t.emirateNames] ?? e.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3>Company</h3>
+            <h3>{t.footer.company}</h3>
             <ul>
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-              <li><Link href="/areas">Service Areas</Link></li>
+              <li><Link href="/about">{t.footer.aboutUs}</Link></li>
+              <li><Link href="/blog">{t.footer.blog}</Link></li>
+              <li><Link href="/contact">{t.footer.contact}</Link></li>
+              <li><Link href="/areas">{t.footer.serviceAreas}</Link></li>
               <li><a href={`tel:${SITE_CONFIG.phone}`}>{SITE_CONFIG.phone}</a></li>
-              <li><a href={SITE_CONFIG.googleReviewLink} target="_blank" rel="noopener noreferrer">Review us on Google</a></li>
+              <li><a href={SITE_CONFIG.googleReviewLink} target="_blank" rel="noopener noreferrer">{t.footer.reviewGoogle}</a></li>
             </ul>
           </div>
         </div>
@@ -119,7 +129,7 @@ export default function Footer() {
           <Link href="/" style={{ borderBottom: '1px solid #6b7280', color: '#6b7280', textDecoration: 'none' }}>
             Madinat Alhaya Building Cleaning Services
           </Link>
-          , All Rights Reserved.
+          , {t.footer.allRightsReserved}
         </p>
       </div>
     </footer>

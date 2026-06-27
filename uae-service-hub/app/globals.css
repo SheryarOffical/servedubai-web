@@ -400,9 +400,9 @@ img { max-width: 100%; }
 
 [data-theme="light"] .hero-overlay {
   background: linear-gradient(to bottom,
-    rgba(253,245,220,0.08) 0%,
-    rgba(245,232,195,0.18) 50%,
-    rgba(237,220,170,0.32) 100%
+    rgba(255,255,255,0.18) 0%,
+    rgba(255,255,255,0.32) 50%,
+    rgba(255,255,255,0.50) 100%
   ) !important;
 }
 
@@ -436,6 +436,7 @@ img { max-width: 100%; }
   max-width: 600px;
   font-family: var(--font-work), sans-serif;
   line-height: 1.6;
+  font-weight: 700;
 }
 
 /* carousel arrows */
@@ -1684,8 +1685,14 @@ img { max-width: 100%; }
 [data-theme="light"] .p-hero-caption .p-title h5,
 [data-theme="light"] .p-hero-caption h2,
 [data-theme="light"] .p-hero-caption .p-title-center h5 {
-  color: #2a1a00 !important;
-  text-shadow: 0 1px 6px rgba(255,240,200,0.5) !important;
+  color: #000 !important;
+  text-shadow: 0 1px 6px rgba(255,255,255,0.6) !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .p-hero-caption .subtitle-text {
+  color: #000 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.5) !important;
 }
 
 /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
@@ -1693,19 +1700,23 @@ img { max-width: 100%; }
    .hero-overlay already handled above; these rules handle text
 ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
 [data-theme="light"] .page-hero-wrap h1 {
-  color: #2a1a00 !important;
-  text-shadow: 0 1px 8px rgba(255,240,200,0.5) !important;
+  color: #000 !important;
+  text-shadow: 0 1px 6px rgba(255,255,255,0.6) !important;
+  font-weight: 700 !important;
 }
 [data-theme="light"] .page-hero-wrap h2 {
-  color: #3a2800 !important;
-  text-shadow: none !important;
+  color: #000 !important;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.5) !important;
+  font-weight: 700 !important;
 }
 [data-theme="light"] .page-hero-wrap p {
-  color: #3a2800 !important;
+  color: #000 !important;
+  font-weight: 700 !important;
 }
 /* breadcrumb span text */
 [data-theme="light"] .page-hero-wrap nav > span {
-  color: #3a2800 !important;
+  color: #000 !important;
+  font-weight: 600 !important;
 }
 /* "Call" button (white border/text) in emirate hero */
 [data-theme="light"] .page-hero-wrap a[href^="tel"] {
@@ -1714,7 +1725,7 @@ img { max-width: 100%; }
 }
 /* side vignette ΓÇö lighter in light mode */
 [data-theme="light"] .hero-overlay-side {
-  background: linear-gradient(to right, rgba(237,220,170,0.4) 0%, transparent 65%) !important;
+  background: linear-gradient(to right, rgba(255,255,255,0.45) 0%, transparent 65%) !important;
 }
 
 /* "Our Websites" hero button ΓÇö dark amber in light theme */
@@ -3008,6 +3019,71 @@ img { max-width: 100%; }
 .lang-toggle-btn:hover {
   background: rgba(201,168,76,0.12);
   border-color: #c9a84c;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LIGHT THEME — Contact page
+══════════════════════════════════════════════════════════ */
+[data-theme="light"] .contact-page-wrap {
+  background: #fdfcf8 !important;
+}
+[data-theme="light"] .contact-page-wrap h1,
+[data-theme="light"] .contact-page-wrap .text-white {
+  color: #1a1510 !important;
+}
+[data-theme="light"] .contact-page-wrap h2,
+[data-theme="light"] .contact-page-wrap .text-gray-400 {
+  color: #5a4e3a !important;
+}
+[data-theme="light"] .contact-page-wrap label,
+[data-theme="light"] .contact-page-wrap .text-gray-300 {
+  color: #3a3020 !important;
+}
+[data-theme="light"] .contact-page-wrap .text-gray-500 {
+  color: #6b5840 !important;
+}
+[data-theme="light"] .contact-page-wrap input,
+[data-theme="light"] .contact-page-wrap select,
+[data-theme="light"] .contact-page-wrap textarea {
+  background: #ffffff !important;
+  border-color: rgba(201,168,76,0.3) !important;
+  color: #1a1510 !important;
+}
+[data-theme="light"] .contact-page-wrap input::placeholder,
+[data-theme="light"] .contact-page-wrap select::placeholder,
+[data-theme="light"] .contact-page-wrap textarea::placeholder {
+  color: #8a7a60 !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LIGHT THEME — Home CTA stats + map inline color overrides
+══════════════════════════════════════════════════════════ */
+[data-theme="light"] .cta-stat-label {
+  color: #6b5840 !important;
+}
+[data-theme="light"] .home-map-section .home-section-p,
+[data-theme="light"] .home-map-section p {
+  color: #5a4e3a !important;
+}
+[data-theme="light"] .home-map-section div[style] {
+  color: #5a4e3a !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LIGHT THEME — Global Tailwind text-white / text-gray overrides
+   Only targets main content (excludes nav, WhatsApp, CTA buttons)
+══════════════════════════════════════════════════════════ */
+[data-theme="light"] main .text-white {
+  color: #1a1510 !important;
+}
+[data-theme="light"] main .text-gray-300 {
+  color: #3a3020 !important;
+}
+[data-theme="light"] main .text-gray-400 {
+  color: #5a4e3a !important;
+}
+[data-theme="light"] main .text-gray-500 {
+  color: #6b5840 !important;
 }
 
 /* RTL adjustments */

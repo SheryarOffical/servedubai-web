@@ -1,6 +1,8 @@
 'use client'
 
 import { getWhatsAppLink } from '@/lib/utils/whatsapp'
+import { useLocale } from '@/lib/i18n/LanguageProvider'
+import translations from '@/lib/i18n/translations'
 
 export default function WhatsAppButton({
   service,
@@ -10,6 +12,8 @@ export default function WhatsAppButton({
   city?: string
 }) {
   const href = getWhatsAppLink(service, city)
+  const { locale } = useLocale()
+  const t = translations[locale]
 
   return (
     <>
@@ -24,7 +28,7 @@ export default function WhatsAppButton({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp"
+        aria-label={t.whatsapp.ariaLabel}
         className="wa-btn"
         style={{
           position: 'fixed',

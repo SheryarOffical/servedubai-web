@@ -1,41 +1,50 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
+import { useSyncExternalStore, useEffect } from 'react'
 import type { Locale } from './translations'
 
-const LangCtx = createContext<{ locale: Locale; toggle: () => void }>({
-  locale: 'en',
-  toggle: () => {},
-})
+let listeners: Array<() => void> = []
+let currentLocale: Locale = 'en'
 
-export function useLocale() {
-  return useContext(LangCtx)
+function getLocale(): Locale {
+  return currentLocale
 }
 
-export default function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>('en')
+function getServerLocale(): Locale {
+  return 'en'
+}
+
+function subscribe(cb: () => void) {
+  listeners.push(cb)
+  return () => {
+    listeners = listeners.filter((l) => l !== cb)
+  }
+}
+
+function setLocale(next: Locale) {
+  currentLocale = next
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('site-lang', next)
+    document.documentElement.setAttribute('dir', next === 'ar' ? 'rtl' : 'ltr')
+    document.documentElement.setAttribute('lang', next === 'ar' ? 'ar' : 'en-AE')
+  }
+  listeners.forEach((cb) => cb())
+}
+
+export function useLocale() {
+  const locale = useSyncExternalStore(subscribe, getLocale, getServerLocale)
 
   useEffect(() => {
     const saved = localStorage.getItem('site-lang') as Locale | null
     if (saved === 'ar' || saved === 'en') {
-      setLocale(saved)
-      applyDir(saved)
+      if (saved !== currentLocale) setLocale(saved)
     }
   }, [])
 
-  const applyDir = (l: Locale) => {
-    document.documentElement.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr')
-    document.documentElement.setAttribute('lang', l === 'ar' ? 'ar' : 'en-AE')
-  }
+  const toggle = () => setLocale(currentLocale === 'en' ? 'ar' : 'en')
+  return { locale, toggle }
+}
 
-  const toggle = () => {
-    setLocale(prev => {
-      const next: Locale = prev === 'en' ? 'ar' : 'en'
-      localStorage.setItem('site-lang', next)
-      applyDir(next)
-      return next
-    })
-  }
-
-  return <LangCtx.Provider value={{ locale, toggle }}>{children}</LangCtx.Provider>
+export default function LanguageProvider({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }

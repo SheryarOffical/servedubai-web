@@ -1,21 +1,26 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Emirate } from '@/lib/data/emirates'
+import { useLocale } from '@/lib/i18n/LanguageProvider'
+import translations from '@/lib/i18n/translations'
 
 export default function EmiratesSection({ emirates }: { emirates: Emirate[] }) {
+  const { locale } = useLocale()
+  const t = translations[locale]
+
   return (
     <section className="theme-emirates" style={{ background: '#212529', padding: '5rem 0' }}>
       <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 1.5rem' }}>
 
-        {/* Poseify title */}
         <div className="p-title" style={{ textAlign: 'center' }}>
           <div className="p-title-center">
-            <h5>Coverage</h5>
-            <h1>We Serve All UAE</h1>
+            <h5>{t.emirates_section.label}</h5>
+            <h1>{t.emirates_section.title}</h1>
           </div>
         </div>
 
-        {/* Team-item grid — 4 columns */}
         <div
           style={{
             display: 'grid',
@@ -29,21 +34,18 @@ export default function EmiratesSection({ emirates }: { emirates: Emirate[] }) {
               href={`/${emirate.slug}`}
               style={{ textDecoration: 'none', display: 'block' }}
             >
-              {/* Poseify team-item */}
               <div className="team-item" style={{ cursor: 'pointer' }}>
                 <div className="team-body">
-                  {/* Left panel: slides in from left — shows city names */}
                   <div className="team-before">
-                    <span style={{ color: '#c9a84c', fontSize: '0.65rem', letterSpacing: '0.1em' }}>CITIES</span>
+                    <span style={{ color: '#c9a84c', fontSize: '0.65rem', letterSpacing: '0.1em' }}>{t.emirates_section.cities}</span>
                     {emirate.cities.slice(0, 5).map((city) => (
                       <span key={city.id}>{city.name}</span>
                     ))}
                     {emirate.cities.length > 5 && (
-                      <span style={{ color: '#c9a84c' }}>+{emirate.cities.length - 5} more</span>
+                      <span style={{ color: '#c9a84c' }}>+{emirate.cities.length - 5} {t.emirates_section.more}</span>
                     )}
                   </div>
 
-                  {/* The emirate image */}
                   <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4', overflow: 'hidden' }}>
                     <Image
                       src={emirate.image}
@@ -55,18 +57,16 @@ export default function EmiratesSection({ emirates }: { emirates: Emirate[] }) {
                     />
                   </div>
 
-                  {/* Right panel: slides in from right */}
                   <div className="team-after">
-                    <span style={{ color: '#c9a84c', fontSize: '0.65rem', letterSpacing: '0.1em' }}>AREAS</span>
+                    <span style={{ color: '#c9a84c', fontSize: '0.65rem', letterSpacing: '0.1em' }}>{t.emirates_section.areas}</span>
                     <span style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff' }}>{emirate.cities.length}</span>
-                    <span>covered</span>
-                    <span style={{ marginTop: '8px', color: '#c9a84c', fontSize: '0.65rem' }}>VIEW ALL →</span>
+                    <span>{t.emirates_section.covered}</span>
+                    <span style={{ marginTop: '8px', color: '#c9a84c', fontSize: '0.65rem' }}>{t.emirates_section.viewAll}</span>
                   </div>
                 </div>
 
-                {/* Bottom name bar */}
                 <div className="team-name">
-                  <h5>{emirate.name}</h5>
+                  <h5>{t.emirateNames[emirate.slug as keyof typeof t.emirateNames] ?? emirate.name}</h5>
                 </div>
               </div>
             </Link>

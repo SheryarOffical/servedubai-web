@@ -1617,29 +1617,41 @@ img { max-width: 100%; }
 }
 
 [data-theme="light"] .p-navbar.scrolled {
-  background: rgba(253,252,248,0.97) !important;
-  border-bottom: 1px solid rgba(201,168,76,0.25) !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 10, 24, 0.92) 0%,
+    rgba(6, 10, 24, 0.82) 100%
+  ) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid rgba(201,168,76,0.15) !important;
 }
 
-/* Nav link hover/active in light mode */
+/* Light mode scrolled: light text on dark bg */
+[data-theme="light"] .p-navbar.scrolled .brand {
+  color: #ecca6e !important;
+}
+[data-theme="light"] .p-navbar.scrolled .nav-links .nav-link {
+  color: #f5f1e6 !important;
+}
 [data-theme="light"] .p-navbar .nav-links .nav-link:hover,
 [data-theme="light"] .p-navbar .nav-links .nav-link.active {
   color: #c9a84c !important;
 }
 
-/* Hamburger: always dark in light mode */
+/* Hamburger: light on dark navbar background */
 [data-theme="light"] .p-navbar .hamburger {
-  color: #1a1510 !important;
+  color: #ffffff !important;
 }
 
 [data-theme="light"] .p-navbar .dropdown-menu {
-  background: #ffffff !important;
+  background: rgba(14, 20, 42, 0.97) !important;
   border-color: rgba(201,168,76,0.2) !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
 }
 
 [data-theme="light"] .p-navbar .dropdown-menu a {
-  color: #3a3020 !important;
+  color: #f5f1e6 !important;
 }
 
 [data-theme="light"] .p-navbar .dropdown-menu a:hover {
@@ -1648,27 +1660,27 @@ img { max-width: 100%; }
 }
 
 [data-theme="light"] .p-navbar .mobile-menu {
-  background: rgba(253,252,248,0.99) !important;
+  background: rgba(6, 10, 24, 0.97) !important;
   border-top-color: rgba(201,168,76,0.2) !important;
 }
 
 [data-theme="light"] .p-navbar .mobile-menu a,
 [data-theme="light"] .p-navbar .mobile-menu button {
-  color: #1a1510 !important;
+  color: #f5f1e6 !important;
 }
 
 [data-theme="light"] .p-navbar .mobile-menu a:hover {
   color: #c9a84c !important;
 }
 
-/* Mobile: navbar is always fixed ΓÇö always show cream so it stays readable */
+/* Mobile: navbar is always fixed — dark frosted glass */
 @media (max-width: 991px) {
   [data-theme="light"] .p-navbar {
-    background: rgba(253,252,248,0.97) !important;
-    border-bottom: 1px solid rgba(201,168,76,0.25) !important;
+    background: rgba(6, 10, 24, 0.92) !important;
+    border-bottom: 1px solid rgba(201,168,76,0.15) !important;
   }
   [data-theme="light"] .p-navbar .hamburger {
-    color: #1a1510 !important;
+    color: #ffffff !important;
   }
 }
 

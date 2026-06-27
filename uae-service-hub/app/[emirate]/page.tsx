@@ -20,11 +20,59 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { emirate: emirateSlug } = await params
   const emirate = getEmirateBySlug(emirateSlug)
   if (!emirate) return {}
-  return buildMetadata({
-    title: `Cleaning Services in ${emirate.name} | Madinat Alhaya`,
-    description: `Professional cleaning services across ${emirate.name}. Sofa, carpet, villa, marble and more. Call +971 55 127 5545.`,
-    path: `/${emirateSlug}`,
-  })
+
+  const emirateKeywords: Record<string, string[]> = {
+    dubai: [
+      'cleaning services Dubai', 'best cleaning company Dubai', 'villa deep cleaning Dubai',
+      'sofa cleaning services Dubai', 'carpet cleaning Dubai', 'marble polishing Dubai',
+      'apartment cleaning Dubai', 'office cleaning Dubai', 'deep cleaning Dubai Marina',
+      'professional cleaning Downtown Dubai', 'cleaning services Palm Jumeirah',
+      'cleaning services JBR', 'cleaning services Arabian Ranches', 'same-day cleaning Dubai',
+      'mattress cleaning Dubai', 'curtain cleaning Dubai', 'move in move out cleaning Dubai',
+    ],
+    'abu-dhabi': [
+      'cleaning services Abu Dhabi', 'best cleaning company Abu Dhabi', 'villa deep cleaning Abu Dhabi',
+      'sofa cleaning Abu Dhabi', 'carpet cleaning Abu Dhabi', 'marble polishing Abu Dhabi',
+      'professional home deep cleaning services Abu Dhabi', 'office cleaning Abu Dhabi',
+      'apartment cleaning Abu Dhabi', 'upholstery steam cleaning Abu Dhabi',
+      'marble crystallization Abu Dhabi', 'corporate office cleaning Abu Dhabi',
+    ],
+    sharjah: [
+      'cleaning services Sharjah', 'best cleaning company Sharjah', 'villa deep cleaning Sharjah',
+      'sofa deep cleaning services Sharjah', 'carpet cleaning Sharjah', 'apartment cleaners Sharjah',
+      'office cleaning Sharjah', 'deep carpet and mattress sanitization Sharjah',
+      'commercial office cleaning Sharjah', 'cleaning services Al Nahda Sharjah',
+    ],
+    ajman: [
+      'cleaning services Ajman', 'best cleaning company Ajman', 'home deep cleaning Ajman',
+      'villa cleaning Ajman', 'sofa cleaning Ajman', 'carpet cleaning Ajman',
+      'curtain cleaning Ajman', 'office cleaners Ajman', 'apartment cleaning Ajman',
+    ],
+    'ras-al-khaimah': [
+      'cleaning services Ras Al Khaimah', 'best cleaning company RAK', 'villa deep cleaning RAK',
+      'sofa shampooing RAK', 'carpet cleaning Ras Al Khaimah', 'office cleaning RAK',
+      'professional cleaning company Ras Al Khaimah', 'industrial cleaning RAK',
+    ],
+    fujairah: [
+      'cleaning services Fujairah', 'best cleaning company Fujairah', 'villa deep cleaning Fujairah',
+      'sofa cleaning Fujairah', 'carpet cleaning Fujairah', 'apartment deep clean Fujairah',
+      'upholstery cleaning Fujairah', 'commercial building cleaning Fujairah',
+    ],
+    'umm-al-quwain': [
+      'cleaning services Umm Al Quwain', 'best cleaning company UAQ', 'home cleaning UAQ',
+      'villa deep cleaning UAQ', 'sofa cleaning Umm Al Quwain', 'carpet cleaning UAQ',
+      'marble polishing UAQ', 'floor restoration UAQ', 'curtain cleaning UAQ',
+    ],
+  }
+
+  return {
+    ...buildMetadata({
+      title: `Best Cleaning Services ${emirate.name} | Professional Cleaning Company ${emirate.name}`,
+      description: `Best professional cleaning services in ${emirate.name} — villa deep cleaning, sofa cleaning, carpet cleaning, marble polishing, office cleaning & more. Same-day service. Call +971 55 127 5545.`,
+      path: `/${emirateSlug}`,
+    }),
+    keywords: emirateKeywords[emirateSlug] || [`cleaning services ${emirate.name}`, `best cleaning company ${emirate.name}`],
+  }
 }
 
 const whyUs = [

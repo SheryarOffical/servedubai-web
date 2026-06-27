@@ -4,12 +4,20 @@ import Link from 'next/link'
 import { blogPosts, type BlogPost } from '@/lib/data/blog'
 import { buildMetadata, buildBreadcrumbSchema } from '@/lib/utils/seo'
 
-export const metadata: Metadata = buildMetadata({
-  title: 'Cleaning Tips & Guides for Dubai | Madinat Alhaya Blog',
-  description:
-    'Expert cleaning guides for Dubai — sofa & villa cleaning costs, how often to deep-clean, move-out checklists and more. Practical advice from Madinat Alhaya Building Cleaning Services.',
-  path: '/blog',
-})
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: 'Cleaning Tips & Guides Dubai | Sofa, Carpet, Villa Cleaning Costs & FAQ',
+    description:
+      'Expert cleaning guides for Dubai — how much does sofa cleaning cost in Dubai, villa deep cleaning vs regular cleaning, marble polishing vs crystallization, move-out cleaning checklists & more. Practical advice from Madinat Alhaya.',
+    path: '/blog',
+  }),
+  keywords: [
+    'sofa cleaning cost Dubai', 'villa deep cleaning cost Dubai', 'carpet cleaning price Dubai',
+    'marble polishing cost Dubai', 'how often deep clean Dubai', 'move out cleaning checklist Dubai',
+    'difference marble polishing crystallization', 'how to remove sand villa Dubai',
+    'upholstery cleaning tips UAE', 'cleaning guides Dubai', 'mattress cleaning how often UAE',
+  ],
+}
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: 'Home', url: '/' },

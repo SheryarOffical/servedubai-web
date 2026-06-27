@@ -886,9 +886,11 @@ Madinat Alhaya provides car seats cleaning services across all 7 UAE Emirates �
   {
     id: 'dining-chair-cleaning',
     name: 'Dining Chair Cleaning',
+    heroTitle: 'Professional Dining Chair Cleaning Dubai | Food Stain & Grease Removal',
+    heroSubtitle: 'Best dining chair cleaning services Dubai, Abu Dhabi & Sharjah — fabric, leather & faux leather dining chairs. Deep stain removal, deodorizing & fabric protection. Same-day service across UAE!',
     slug: 'dining-chair-cleaning',
     category: 'domestic',
-    shortDescription: 'Professional dining chair cleaning in UAE. Remove food stains and freshen fabric or leather dining chairs.',
+    shortDescription: 'Best dining chair cleaning services Dubai — expert food stain, grease & odor removal for fabric and leather dining chairs. Professional upholstery cleaning near me across Dubai, Abu Dhabi & all UAE. Same-day service!',
     fullDescription: `Dining chairs are among the most heavily used and frequently soiled furniture items in any home. Daily contact with food, grease, sauces, beverages, and body oils creates a combination of staining and odor that regular wiping cannot address. Our dining chair cleaning service uses targeted stain treatment and hot-water extraction or leather conditioning to restore your chairs to a clean, hygienic condition.
 
 We clean all dining chair types: fabric-upholstered chairs, leather dining chairs, faux leather or PU chairs, mixed-material chairs with padded seats, and wooden chairs with upholstered cushions. Each material requires a different approach, and our technicians are trained to identify the correct method before starting — ensuring effective cleaning without damage to the fabric or frame.
@@ -1127,9 +1129,11 @@ Madinat Alhaya is the best villa deep cleaning services Dubai, Abu Dhabi, and Sh
   {
     id: 'apartment-cleaning',
     name: 'Apartment Cleaning',
+    heroTitle: 'Apartment Cleaning Services Dubai | Deep Clean, Move-In & Move-Out',
+    heroSubtitle: 'Best apartment cleaning services Dubai, Abu Dhabi & Sharjah — studio, 1BHK to 4BHK deep cleaning, move-in move-out cleaning Dubai, end of tenancy cleaning. Professional flat cleaning near me across UAE!',
     slug: 'apartment-cleaning',
     category: 'commercial',
-    shortDescription: 'Professional apartment cleaning service in UAE. Regular, deep, and move-in/move-out cleaning packages.',
+    shortDescription: 'Best apartment cleaning Dubai — professional flat cleaning services near me for studios to 4BHK. Move-in move-out cleaning Dubai, end of tenancy cleaning, deep cleaning apartments. Same-day service Dubai, Abu Dhabi & all UAE!',
     fullDescription: `Our apartment cleaning service offers flexible packages designed to meet every need — from a quick regular maintenance clean to a comprehensive deep clean or a move-in/move-out clean that restores the property to its original condition. Whether you are a resident looking for a reliable regular cleaning team or a landlord or tenant preparing for a handover, Madinat Alhaya provides consistent, professional results across all UAE Emirates.
 
 Our regular apartment cleaning package covers all the essential tasks needed to keep your home fresh and organized between deep cleans: dusting all surfaces, vacuuming carpets and rugs, mopping hard floors, cleaning bathroom surfaces, wiping kitchen counters and hob, emptying bins, cleaning mirrors, and general tidying. This package is ideal for weekly or fortnightly bookings and can be customized to your specific priorities.
@@ -1187,9 +1191,11 @@ All packages are available for studio apartments through to 4+ bedroom apartment
   {
     id: 'office-cleaning',
     name: 'Office Cleaning',
+    heroTitle: 'Office Cleaning Services Dubai | Commercial & Workplace Deep Cleaning',
+    heroSubtitle: 'Best office cleaning services Dubai, Abu Dhabi & Sharjah — daily, weekly & deep commercial cleaning. Professional workplace cleaning company near me. Sanitization & disinfection services UAE!',
     slug: 'office-cleaning',
     category: 'commercial',
-    shortDescription: 'Professional office cleaning services in UAE. Daily, weekly, and deep cleaning for commercial spaces.',
+    shortDescription: 'Best office cleaning company Dubai — professional commercial cleaning services near me for offices, co-working spaces & corporate floors. Daily, weekly & deep office cleaning Dubai, Abu Dhabi & all UAE. Workplace sanitization included!',
     fullDescription: `A consistently clean and well-maintained office environment directly influences employee productivity, morale, and health — and creates a strong first impression on visiting clients and partners. Madinat Alhaya's professional office cleaning service covers all types of commercial spaces across UAE, from small boutique offices and co-working spaces to large corporate floors, government offices, and retail premises.
 
 Our office cleaning packages are designed to be flexible around your business operations. We offer early-morning cleans before staff arrive, evening cleans after the working day, and weekend deep cleans — all scheduled to minimize disruption to your team. For large corporate clients, we can assign a dedicated team and site supervisor who manages the cleaning schedule and quality on an ongoing basis.
@@ -1249,9 +1255,11 @@ We hold comprehensive liability insurance and our cleaning teams undergo regular
   {
     id: 'restaurant-kitchen-cleaning',
     name: 'Restaurant & Kitchen Cleaning',
+    heroTitle: 'Kitchen Deep Cleaning Dubai | Restaurant & Commercial Kitchen Cleaning',
+    heroSubtitle: 'Best kitchen deep cleaning services Dubai — commercial kitchen cleaning, restaurant hood cleaning, grease trap cleaning Dubai. Municipality hygiene compliance. Professional kitchen cleaning near me across UAE!',
     slug: 'restaurant-kitchen-cleaning',
     category: 'commercial',
-    shortDescription: 'Deep commercial kitchen cleaning in UAE. Grease traps, hoods, equipment, and full hygiene compliance.',
+    shortDescription: 'Best kitchen deep cleaning services Dubai — professional restaurant cleaning, commercial kitchen hood cleaning, grease trap cleaning near me. Municipality compliance reports included. Deep kitchen cleaning Dubai, Abu Dhabi & all UAE!',
     fullDescription: `Commercial kitchens operate under enormous demands, generating extreme levels of grease, steam, smoke, and food residue on a daily basis. Without regular professional deep cleaning, this buildup presents serious fire hazards from grease accumulation in exhaust hoods and ducts, hygiene compliance failures that risk your trade license, and an environment that accelerates equipment deterioration. Our restaurant and kitchen deep cleaning team is specifically trained in commercial kitchen hygiene protocols and uses industrial-strength degreasers and specialist equipment to deliver results that standard cleaning simply cannot match.
 
 Our service is suitable for all types of food service operations — fine dining restaurants, fast food outlets, hotel kitchens, catering facilities, school and hospital canteens, food manufacturing premises, and cloud kitchens. We work during off-peak hours, late nights, or early mornings to minimize any impact on your operations.
@@ -1309,9 +1317,11 @@ Pricing is based on kitchen size and the extent of buildup. We recommend monthly
   {
     id: 'marble-polishing',
     name: 'Marble Polishing & Restoration',
+    heroTitle: 'Marble Polishing Dubai | Floor Polishing & Marble Restoration UAE',
+    heroSubtitle: 'Best marble polishing services Dubai — professional floor polishing, marble crystallization, marble grinding & stone restoration. Marble polishing Abu Dhabi, Sharjah & all UAE. Diamond technology!',
     slug: 'marble-polishing',
     category: 'specialized',
-    shortDescription: 'Expert marble polishing and restoration in UAE. Restore the natural shine and seal your marble surfaces.',
+    shortDescription: 'Best marble polishing Dubai — professional floor polishing services, marble crystallization, marble restoration & stone polishing near me. Diamond abrasive technology. Marble polishing Abu Dhabi, Sharjah & all UAE Emirates!',
     fullDescription: `Marble is one of the most beautiful and prestigious natural stones used in UAE homes and commercial spaces, but it requires specialist care to maintain its appearance and integrity. Unlike ceramic or porcelain tiles, marble is a calcium carbonate-based stone that is naturally porous and prone to etching from acids (including lemon juice, vinegar, and certain cleaning products), scratching from grit and abrasive cleaners, and dulling from foot traffic and everyday wear. Our marble polishing and restoration service uses diamond abrasive technology and professional polishing compounds to restore your marble to its original factory finish — or better.
 
 We offer the full spectrum of marble care services, from light polishing of surface scratches to comprehensive restoration of severely damaged or neglected marble. The appropriate service is determined during an initial assessment of the marble's current condition, the type and severity of damage, and the client's desired finish (matte, satin, or high gloss).

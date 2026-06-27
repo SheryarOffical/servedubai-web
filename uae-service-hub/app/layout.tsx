@@ -20,9 +20,20 @@ const workSans = Work_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Professional Cleaning Services in UAE | Madinat Alhaya Building Cleaning Services',
+  title: 'Cleaning Services Dubai & UAE | Madinat Alhaya Building Cleaning Services',
   description:
-    'Madinat Alhaya offers 11 professional cleaning services across 7 UAE Emirates. Same-day service. Call or WhatsApp +971 55 127 5545.',
+    'Best cleaning services Dubai, Abu Dhabi & Sharjah. Villa cleaning, sofa cleaning, carpet cleaning, marble polishing, office cleaning across 7 UAE Emirates. Same-day service. Call +971 55 127 5545.',
+  keywords: [
+    'cleaning services Dubai', 'cleaning company Dubai', 'cleaning services UAE',
+    'deep cleaning Dubai', 'professional cleaning services Dubai', 'best cleaning company in Dubai',
+    'cleaning services Abu Dhabi', 'cleaning services Sharjah', 'home cleaning services Dubai',
+    'villa deep cleaning Dubai', 'sofa cleaning Dubai', 'carpet cleaning Dubai',
+    'marble polishing Dubai', 'office cleaning Dubai', 'apartment cleaning Dubai',
+    'mattress cleaning Dubai', 'curtain cleaning Dubai', 'cleaning services near me Dubai',
+    'house cleaning Dubai', 'move in move out cleaning Dubai', 'same-day cleaning Dubai',
+    'cleaning services Ajman', 'cleaning services RAK', 'cleaning services Fujairah',
+    'cleaning services Umm Al Quwain', 'eco-friendly cleaning Dubai', 'best cleaning services UAE',
+  ],
   verification: {
     google: 'kcRs3u_-iV5Ou0Op2OAvNBajnVhBwo3epUrUm0gEKCg',
   },

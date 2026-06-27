@@ -8,12 +8,22 @@ import { buildMetadata, buildLocalBusinessSchema } from '@/lib/utils/seo'
 import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
 
-export const metadata: Metadata = buildMetadata({
-  title: 'About Us | Professional Cleaning Services Dubai & UAE',
-  description:
-    'Learn about Madinat Alhaya — Dubai\'s trusted professional cleaning company serving all 7 UAE Emirates. Expert villa, sofa, carpet, mattress cleaning & marble polishing. Vetted technicians. Free quotes.',
-  path: '/about',
-})
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: 'About Madinat Alhaya | Best Cleaning Company Dubai & UAE',
+    description:
+      'Madinat Alhaya — best cleaning company in Dubai serving all 7 UAE Emirates. Professional villa cleaning, sofa cleaning, carpet cleaning, marble polishing & office cleaning. IICRC-trained technicians. Same-day service. Free quotes.',
+    path: '/about',
+  }),
+  keywords: [
+    'best cleaning company Dubai', 'cleaning company UAE', 'Madinat Alhaya cleaning services',
+    'professional cleaning services Dubai', 'cleaning company near me Dubai',
+    'villa cleaning company Dubai', 'sofa cleaning company Dubai', 'carpet cleaning company Dubai',
+    'marble polishing company Dubai', 'office cleaning company Dubai',
+    'eco-friendly cleaning company UAE', 'IICRC certified cleaners Dubai',
+    'cleaning services Abu Dhabi', 'cleaning services Sharjah', 'cleaning services all Emirates',
+  ],
+}
 
 const localBusinessSchema = buildLocalBusinessSchema({ path: '/about' })
 

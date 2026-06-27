@@ -2,12 +2,31 @@ import type { Metadata } from 'next'
 import { buildMetadata, buildLocalBusinessSchema, buildImageObjectSchema } from '@/lib/utils/seo'
 import HomeContent from '@/components/HomeContent'
 
-export const metadata: Metadata = buildMetadata({
-  title: 'Professional Cleaning Services Dubai | Top-Rated Villa & Sofa Cleaning',
-  description:
-    'Looking for the best professional cleaning services in Dubai? We offer expert villa & apartment cleaning, deep sofa & mattress cleaning, carpet care, and premium marble polishing. 100% Satisfaction Guaranteed. Book your deep clean today!',
-  path: '/',
-})
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: 'Cleaning Services Dubai & UAE | Best Cleaning Company Dubai',
+    description:
+      'Best cleaning services Dubai, Abu Dhabi & Sharjah — villa deep cleaning, sofa cleaning, carpet cleaning, marble polishing, office cleaning & more. Professional cleaning company near me across all 7 UAE Emirates. Same-day service!',
+    path: '/',
+  }),
+  keywords: [
+    'cleaning services Dubai', 'cleaning company Dubai', 'deep cleaning Dubai', 'cleaning services UAE',
+    'cleaning services Abu Dhabi', 'cleaning services Sharjah', 'professional cleaning services Dubai',
+    'house cleaning Dubai', 'home cleaning services Dubai', 'cleaning services near me Dubai',
+    'best cleaning company in Dubai', 'villa cleaning Dubai', 'villa deep cleaning Dubai',
+    'sofa cleaning Dubai', 'sofa cleaning services Dubai', 'sofa deep cleaning Dubai',
+    'carpet cleaning Dubai', 'carpet cleaning services Dubai', 'steam carpet cleaning Dubai',
+    'marble polishing Dubai', 'marble crystallization Dubai', 'floor polishing Dubai',
+    'office cleaning Dubai', 'commercial cleaning Dubai', 'office cleaning services Dubai',
+    'apartment cleaning Dubai', 'apartment deep cleaning Dubai', 'flat cleaning Dubai',
+    'mattress cleaning Dubai', 'mattress deep cleaning Dubai', 'curtain cleaning Dubai',
+    'move in move out cleaning Dubai', 'deep cleaning services UAE', 'same-day cleaning Dubai',
+    'cleaning services Ajman', 'cleaning services RAK', 'cleaning services Fujairah',
+    'cleaning services Umm Al Quwain', 'eco-friendly cleaning Dubai',
+    'book villa deep cleaning online Dubai', 'professional sofa cleaning service price UAE',
+    'same-day apartment deep cleaning services Dubai', 'best villa deep cleaning Dubai Marina',
+  ],
+}
 
 const heroSlides = [
   { image: '/images/hero/professional-cleaning-services-UAE.webp', imageAlt: 'Professional Cleaning Services Dubai — Madinat Alhaya certified cleaning technicians UAE', imageTitle: 'Professional Cleaning Services Dubai | Madinat Alhaya', tags: ['professional cleaning services Dubai', 'cleaning services Dubai', 'deep cleaning Dubai', 'Madinat Alhaya cleaning UAE', 'same day cleaning service Dubai'] },

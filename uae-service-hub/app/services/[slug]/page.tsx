@@ -16,15 +16,33 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return services.map((s) => ({ slug: s.slug }))
 }
 
+const serviceKeywords: Record<string, string[]> = {
+  'sofa-cleaning': ['sofa cleaning Dubai', 'sofa cleaning services Dubai', 'sofa deep cleaning Dubai', 'best sofa cleaning Dubai', 'sofa shampooing Dubai', 'upholstery cleaning Dubai', 'leather sofa cleaning Dubai', 'sofa cleaning Abu Dhabi', 'sofa cleaning Sharjah', 'sofa cleaning near me Dubai', 'sofa cleaning price Dubai', 'professional sofa cleaning UAE'],
+  'carpet-cleaning': ['carpet cleaning Dubai', 'carpet cleaning services Dubai', 'best carpet cleaning Dubai', 'carpet shampooing Dubai', 'steam carpet cleaning Dubai', 'rug cleaning Dubai', 'carpet cleaning Abu Dhabi', 'carpet cleaning Sharjah', 'carpet cleaning near me', 'carpet cleaning price Dubai', 'professional carpet cleaners Dubai', 'eco-friendly carpet cleaning UAE'],
+  'mattress-cleaning': ['mattress cleaning Dubai', 'mattress deep cleaning Dubai', 'mattress sanitization Dubai', 'mattress cleaning services Dubai', 'mattress cleaning Abu Dhabi', 'mattress cleaning near me', 'bed cleaning Dubai', 'dust mite removal Dubai', 'mattress steam cleaning Dubai', 'mattress cleaning price Dubai'],
+  'curtain-cleaning': ['curtain cleaning Dubai', 'curtain cleaning services Dubai', 'curtain steam cleaning Dubai', 'blinds cleaning Dubai', 'curtain cleaning Abu Dhabi', 'curtain cleaning Sharjah', 'curtain cleaning near me', 'professional curtain cleaning UAE', 'on-site curtain cleaning Dubai'],
+  'car-seat-cleaning': ['car interior cleaning Dubai', 'car seat cleaning Dubai', 'car detailing Dubai', 'car upholstery cleaning Dubai', 'car seat shampooing Dubai', 'car interior detailing UAE', 'car cleaning services Dubai', 'auto detailing Dubai'],
+  'dining-chair-cleaning': ['dining chair cleaning Dubai', 'chair cleaning services Dubai', 'furniture cleaning Dubai', 'dining chair steam cleaning Dubai', 'restaurant chair cleaning UAE', 'upholstery cleaning Dubai'],
+  'villa-cleaning': ['villa cleaning Dubai', 'villa deep cleaning Dubai', 'best villa cleaning Dubai', 'villa cleaning services Dubai', 'villa cleaning Abu Dhabi', 'villa cleaning Sharjah', 'house cleaning Dubai', 'home deep cleaning Dubai', 'move in move out cleaning Dubai', 'villa cleaning near me', 'villa cleaning price Dubai'],
+  'apartment-cleaning': ['apartment cleaning Dubai', 'apartment deep cleaning Dubai', 'flat cleaning Dubai', 'apartment cleaning services Dubai', 'move in cleaning Dubai', 'move out cleaning Dubai', 'end of tenancy cleaning Dubai', 'apartment cleaning Abu Dhabi', 'apartment cleaning near me', 'studio cleaning Dubai'],
+  'office-cleaning': ['office cleaning Dubai', 'office cleaning services Dubai', 'commercial cleaning Dubai', 'workplace cleaning Dubai', 'office cleaning company Dubai', 'corporate office cleaning Dubai', 'office cleaning Abu Dhabi', 'office cleaning Sharjah', 'janitorial services Dubai', 'office cleaning contract Dubai'],
+  'restaurant-kitchen-cleaning': ['kitchen cleaning Dubai', 'restaurant kitchen cleaning Dubai', 'commercial kitchen cleaning Dubai', 'kitchen deep cleaning Dubai', 'hood cleaning Dubai', 'grease trap cleaning Dubai', 'kitchen cleaning services UAE', 'restaurant cleaning Dubai'],
+  'marble-polishing': ['marble polishing Dubai', 'marble floor polishing Dubai', 'marble crystallization Dubai', 'marble restoration Dubai', 'stone polishing Dubai', 'floor polishing Dubai', 'marble polishing Abu Dhabi', 'marble polishing Sharjah', 'marble polishing near me', 'marble polishing price Dubai', 'terrazzo polishing Dubai'],
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = getServiceBySlug(slug)
   if (!service) return {}
-  return buildMetadata({
-    title: `${service.name} in UAE | Madinat Alhaya`,
-    description: `${service.shortDescription} Available across all UAE Emirates. Call +971 55 127 5545.`,
-    path: `/services/${slug}`,
-  })
+  const seoTitle = service.heroTitle || `${service.name} Dubai | Professional ${service.name} Services UAE`
+  return {
+    ...buildMetadata({
+      title: seoTitle,
+      description: service.shortDescription,
+      path: `/services/${slug}`,
+    }),
+    keywords: serviceKeywords[slug] || [`${service.name} Dubai`, `${service.name} UAE`, `professional ${service.name} services Dubai`],
+  }
 }
 
 const stats = [

@@ -5,12 +5,22 @@ import { buildMetadata, buildBreadcrumbSchema } from '@/lib/utils/seo'
 import { getWhatsAppLink } from '@/lib/utils/whatsapp'
 import { SITE_CONFIG } from '@/lib/data/constants'
 
-export const metadata: Metadata = buildMetadata({
-  title: 'Cleaning Services by Area in Dubai | Madinat Alhaya',
-  description:
-    'Find professional cleaning services in your Dubai area — sofa, carpet, villa deep cleaning and marble polishing in Marina, Downtown, Jumeirah, Palm Jumeirah and more. Same-day service.',
-  path: '/areas',
-})
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: 'Cleaning Services Near Me Dubai | All Dubai Areas & Neighbourhoods',
+    description:
+      'Find the best cleaning services near me in Dubai — villa cleaning, sofa cleaning, carpet cleaning & marble polishing in Dubai Marina, Downtown, JBR, Palm Jumeirah, Arabian Ranches, JLT & more. Same-day service.',
+    path: '/areas',
+  }),
+  keywords: [
+    'cleaning services near me Dubai', 'cleaning services Dubai Marina', 'cleaning services Downtown Dubai',
+    'cleaning services JBR', 'cleaning services Palm Jumeirah', 'cleaning services Arabian Ranches',
+    'cleaning services JLT', 'cleaning services Business Bay', 'cleaning services Al Barsha',
+    'cleaning services Jumeirah', 'cleaning services Deira', 'cleaning services Mirdif',
+    'cleaning services JVC', 'cleaning services Silicon Oasis', 'cleaning services DIFC',
+    'villa deep cleaning Dubai Marina', 'sofa cleaning Downtown Dubai', 'carpet cleaning Palm Jumeirah',
+  ],
+}
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: 'Home', url: '/' },

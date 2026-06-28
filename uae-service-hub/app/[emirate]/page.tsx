@@ -75,20 +75,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const whyUs = [
-  { title: 'Certified Technicians', desc: 'Background-checked, trained professionals on every job.' },
-  { title: 'Eco-Friendly Products', desc: 'Safe for children, pets, and the environment.' },
-  { title: 'Same-Day Service', desc: 'Book today, we arrive today across all areas.' },
-  { title: 'Free Instant Quote', desc: 'Message on WhatsApp — get a price in minutes.' },
-  { title: 'All Fabric & Surface Types', desc: 'Sofa, carpet, marble, leather, curtains and more.' },
-  { title: 'Satisfaction Guaranteed', desc: 'Not happy? We come back at no extra charge.' },
+const getWhyUs = (emirateName: string) => [
+  { title: 'Trained Cleaning Professionals', desc: `Background-checked, experienced technicians delivering villa deep cleaning, sofa cleaning, and carpet cleaning across ${emirateName}.` },
+  { title: 'Eco-Friendly Cleaning Products', desc: `Safe for children, pets, and allergy sufferers. Our non-toxic, biodegradable solutions are perfect for residential and commercial cleaning in ${emirateName}.` },
+  { title: 'Same-Day Cleaning Service', desc: `Book deep cleaning, marble polishing, or office cleaning today — our team arrives the same day across all ${emirateName} areas.` },
+  { title: 'Free Instant Quote', desc: `WhatsApp us for a free cleaning service quote in ${emirateName}. Transparent pricing, no hidden fees — villa cleaning, apartment cleaning, or office cleaning.` },
+  { title: 'All Fabric & Surface Types', desc: `Professional sofa cleaning, carpet cleaning, curtain cleaning, marble polishing, mattress cleaning, and car interior detailing — all available in ${emirateName}.` },
+  { title: '100% Satisfaction Guaranteed', desc: `Not satisfied with your deep cleaning or sofa cleaning in ${emirateName}? We return at no extra charge. Every job backed by our satisfaction guarantee.` },
 ]
 
-const howItWorks = [
-  { step: '01', title: 'Contact Us', desc: 'Send a WhatsApp message or call. Tell us the service and your area.' },
-  { step: '02', title: 'Get a Quote', desc: 'Receive a free instant quote tailored to your home or office.' },
-  { step: '03', title: 'We Arrive', desc: 'Our certified technicians arrive on time with all equipment.' },
-  { step: '04', title: 'Spotless Result', desc: 'Your space is left hygienically clean — guaranteed.' },
+const getHowItWorks = (emirateName: string) => [
+  { step: '01', title: 'Book Your Cleaning Service', desc: `WhatsApp or call us to book villa deep cleaning, sofa cleaning, carpet cleaning, or any service in ${emirateName}.` },
+  { step: '02', title: 'Get a Free Quote', desc: `Receive a free instant quote for your home cleaning or office cleaning in ${emirateName} — no obligations, transparent pricing.` },
+  { step: '03', title: 'Professional Team Arrives', desc: `Our trained cleaning professionals arrive on time with commercial-grade equipment for deep cleaning, marble polishing, or upholstery cleaning in ${emirateName}.` },
+  { step: '04', title: 'Spotless & Sanitized', desc: `Your villa, apartment, or office in ${emirateName} is left hygienically clean and sanitized — 100% satisfaction guaranteed.` },
 ]
 
 export default async function EmiratePage({ params }: Props) {
@@ -150,7 +150,7 @@ export default async function EmiratePage({ params }: Props) {
             Cleaning Services<br />in {emirate.name}
           </h1>
           <p style={{ color: '#d1d5db', fontSize: '1.05rem', fontWeight: 400, marginBottom: '2rem', lineHeight: 1.6 }}>
-            Professional cleaning across {emirate.cities.length} areas — certified technicians, same-day service
+            Best professional cleaning company in {emirate.name} — villa deep cleaning, sofa cleaning, carpet cleaning, marble polishing & office cleaning across {emirate.cities.length} areas. Same-day service available.
           </p>
 
           <div style={{ display: 'flex', gap: '0.875rem', flexWrap: 'wrap' }}>
@@ -416,7 +416,7 @@ export default async function EmiratePage({ params }: Props) {
 
             {/* Right: animated feature rows */}
             <div className="why-right-panel" style={{ padding: '1.5rem 1.75rem' }}>
-              {whyUs.map((item, i) => (
+              {getWhyUs(emirate.name).map((item, i) => (
                 <div
                   key={item.title}
                   className="why-row"
@@ -460,7 +460,7 @@ export default async function EmiratePage({ params }: Props) {
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem' }}>
-            {howItWorks.map((step) => (
+            {getHowItWorks(emirate.name).map((step) => (
               <div key={step.step} className="how-it-works-card" style={{
                 background: 'linear-gradient(160deg, #0e1b40 0%, #1c2f58 100%)',
                 border: '1px solid rgba(80,140,255,0.25)',

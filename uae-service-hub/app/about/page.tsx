@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: 'About Madinat Alhaya | Best Cleaning Company Dubai & UAE',
     description:
-      'Madinat Alhaya — best cleaning company in Dubai serving all 7 UAE Emirates. Professional villa cleaning, sofa cleaning, carpet cleaning, marble polishing & office cleaning. IICRC-trained technicians. Same-day service. Free quotes.',
+      'Madinat Alhaya — best cleaning company in Dubai serving all 7 UAE Emirates. Professional villa deep cleaning, sofa cleaning, carpet cleaning, marble polishing & office cleaning. Trained professionals, eco-friendly products, same-day service. Free quotes.',
     path: '/about',
   }),
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'professional cleaning services Dubai', 'cleaning company near me Dubai',
     'villa cleaning company Dubai', 'sofa cleaning company Dubai', 'carpet cleaning company Dubai',
     'marble polishing company Dubai', 'office cleaning company Dubai',
-    'eco-friendly cleaning company UAE', 'IICRC certified cleaners Dubai',
+    'eco-friendly cleaning company UAE', 'certified professional cleaners Dubai',
     'cleaning services Abu Dhabi', 'cleaning services Sharjah', 'cleaning services all Emirates',
   ],
 }
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 Today, Madinat Alhaya serves thousands of residential and commercial clients across all 7 UAE Emirates — from luxury villas in Arabian Ranches to high-rise apartments in Dubai Marina. Our certified, background-checked technicians bring professional-grade equipment, eco-friendly solutions, and genuine care to every job.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem 1.5rem' }}>
-                {['11 professional services','All 7 UAE Emirates','Same-day availability','Eco-friendly solutions','Vetted technicians','Free instant quote'].map((feat) => (
+                {['11 professional services','All 7 UAE Emirates','Same-day availability','Eco-friendly products','Trained professionals','Free instant quote'].map((feat) => (
                   <div key={feat} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <span style={{ color: '#c9a84c', flexShrink: 0 }}>✓</span>
                     <span className="about-feat-txt" style={{ color: '#d1d5db', fontSize: '0.84rem' }}>{feat}</span>
@@ -175,7 +175,7 @@ export default function AboutPage() {
               { n: '03', title: '100% Eco-Friendly & Non-Toxic Solutions', desc: 'Our biodegradable, non-toxic cleaning products are powerful on stains but completely safe for children, pets, and allergy sufferers. Zero harsh chemicals — zero compromise on results.' },
               { n: '04', title: 'Transparent Pricing with No Hidden Fees', desc: 'Every quote is detailed and final. No surprise charges after the job. No add-on fees you weren\'t told about. Just honest, upfront pricing with professional results.' },
               { n: '05', title: 'Comprehensive Insurance & Satisfaction Guarantee', desc: 'Madinat Alhaya carries full liability insurance on all services. Not satisfied? We return at no extra charge. Your peace of mind is our standard practice — not an exception.' },
-              { n: '06', title: 'IICRC-Standard Cleaning Techniques', desc: 'We follow international IICRC (Institute of Inspection, Cleaning and Restoration Certification) standards for carpet, upholstery, and water damage restoration — the gold standard globally.' },
+              { n: '06', title: 'International-Standard Cleaning Techniques', desc: 'We follow globally recognized professional standards for carpet cleaning, sofa cleaning, upholstery care, and water damage restoration — delivering results that meet the highest industry benchmarks in Dubai and UAE.' },
             ].map((v) => (
               <div key={v.n} className="about-value-card" style={{ background: '#1c2f58', border: '1px solid rgba(80,140,255,0.18)', borderRadius: '12px', padding: '1.4rem', display: 'flex', gap: '0.875rem' }}>
                 <div style={{ width: '34px', height: '34px', borderRadius: '7px', background: 'rgba(201,168,76,0.12)', border: '1px solid rgba(201,168,76,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>

@@ -17,17 +17,58 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 }
 
 const serviceKeywords: Record<string, string[]> = {
-  'sofa-cleaning': ['sofa cleaning Dubai', 'sofa cleaning services Dubai', 'sofa deep cleaning Dubai', 'best sofa cleaning Dubai', 'sofa shampooing Dubai', 'upholstery cleaning Dubai', 'leather sofa cleaning Dubai', 'sofa cleaning Abu Dhabi', 'sofa cleaning Sharjah', 'sofa cleaning near me Dubai', 'sofa cleaning price Dubai', 'professional sofa cleaning UAE'],
-  'carpet-cleaning': ['carpet cleaning Dubai', 'carpet cleaning services Dubai', 'best carpet cleaning Dubai', 'carpet shampooing Dubai', 'steam carpet cleaning Dubai', 'rug cleaning Dubai', 'carpet cleaning Abu Dhabi', 'carpet cleaning Sharjah', 'carpet cleaning near me', 'carpet cleaning price Dubai', 'professional carpet cleaners Dubai', 'eco-friendly carpet cleaning UAE'],
-  'mattress-cleaning': ['mattress cleaning Dubai', 'mattress deep cleaning Dubai', 'mattress sanitization Dubai', 'mattress cleaning services Dubai', 'mattress cleaning Abu Dhabi', 'mattress cleaning near me', 'bed cleaning Dubai', 'dust mite removal Dubai', 'mattress steam cleaning Dubai', 'mattress cleaning price Dubai'],
-  'curtain-cleaning': ['curtain cleaning Dubai', 'curtain cleaning services Dubai', 'curtain steam cleaning Dubai', 'blinds cleaning Dubai', 'curtain cleaning Abu Dhabi', 'curtain cleaning Sharjah', 'curtain cleaning near me', 'professional curtain cleaning UAE', 'on-site curtain cleaning Dubai'],
-  'car-seat-cleaning': ['car interior cleaning Dubai', 'car seat cleaning Dubai', 'car detailing Dubai', 'car upholstery cleaning Dubai', 'car seat shampooing Dubai', 'car interior detailing UAE', 'car cleaning services Dubai', 'auto detailing Dubai'],
-  'dining-chair-cleaning': ['dining chair cleaning Dubai', 'chair cleaning services Dubai', 'furniture cleaning Dubai', 'dining chair steam cleaning Dubai', 'restaurant chair cleaning UAE', 'upholstery cleaning Dubai'],
-  'villa-cleaning': ['villa cleaning Dubai', 'villa deep cleaning Dubai', 'best villa cleaning Dubai', 'villa cleaning services Dubai', 'villa cleaning Abu Dhabi', 'villa cleaning Sharjah', 'house cleaning Dubai', 'home deep cleaning Dubai', 'move in move out cleaning Dubai', 'villa cleaning near me', 'villa cleaning price Dubai'],
-  'apartment-cleaning': ['apartment cleaning Dubai', 'apartment deep cleaning Dubai', 'flat cleaning Dubai', 'apartment cleaning services Dubai', 'move in cleaning Dubai', 'move out cleaning Dubai', 'end of tenancy cleaning Dubai', 'apartment cleaning Abu Dhabi', 'apartment cleaning near me', 'studio cleaning Dubai'],
-  'office-cleaning': ['office cleaning Dubai', 'office cleaning services Dubai', 'commercial cleaning Dubai', 'workplace cleaning Dubai', 'office cleaning company Dubai', 'corporate office cleaning Dubai', 'office cleaning Abu Dhabi', 'office cleaning Sharjah', 'janitorial services Dubai', 'office cleaning contract Dubai'],
-  'restaurant-kitchen-cleaning': ['kitchen cleaning Dubai', 'restaurant kitchen cleaning Dubai', 'commercial kitchen cleaning Dubai', 'kitchen deep cleaning Dubai', 'hood cleaning Dubai', 'grease trap cleaning Dubai', 'kitchen cleaning services UAE', 'restaurant cleaning Dubai'],
-  'marble-polishing': ['marble polishing Dubai', 'marble floor polishing Dubai', 'marble crystallization Dubai', 'marble restoration Dubai', 'stone polishing Dubai', 'floor polishing Dubai', 'marble polishing Abu Dhabi', 'marble polishing Sharjah', 'marble polishing near me', 'marble polishing price Dubai', 'terrazzo polishing Dubai'],
+  'sofa-cleaning': [
+    'sofa cleaning Dubai', 'sofa cleaning Abu Dhabi', 'sofa cleaning Sharjah', 'sofa cleaning Ajman', 'sofa cleaning RAK', 'sofa cleaning Fujairah', 'sofa cleaning Umm Al Quwain',
+    'sofa cleaning services Dubai', 'sofa deep cleaning Dubai', 'best sofa cleaning Dubai', 'sofa shampooing Dubai', 'upholstery cleaning Dubai', 'leather sofa cleaning Dubai',
+    'sofa cleaning near me', 'sofa cleaning price Dubai', 'professional sofa cleaning UAE', 'sofa steam cleaning Dubai', 'couch cleaning Dubai',
+  ],
+  'carpet-cleaning': [
+    'carpet cleaning Dubai', 'carpet cleaning Abu Dhabi', 'carpet cleaning Sharjah', 'carpet cleaning Ajman', 'carpet cleaning Ras Al Khaimah', 'carpet cleaning Fujairah', 'carpet cleaning UAQ',
+    'carpet cleaning services Dubai', 'best carpet cleaning Dubai', 'carpet shampooing Dubai', 'steam carpet cleaning Dubai', 'rug cleaning Dubai',
+    'carpet cleaning near me', 'carpet cleaning price Dubai', 'professional carpet cleaners UAE', 'eco-friendly carpet cleaning Dubai',
+  ],
+  'mattress-cleaning': [
+    'mattress cleaning Dubai', 'mattress cleaning Abu Dhabi', 'mattress cleaning Sharjah', 'mattress cleaning Ajman', 'mattress cleaning RAK', 'mattress cleaning Fujairah', 'mattress cleaning UAQ',
+    'mattress deep cleaning Dubai', 'mattress sanitization Dubai', 'mattress cleaning services Dubai', 'bed cleaning Dubai',
+    'dust mite removal Dubai', 'mattress steam cleaning Dubai', 'mattress cleaning near me', 'mattress cleaning price Dubai',
+  ],
+  'curtain-cleaning': [
+    'curtain cleaning Dubai', 'curtain cleaning Abu Dhabi', 'curtain cleaning Sharjah', 'curtain cleaning Ajman', 'curtain cleaning RAK', 'curtain cleaning Fujairah', 'curtain cleaning UAQ',
+    'curtain cleaning services Dubai', 'curtain steam cleaning Dubai', 'blinds cleaning Dubai', 'curtain cleaning near me', 'professional curtain cleaning UAE', 'on-site curtain cleaning Dubai',
+  ],
+  'car-seat-cleaning': [
+    'car interior cleaning Dubai', 'car seat cleaning Dubai', 'car seat cleaning Abu Dhabi', 'car seat cleaning Sharjah', 'car seat cleaning Ajman',
+    'car detailing Dubai', 'car upholstery cleaning Dubai', 'car seat shampooing Dubai', 'car interior detailing UAE', 'car cleaning services Dubai', 'auto detailing Dubai',
+  ],
+  'dining-chair-cleaning': [
+    'dining chair cleaning Dubai', 'dining chair cleaning Abu Dhabi', 'dining chair cleaning Sharjah', 'dining chair cleaning Ajman',
+    'chair cleaning services Dubai', 'furniture cleaning Dubai', 'dining chair steam cleaning Dubai', 'restaurant chair cleaning UAE', 'upholstery cleaning Dubai',
+  ],
+  'villa-cleaning': [
+    'villa cleaning Dubai', 'villa cleaning Abu Dhabi', 'villa cleaning Sharjah', 'villa cleaning Ajman', 'villa cleaning RAK', 'villa cleaning Fujairah', 'villa cleaning UAQ',
+    'villa deep cleaning Dubai', 'best villa cleaning Dubai', 'villa cleaning services Dubai', 'house cleaning Dubai', 'home deep cleaning Dubai',
+    'move in move out cleaning Dubai', 'villa cleaning near me', 'villa cleaning price Dubai',
+  ],
+  'apartment-cleaning': [
+    'apartment cleaning Dubai', 'apartment cleaning Abu Dhabi', 'apartment cleaning Sharjah', 'apartment cleaning Ajman', 'apartment cleaning RAK', 'apartment cleaning Fujairah',
+    'apartment deep cleaning Dubai', 'flat cleaning Dubai', 'apartment cleaning services Dubai', 'move in cleaning Dubai', 'move out cleaning Dubai',
+    'end of tenancy cleaning Dubai', 'apartment cleaning near me', 'studio cleaning Dubai',
+  ],
+  'office-cleaning': [
+    'office cleaning Dubai', 'office cleaning Abu Dhabi', 'office cleaning Sharjah', 'office cleaning Ajman', 'office cleaning RAK', 'office cleaning Fujairah', 'office cleaning UAQ',
+    'office cleaning services Dubai', 'commercial cleaning Dubai', 'workplace cleaning Dubai', 'office cleaning company Dubai',
+    'corporate office cleaning Dubai', 'janitorial services Dubai', 'office cleaning contract Dubai',
+  ],
+  'restaurant-kitchen-cleaning': [
+    'kitchen cleaning Dubai', 'kitchen cleaning Abu Dhabi', 'kitchen cleaning Sharjah', 'kitchen cleaning Ajman',
+    'restaurant kitchen cleaning Dubai', 'commercial kitchen cleaning Dubai', 'kitchen deep cleaning Dubai',
+    'hood cleaning Dubai', 'grease trap cleaning Dubai', 'kitchen cleaning services UAE', 'restaurant cleaning Dubai',
+  ],
+  'marble-polishing': [
+    'marble polishing Dubai', 'marble polishing Abu Dhabi', 'marble polishing Sharjah', 'marble polishing Ajman', 'marble polishing RAK', 'marble polishing Fujairah', 'marble polishing UAQ',
+    'marble floor polishing Dubai', 'marble crystallization Dubai', 'marble restoration Dubai', 'stone polishing Dubai',
+    'floor polishing Dubai', 'marble polishing near me', 'marble polishing price Dubai', 'terrazzo polishing Dubai',
+  ],
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

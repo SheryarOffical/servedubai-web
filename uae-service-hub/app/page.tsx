@@ -11,20 +11,29 @@ export const metadata: Metadata = {
   }),
   keywords: [
     'cleaning services Dubai', 'cleaning company Dubai', 'deep cleaning Dubai', 'cleaning services UAE',
-    'cleaning services Abu Dhabi', 'cleaning services Sharjah', 'professional cleaning services Dubai',
-    'house cleaning Dubai', 'home cleaning services Dubai', 'cleaning services near me Dubai',
-    'best cleaning company in Dubai', 'villa cleaning Dubai', 'villa deep cleaning Dubai',
-    'sofa cleaning Dubai', 'sofa cleaning services Dubai', 'sofa deep cleaning Dubai',
-    'carpet cleaning Dubai', 'carpet cleaning services Dubai', 'steam carpet cleaning Dubai',
-    'marble polishing Dubai', 'marble crystallization Dubai', 'floor polishing Dubai',
-    'office cleaning Dubai', 'commercial cleaning Dubai', 'office cleaning services Dubai',
-    'apartment cleaning Dubai', 'apartment deep cleaning Dubai', 'flat cleaning Dubai',
-    'mattress cleaning Dubai', 'mattress deep cleaning Dubai', 'curtain cleaning Dubai',
-    'move in move out cleaning Dubai', 'deep cleaning services UAE', 'same-day cleaning Dubai',
-    'cleaning services Ajman', 'cleaning services RAK', 'cleaning services Fujairah',
-    'cleaning services Umm Al Quwain', 'eco-friendly cleaning Dubai',
-    'book villa deep cleaning online Dubai', 'professional sofa cleaning service price UAE',
-    'same-day apartment deep cleaning services Dubai', 'best villa deep cleaning Dubai Marina',
+    'best cleaning company Dubai', 'professional cleaning services Dubai', 'cleaning services near me',
+    // Service + Dubai
+    'sofa cleaning Dubai', 'carpet cleaning Dubai', 'marble polishing Dubai', 'mattress cleaning Dubai',
+    'curtain cleaning Dubai', 'villa cleaning Dubai', 'villa deep cleaning Dubai', 'apartment cleaning Dubai',
+    'office cleaning Dubai', 'kitchen cleaning Dubai', 'car interior cleaning Dubai',
+    // Service + Abu Dhabi
+    'sofa cleaning Abu Dhabi', 'carpet cleaning Abu Dhabi', 'marble polishing Abu Dhabi', 'mattress cleaning Abu Dhabi',
+    'villa cleaning Abu Dhabi', 'apartment cleaning Abu Dhabi', 'office cleaning Abu Dhabi',
+    // Service + Sharjah
+    'sofa cleaning Sharjah', 'carpet cleaning Sharjah', 'marble polishing Sharjah', 'mattress cleaning Sharjah',
+    'villa cleaning Sharjah', 'apartment cleaning Sharjah', 'office cleaning Sharjah',
+    // Service + Ajman
+    'sofa cleaning Ajman', 'carpet cleaning Ajman', 'marble polishing Ajman', 'villa cleaning Ajman',
+    'mattress cleaning Ajman', 'office cleaning Ajman',
+    // Service + RAK
+    'sofa cleaning RAK', 'carpet cleaning RAK', 'marble polishing RAK', 'villa cleaning RAK',
+    'cleaning services Ras Al Khaimah',
+    // Service + Fujairah & UAQ
+    'sofa cleaning Fujairah', 'carpet cleaning Fujairah', 'cleaning services Fujairah',
+    'sofa cleaning UAQ', 'carpet cleaning UAQ', 'cleaning services Umm Al Quwain',
+    // Transactional
+    'same-day cleaning Dubai', 'move in move out cleaning Dubai', 'eco-friendly cleaning Dubai',
+    'house cleaning Dubai', 'home cleaning Dubai',
   ],
 }
 

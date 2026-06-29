@@ -53,6 +53,26 @@ export const metadata: Metadata = {
       'en-US': 'https://servedubai.com',
     },
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Cleaning Services Dubai & UAE | Madinat Alhaya Building Cleaning Services',
+    description:
+      'Best cleaning services Dubai, Abu Dhabi & Sharjah. Villa cleaning, sofa cleaning, carpet cleaning, marble polishing, office cleaning across 7 UAE Emirates.',
+    url: 'https://servedubai.com',
+    siteName: 'Madinat Alhaya Building Cleaning Services',
+    locale: 'en_AE',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({

@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// Old WordPress hack URLs — return 410 Gone so Google removes them fast
 const SPAM_PATH_PATTERNS = [
   /\.php/i,
   /pnnfxpueiq/i,
@@ -10,23 +9,23 @@ const SPAM_PATH_PATTERNS = [
   /\/cgi-bin/i,
   /\/adminer/i,
   /\/phpmyadmin/i,
-  // Hack-injected spam pages (auto-generated fake product/search URLs).
-  // The real site has NO /products or /ctg routes, so 410 (Gone) is safe and
-  // de-indexes faster than the bare 404 these currently return.
   /^\/products\//i,
   /^\/ctg\//i,
+  /^\/categoryindex/i,
+  /^\/xmlrpc/i,
+  /^\/wp-login/i,
+  /^\/wp-json/i,
+  /^\/wp-cron/i,
+  /^\/trackback/i,
+  /^\/feed\//i,
 ]
 
-// Query string spam — e.g. /?products/68533758
 const SPAM_QUERY_PATTERNS = [
   /products\//i,
   /\.php/i,
+  /categoryindex/i,
 ]
 
-// Build a fresh 410 response per request.
-// Proxy must NOT reuse a shared/global Response instance (Next.js docs:
-// "you should not attempt relying on shared modules or globals") — a single
-// Response object cannot be safely returned for multiple concurrent requests.
 function gone(): NextResponse {
   return new NextResponse(null, {
     status: 410,

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { buildMetadata, buildLocalBusinessSchema, buildImageObjectSchema } from '@/lib/utils/seo'
 import HomeContent from '@/components/HomeContent'
+
+const SPAM_QUERY_PATTERNS = [/products\//i, /\.php/i, /categoryindex/i, /ctg\//i, /wp-/i, /xmlrpc/i, /pnnfxpueiq/i]
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -64,7 +67,17 @@ const faqSchema = {
   mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 }
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}) {
+  const params = await searchParams
+  const keys = Object.keys(params)
+  if (keys.length > 0 && keys.some((k) => SPAM_QUERY_PATTERNS.some((p) => p.test(k)))) {
+    notFound()
+  }
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
